@@ -5,11 +5,12 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 基础
 
 - [Apache Kafka 简介](../apache-kafka-2/apache-kafka_zh.md)
-- [使用 Apache Kafka 进行数据建模](../algorithms-modules/apache-kafka-data-modeling_zh.md)
+- [使用Apache Kafka进行数据建模](../algorithms-modules/apache-kafka-data-modeling_zh.md)
 
 ## [reference-tag](https://www.baeldung.com/tag/kafka)
 
->> Intro to Apache Kafka with Spring
+- [Intro to Apache Kafka with Spring](https://www.baeldung.com/apache-kafka)
+
 >> Dynamically Managing Kafka Listeners in Spring Boot
 >> Commit Offsets in Kafka
 >> Introduction to Redpanda
@@ -55,7 +56,9 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 >> Guide to Setting Up Apache Kafka Using Docker
 >> Guide to Purging an Apache Kafka Topic
 >> Configuring Message Retention Period in Apache Kafka
->> Data Modeling with Apache Kafka
+
+- Data Modeling with Apache Kafka
+
 >> Testing Kafka and Spring Boot
 >> Using Kafka MockProducer
 >> Using Kafka MockConsumer
