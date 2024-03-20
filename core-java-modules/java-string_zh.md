@@ -2,36 +2,35 @@
 
 字符串基础知识
 
-- [Java 多行字符串](/core-java-strings/java-multiline-string_zh.md)
+- [Java多行字符串](/core-java-strings/java-multiline-string_zh.md)
 
 检查 Java 中的空字符串或空白字符串
 
-- [Java - 生成随机字符串](/core-java-string-operations-6/java-random-string_zh.md)
+- [Java-生成随机字符串](/core-java-string-operations-6/java-random-string_zh.md)
 
 如何删除字符串的最后一个字符？
 
-计算字符串中字符的出现次数
+- [计算字符串中字符的出现次数](/core-java-string-algorithms/java-count-chars_zh.md)
+- [用Java检查字符串是否为回文字符串](/core-java-string-algorithms/java-palindrome_zh.md)
 
-用 Java 检查字符串是否为重码字符串
+在Java中分割字符
 
-在 Java 中分割字符串
+- [在Java9中压缩字符串](/core-java-string-operations-6/java-9-compact-string_zh.md)
 
-- [在 Java 9 中压缩字符串](/core-java-string-operations-6/java-9-compact-string_zh.md)
+用Java比较字符串
 
-用 Java 比较字符串
+Java中的字符串序列与字符串
 
-Java 中的字符串序列与字符串
-
-在 Java 中为字符串添加换行符
+在Java中为字符串添加换行符
 
 字符编码指南
 
-在 Java 中连字符串
+在Java中连字符串
 
-Java 中的字符串初始化
+Java中的字符串初始化
 
 为什么字符串在 Java 中不可变？
- 字符串助手 - 图标
+
 字符串辅助类和工具
 
 java.util.Formatter 指南
@@ -79,7 +78,7 @@ Java RegExps 中的转义字符指南
 在 Java 中将字符串转换为 int 或整数
 
 在 Java 中将字符串转换为字符串
- 字符串 IO - 图标
+
 字符串 IO 转换
 
 Java 输入流转字符串（常用）
@@ -164,9 +163,8 @@ Checking for Empty or Blank Strings in Java
 
 How to Remove the Last Character of a String?
 
-Count Occurrences of a Char in a String
-
-Check if a String Is a Palindrome in Java
+- [Count Occurrences of a Char in a String](https://www.baeldung.com/java-count-chars)
+- [Check if a String Is a Palindrome in Java](https://www.baeldung.com/java-palindrome)
 
 Split a String in Java
 

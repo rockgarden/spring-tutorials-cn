@@ -106,54 +106,63 @@
 
     在本节中，我们将讨论与字符串 API 有关的一些问题。
 
-    Q11. 如何在 Java 中比较两个字符串？str1 == str2 与 str1.equals(str2) 有什么区别？
+    Q11. 如何在 Java 中[比较两个字符串](https://www.baeldung.com/java-compare-strings)？str1 == str2 与 str1.equals(str2) 有什么区别？
 
     我们可以用两种不同的方法比较字符串：使用等于操作符 ( == ) 和使用 equals() 方法。
 
     这两种方法截然不同：
 
-    运算符 (str1 == str2) 检查引用是否相等
-    方法 (str1.equals(str2)) 检查词法上的等价性
+    - 运算符 (str1 == str2) 检查引用是否相等
+    - 方法 (str1.equals(str2)) 检查词法上的等价性
+
     虽然如果两个字符串在词法上相等，那么 str1.intern() == str2.intern() 也是真的。
 
     通常，在比较两个字符串的内容时，我们应始终使用 String.equals。
 
     Q12. 如何在 Java 中分割字符串？
 
-    String 类本身提供了 String#split 方法，该方法接受正则表达式分隔符。它会返回一个 String[] 数组：
+    String 类本身提供了 [String#split](https://www.baeldung.com/string/split) 方法，该方法接受正则表达式分隔符。它会返回一个 String[] 数组：
 
-    String[] parts = "john,peter,mary".split(",")；
-    assertEquals(new String[] { "john", "peter", "mary" }, parts)；
+    ```java
+    String[] parts = "john,peter,mary".split(",");
+    assertEquals(new String[] { "john", "peter", "mary" }, parts);
+    ```
+
     split 的一个棘手之处是，当分割一个空字符串时，我们可能会得到一个非空数组：
 
-    assertEquals(new String[] { "" }, "".split(","))；
-    当然，split 只是拆分 Java 字符串的众多方法之一。
+    `assertEquals(new String[] { "" }, "".split(","));`
+
+    当然，split 只是[拆分Java字符串](https://www.baeldung.com/java-split-string)的众多方法之一。
 
     Q13. 什么是 Stringjoiner？
 
-    StringJoiner 是 Java 8 中引入的一个类，用于将单独的字符串连接成一个字符串，比如将一个颜色列表以逗号分隔的字符串形式返回。我们可以提供分隔符以及前缀和后缀：
+    [StringJoiner](https://www.baeldung.com/java-string-joiner) 是 Java 8 中引入的一个类，用于将单独的字符串连接成一个字符串，比如将一个颜色列表以逗号分隔的字符串形式返回。我们可以提供分隔符以及前缀和后缀：
 
-    StringJoiner joiner = new StringJoiner(",", "[", "]")；
+    ```java
+    StringJoiner joiner = new StringJoiner(",", "[", "]");
     joiner.add("Red")
     .add("Green")
-    .add("Blue")；
+    .add("Blue");
 
-    assertEquals("[Red,Green,Blue]", joiner.toString())；
+    assertEquals("[Red,Green,Blue]", joiner.toString());
+    ```
+
     Q14. 字符串、字符串缓冲区和字符串生成器之间的区别？
 
     字符串是不可变的。这意味着，如果我们试图更改或改变其值，Java 会创建一个全新的字符串。
 
     例如，如果我们在字符串 str1 创建后对其进行添加，则
 
-    字符串 str1 = "abc"；
-    str1 = str1 + "def"；
+    `String str1 = "abc";`
+    `str1 = str1 + "def";`
+
     那么 JVM 将不会修改 str1，而是创建一个全新的字符串。
 
     不过，对于大多数简单的情况，编译器会在内部使用 StringBuilder 并优化上述代码。
 
     但对于循环等更复杂的代码，编译器会创建一个全新的字符串，从而降低性能。这时，StringBuilder 和 StringBuffer 就派上用场了。
 
-    Java 中的 StringBuilder 和 StringBuffer 都能创建保存可变字符序列的对象。StringBuffer 是同步的，因此是线程安全的，而 StringBuilder 则不是。
+    Java 中的 [StringBuilder 和 StringBuffer](https://www.baeldung.com/java-string-builder-string-buffer) 都能创建保存可变字符序列的对象。StringBuffer 是同步的，因此是线程安全的，而 StringBuilder 则不是。
 
     由于 StringBuffer 中的额外同步通常是不必要的，我们通常可以通过选择 StringBuilder 来提高性能。
 
@@ -167,100 +176,129 @@
 
     使用 char[] 而不是 String 并不能完全确保信息的安全；它只是一种额外的措施，减少了恶意用户获取敏感信息的机会。
 
-    Q16. 字符串的 intern() 方法有什么作用？
+    Q16. 字符串的 [intern()](https://www.baeldung.com/string/intern) 方法有什么作用？
 
     intern() 方法会在堆中创建一个字符串对象的精确副本，并将其存储到 JVM 维护的字符串常量池中。
 
-    Java 会自动实习所有使用字符串字面量创建的字符串，但如果我们使用 new 操作符创建一个字符串，例如，String str = new String("abc")，Java 就会将其添加到堆中，就像添加其他对象一样。
+    Java 会自动实习(interns)所有使用字符串字面量创建的字符串，但如果我们使用 new 操作符创建一个字符串，例如，`String str = new String("abc")`，Java 就会将其添加到堆中，就像添加其他对象一样。
 
     我们可以调用 intern() 方法，告诉 JVM 如果字符串池中还不存在字符串，就将其添加到字符串池中，并返回该字符串的引用：
 
-    字符串 s1 = "Baeldung"；
-    String s2 = new String("Baeldung")；
-    String s3 = new String("Baeldung").intern()；
+    ```java
+    String s1 = "Baeldung";
+    String s2 = new String("Baeldung");
+    String s3 = new String("Baeldung").intern();
 
-    assertThat(s1 == s2).isFalse()；
-    assertThat(s1 == s3).isTrue()；
+    assertThat(s1 == s2).isFalse();
+    assertThat(s1 == s3).isTrue();
+    ```
+
     Q17. 如何在 Java 中将字符串转换为整数和将整数转换为字符串？
 
-    将字符串转换为整数的最直接方法是使用 Integer#parseInt：
+    将字符串[转换为整数](https://www.baeldung.com/java-convert-string-to-int-or-integer)的最直接方法是使用 Integer#parseInt：
 
-    int num = Integer.parseInt("22")；
+    `int num = Integer.parseInt("22");`
+
     要进行相反操作，我们可以使用 Integer#toString 命令：
 
-    字符串 s = Integer.toString(num)；
+    `String s = Integer.toString(num);`
+
     Q18. 什么是 String.format()？
 
-    String#format 使用指定的格式字符串和参数返回格式化字符串。
+    [String#format](https://www.baeldung.com/string/format) 使用指定的格式字符串和参数返回格式化字符串。
 
-    字符串 title = "Baeldung"；
-    String formatted = String.format("Title is %s", title)；
-    assertEquals（"Title is Baeldung"，formatted）；
+    ```java
+    String title = "Baeldung"; 
+    String formatted = String.format("Title is %s", title);
+    assertEquals("Title is Baeldung", formatted);
+    ```
+
     我们还需要记住指定用户的 Locale，除非我们可以接受操作系统的默认设置：
 
-    Locale usersLocale = Locale.ITALY；
-    assertEquals("1.024"、
-    String.format(usersLocale, "有 %,d 件衬衫可供选择。 祝你好运。", 1024))
+    ```java
+    Locale usersLocale = Locale.ITALY;
+    assertEquals("1.024",
+      String.format(usersLocale, "There are %,d shirts to choose from. Good luck.", 1024))
+    ```
+
     Q19. 如何将字符串转换成大写和小写？
 
-    字符串隐式提供了 String#toUpperCase 来将大小写转换为大写。
+    字符串隐式提供了 [String#toUpperCase](https://www.baeldung.com/string/to-upper-case) 来将大小写转换为大写。
 
     不过，Javadocs 提醒我们需要指定用户的 Locale 以确保正确性：
 
-    String s = "Welcome to Baeldung!"；
-    assertEquals("WELCOME TO BAELDUNG!", s.toUpperCase(Locale.US))；
-    同样，要转换为小写，我们可以使用 String#toLowerCase：
+    ```java
+    String s = "Welcome to Baeldung!";
+    assertEquals("WELCOME TO BAELDUNG!", s.toUpperCase(Locale.US));
+    ```
 
-    String s = "Welcome to Baeldung!"；
-    assertEquals("welcome to baeldung!", s.toLowerCase(Locale.UK))；
+    同样，要转换为小写，我们可以使用 [String#toLowerCase](https://www.baeldung.com/string/to-lower-case)：
+
+    ```java
+    String s = "Welcome to Baeldung!";
+    assertEquals("welcome to baeldung!", s.toLowerCase(Locale.UK));
+    ```
+
     Q20. 如何从字符串获取字符数组？
 
     String 提供了 toCharArray 功能，在 JDK9 之前，它返回内部字符数组的副本（在 JDK9+ 中，它将 String 转换为新的字符数组）：
 
-    char[] hello = "hello".toCharArray()；
-    assertArrayEquals(new String[] { 'h', 'e', 'l', 'l', 'o' }, hello)；
+    ```java
+    char[] hello = "hello".toCharArray();
+    assertArrayEquals(new String[] { 'h', 'e', 'l', 'l', 'o' }, hello);
+    ```
+
     Q21. 如何将 Java 字符串转换为字节数组？
 
-    默认情况下，方法 String#getBytes() 使用平台的默认字符集将字符串编码为字节数组。
+    默认情况下，方法 [String#getBytes()](https://www.baeldung.com/string/get-bytes) 使用平台的默认字符集将字符串编码为字节数组。
 
-    虽然 API 并不要求我们指定字符集，但为了确保安全性和可移植性，我们还是应该这样做：
+    虽然 API 并不要求我们指定字符集，但为了[确保安全性和可移植性](https://www.baeldung.com/java-char-encoding)，我们还是应该这样做：
 
-    byte[] byteArray2 = "efgh".getBytes(StandardCharsets.US_ASCII)；
-    byte[] byteArray3 = "ijkl".getBytes("UTF-8")；
+    ```java
+    byte[] byteArray2 = "efgh".getBytes(StandardCharsets.US_ASCII);
+    byte[] byteArray3 = "ijkl".getBytes("UTF-8");
+    ```
+
 4. 基于字符串的算法
 
-在本节中，我们将讨论一些与字符串有关的编程问题。
+    在本节中，我们将讨论一些与字符串有关的编程问题。
 
-Q22. 如何在 Java 中检查两个字符串是否为变位字符串？
+    Q22. 如何在 Java 中检查两个字符串是否为变位字符串？
 
-变位词是将另一个给定单词的字母重新排列形成的单词，例如 "car "和 "arc"。
+    变位词是将另一个给定单词的字母重新排列形成的单词，例如 "car "和 "arc"。
 
-首先，我们要检查两个字符串是否等长。
+    首先，我们要检查两个字符串是否等长。
 
-然后将它们转换为 char[] 数组，排序，然后检查是否相等。
+    然后将它们[转换为 char[] 数组，排序，然后检查是否相等](https://www.baeldung.com/java-sort-string-alphabetically)。
 
-Q23. 如何计算字符串中给定字符的出现次数？
+    Q23. 如何计算字符串中给定字符的出现次数？
 
-Java 8 确实简化了类似的聚合任务：
+    Java 8 确实简化了类似的聚合任务：
 
-long count = "hello".chars().filter(ch -> (char)ch == 'l').count()；
-assertEquals(2, count)；
-此外，还有其他一些计算 l 的好方法，包括循环、递归、正则表达式和外部库。
+    ```java
+    long count = "hello".chars().filter(ch -> (char)ch == 'l').count();
+    assertEquals(2, count);
+    ```
 
-Q24. 如何在 Java 中反转字符串？
+    此外，还有其他一些[计算l](https://www.baeldung.com/java-count-chars)的好方法，包括循环、递归、正则表达式和外部库。
 
-有很多方法可以做到这一点，最直接的方法是使用 StringBuilder（或 StringBuffer）中的反转方法：
+    Q24. 如何在 Java 中反转字符串？
 
-String reversed = new StringBuilder("baeldung").reverse().toString()；
-assertEquals("gnudleab", reversed)；
-Q25. 如何检查字符串是否是回文字符串？
+    有很多方法可以做到这一点，最直接的方法是使用 StringBuilder（或 StringBuffer）中的反转方法：
 
-回文字符串是指反向读法与正向读法相同的字符序列，如 "madam"、"radar "或 "level"。
+    ```java
+    String reversed = new StringBuilder("baeldung").reverse().toString();
+    assertEquals("gnudleab", reversed);
+    ```
 
-要检查一个字符串是否是回文字符串，我们可以开始在一个循环中前后遍历给定的字符串，每次遍历一个字符。当出现第一个不匹配字符时，循环退出。
+    Q25. 如何检查字符串是否是回文字符串？
+
+    [回文字符串](https://www.baeldung.com/java-palindrome-substrings)是指反向读法与正向读法相同的字符序列，如 "madam"、"radar"或 "level"。
+
+    要[检查一个字符串是否是回文](https://www.baeldung.com/java-palindrome)字符串，我们可以开始在一个循环中前后遍历给定的字符串，每次遍历一个字符。当出现第一个不匹配字符时，循环退出。
 
 5. 结论
 
-在本文中，我们讨论了一些最常见的字符串面试问题。
+    在本文中，我们讨论了一些最常见的字符串面试问题。
 
-本文使用的所有代码示例均可在 [GitHub](https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-strings) 上获取。
+    本文使用的所有代码示例均可在 [GitHub](https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-strings) 上获取。

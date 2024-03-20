@@ -44,7 +44,7 @@ public class CountCharsExampleUnitTest {
 
     @Test
     public void givenString_whenUsingReqExp_thenCountChars() {
-        Pattern pattern = Pattern.compile("[^e]*e");
+        Pattern pattern = Pattern.compile("e");
         Matcher matcher = pattern.matcher("elephant");
         int count = 0;
         while (matcher.find()) {
