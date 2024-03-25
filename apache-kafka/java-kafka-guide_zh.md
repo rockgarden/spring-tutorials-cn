@@ -5,6 +5,7 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 原理
 
 - [Apache Kafka 简介](../apache-kafka-2/apache-kafka_zh.md)
+- [Apache Kafka 中 GroupId 和 ConsumerId 的区别](../spring-kafka-3/apache-kafka-groupid-vs-consumerid_zh.md)
 - [使用Apache Kafka进行数据建模](../algorithms-modules/apache-kafka-data-modeling_zh.md)
 - [Apache ActiveMQ vs. Kafka](apache-activemq-vs-kafka_zh.md)
 
@@ -16,7 +17,7 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 
 >> Kafka 中的提交偏移量
 >> Redpanda 简介
->> Apache Kafka 中 GroupId 和 ConsumerId 的区别
+
 >> 理解 Java 中的 Kafka InstanceAlreadyExistsException
 >> 用 Java 查看 Kafka 头文件
 >> 使用 Spring Modulith 实现事件外部化
@@ -32,7 +33,6 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 >> 如何将 Kafka 消费者订阅到多个主题
 >> 将 JSON 文件数据导入 Kafka Topic
 >> Kafka 配置中的 bootstrap-server
->> 了解 Kafka 主题和分区
 >> 使用 AsyncAPI 和 Springwolf 记录 Spring 事件驱动 API
 >> 获取 Kafka 中某个 Topic 的分区计数
 >> 使用 Kafka Consumer API 从开始读取数据
@@ -72,7 +72,9 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 >> Dynamically Managing Kafka Listeners in Spring Boot
 >> Commit Offsets in Kafka
 >> Introduction to Redpanda
->> Difference Between GroupId and ConsumerId in Apache Kafka
+
+- [Difference Between GroupId and ConsumerId in Apache Kafka](https://www.baeldung.com/apache-kafka-groupid-vs-consumerid)
+
 >> Understanding Kafka InstanceAlreadyExistsException in Java
 >> View Kafka Headers in Java
 >> Event Externalization with Spring Modulith
