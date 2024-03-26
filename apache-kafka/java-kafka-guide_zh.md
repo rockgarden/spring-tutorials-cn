@@ -5,8 +5,11 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 原理
 
 - [Apache Kafka 简介](../apache-kafka-2/apache-kafka_zh.md)
-- [Apache Kafka 中 GroupId 和 ConsumerId 的区别](../spring-kafka-3/apache-kafka-groupid-vs-consumerid_zh.md)
 - [使用Apache Kafka进行数据建模](../algorithms-modules/apache-kafka-data-modeling_zh.md)
+- [使用消费者 API 创建 Kafka 监听器](../apache-kafka-2/kafka-create-listener-consumer-api_zh.md)
+- [Apache Kafka 中 GroupId 和 ConsumerId 的区别](../spring-kafka-3/apache-kafka-groupid-vs-consumerid_zh.md)
+- [在 Kafka 中向特定分区发送数据](../spring-kafka/kafka-send-data-partition_zh.md)
+- [使用 Apache Kafka 读取多个消息](../apache-kafka-2/kafka-read-multiple-messages_zh.md)
 - [Apache ActiveMQ vs. Kafka](apache-activemq-vs-kafka_zh.md)
 
 应用
@@ -17,13 +20,10 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 
 >> Kafka 中的提交偏移量
 >> Redpanda 简介
-
 >> 理解 Java 中的 Kafka InstanceAlreadyExistsException
 >> 用 Java 查看 Kafka 头文件
 >> 使用 Spring Modulith 实现事件外部化
 >> 如何在 Spring-Kafka 中捕获反序列化错误？
->> 使用 Apache Kafka 读取多个消息
->> 在 Kafka 中向特定分区发送数据
 >> 使用 Spring 为 Kafka 创建死信队列
 >> 使用消费者 API 创建 Kafka 监听器
 >> Spring Kafka 可信包功能
@@ -79,10 +79,12 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 >> View Kafka Headers in Java
 >> Event Externalization with Spring Modulith
 >> How to Catch Deserialization Errors in Spring-Kafka?
->> Read Multiple Messages with Apache Kafka
->> Sending Data to a Specific Partition in Kafka
+
+- [Read Multiple Messages with Apache Kafka](https://www.baeldung.com/kafka-read-multiple-messages)
+- [Sending Data to a Specific Partition in Kafka](https://www.baeldung.com/kafka-send-data-partition)
+
 >> Dead Letter Queue for Kafka With Spring
->> Creating a Kafka Listener Using the Consumer API
+- [Creating a Kafka Listener Using the Consumer API](https://www.baeldung.com/kafka-create-listener-consumer-api)
 >> Spring Kafka Trusted Packages Feature
 >> Manage Kafka Consumer Groups
 >> Ensuring Message Ordering in Kafka: Strategies and Configurations
