@@ -6,8 +6,11 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 
 - [Apache Kafka 简介](../apache-kafka-2/apache-kafka_zh.md)
 - [使用Apache Kafka进行数据建模](../algorithms-modules/apache-kafka-data-modeling_zh.md)
+- [使用 Java 创建 Kafka 主题](kafka-topic-creation_zh.md)
 - [使用消费者 API 创建 Kafka 监听器](../apache-kafka-2/kafka-create-listener-consumer-api_zh.md)
 - [Apache Kafka 中 GroupId 和 ConsumerId 的区别](../spring-kafka-3/apache-kafka-groupid-vs-consumerid_zh.md)
+- [Java 中的 KafkaStreams 简介](java-kafka-streams_zh.md)
+- [Kafka流与Kafka消费者](java-kafka-streams-vs-kafka-consumer_zh.md)
 - [在 Kafka 中向特定分区发送数据](../spring-kafka/kafka-send-data-partition_zh.md)
 - [使用 Apache Kafka 读取多个消息](../apache-kafka-2/kafka-read-multiple-messages_zh.md)
 - [Apache ActiveMQ vs. Kafka](apache-activemq-vs-kafka_zh.md)
@@ -25,7 +28,6 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 >> 使用 Spring Modulith 实现事件外部化
 >> 如何在 Spring-Kafka 中捕获反序列化错误？
 >> 使用 Spring 为 Kafka 创建死信队列
->> 使用消费者 API 创建 Kafka 监听器
 >> Spring Kafka 可信包功能
 >> 管理 Kafka 消费者组
 >> 确保 Kafka 中的消息排序： 策略和配置
@@ -51,8 +53,6 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 >> Apache Kafka 中的自定义序列化器
 >> 使用 Kafka 发送大消息
 >> 在 Apache Kafka 中监控消费者滞后情况
->> 使用 Java 创建 Kafka 主题
->> Kafka Streams vs. Kafka Consumer
 >> 使用 Docker 设置 Apache Kafka 指南
 >> 清理 Apache Kafka Topic 指南
 >> 在 Apache Kafka 中配置消息保留期
@@ -84,7 +84,9 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 - [Sending Data to a Specific Partition in Kafka](https://www.baeldung.com/kafka-send-data-partition)
 
 >> Dead Letter Queue for Kafka With Spring
+
 - [Creating a Kafka Listener Using the Consumer API](https://www.baeldung.com/kafka-create-listener-consumer-api)
+
 >> Spring Kafka Trusted Packages Feature
 >> Manage Kafka Consumer Groups
 >> Ensuring Message Ordering in Kafka: Strategies and Configurations
@@ -119,8 +121,10 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 >> Custom Serializers in Apache Kafka
 >> Send Large Messages With Kafka
 >> Monitor the Consumer Lag in Apache Kafka
->> Kafka Topic Creation Using Java
->> Kafka Streams vs. Kafka Consumer
+
+- [Kafka Topic Creation Using Java](https://www.baeldung.com/kafka-topic-creation)
+- [Kafka Streams vs. Kafka Consumer](https://www.baeldung.com/java-kafka-streams-vs-kafka-consumer)
+
 >> Guide to Setting Up Apache Kafka Using Docker
 >> Guide to Purging an Apache Kafka Topic
 >> Configuring Message Retention Period in Apache Kafka
@@ -134,4 +138,5 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 >> Introduction to Kafka Connectors
 >> Exactly Once Processing in Kafka with Java
 >> Building a Data Pipeline with Flink and Kafka
->> Introduction to KafkaStreams in Java
+
+- [Introduction to KafkaStreams in Java](https://www.baeldung.com/java-kafka-streams)
