@@ -1,4 +1,4 @@
-# 使用 Apache Kafka 读取多条消息
+# [使用 Apache Kafka 读取多条消息](https://www.baeldung.com/kafka-read-multiple-messages)
 
 [Data](https://www.baeldung.com/category/data)
 

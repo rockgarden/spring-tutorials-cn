@@ -6,12 +6,12 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 
 - [Apache Kafka 简介](../apache-kafka-2/apache-kafka_zh.md)
 - [使用Apache Kafka进行数据建模](../algorithms-modules/apache-kafka-data-modeling_zh.md)
-- [使用 Java 创建 Kafka 主题](kafka-topic-creation_zh.md)
-- [使用消费者 API 创建 Kafka 监听器](../apache-kafka-2/kafka-create-listener-consumer-api_zh.md)
+- [使用Java创建Kafka主题](kafka-topic-creation_zh.md)
+- [使用消费者API创建Kafka监听器](../apache-kafka-2/kafka-create-listener-consumer-api_zh.md)
 - [Apache Kafka 中 GroupId 和 ConsumerId 的区别](../spring-kafka-3/apache-kafka-groupid-vs-consumerid_zh.md)
-- [Java 中的 KafkaStreams 简介](java-kafka-streams_zh.md)
+- [Java中的KafkaStreams简介](java-kafka-streams_zh.md)
 - [Kafka流与Kafka消费者](java-kafka-streams-vs-kafka-consumer_zh.md)
-- [在 Kafka 中向特定分区发送数据](../spring-kafka/kafka-send-data-partition_zh.md)
+- [在Kafka中向特定分区发送数据](../spring-kafka/kafka-send-data-partition_zh.md)
 - [使用 Apache Kafka 读取多个消息](../apache-kafka-2/kafka-read-multiple-messages_zh.md)
 - [Apache ActiveMQ vs. Kafka](apache-activemq-vs-kafka_zh.md)
 
@@ -20,6 +20,8 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 - [使用 Spring 的 Apache Kafka 简介](../spring-kafka/spring-kafka_zh.md)
 - [了解 Kafka 主题和分区](../spring-kafka-2/kafka-topics-partitions_zh.md)
 - 在 Spring Boot 中动态管理 Kafka 监听器
+
+- [Kafka连接器介绍](kafka-connectors-guide_zh.md)
 
 >> Kafka 中的提交偏移量
 >> Redpanda 简介
@@ -60,32 +62,31 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 >> 使用 Kafka MockProducer
 >> 使用 Kafka MockConsumer
 >> 使用 Kafka、Spark Streaming 和 Cassandra 构建数据管道
->> Kafka 连接器介绍
 >> 使用 Java 在 Kafka 中进行精确一次处理
 >> 用 Flink 和 Kafka 构建数据管道
 >> Java 中的 KafkaStreams 简介
 
 ## [reference-tag](https://www.baeldung.com/tag/kafka)
 
-- [Intro to Apache Kafka with Spring](https://www.baeldung.com/spring-kafka)
+- [x] [Intro to Apache Kafka with Spring](https://www.baeldung.com/spring-kafka)
 
 >> Dynamically Managing Kafka Listeners in Spring Boot
 >> Commit Offsets in Kafka
 >> Introduction to Redpanda
 
-- [Difference Between GroupId and ConsumerId in Apache Kafka](https://www.baeldung.com/apache-kafka-groupid-vs-consumerid)
+- [x] [Difference Between GroupId and ConsumerId in Apache Kafka](https://www.baeldung.com/apache-kafka-groupid-vs-consumerid)
 
 >> Understanding Kafka InstanceAlreadyExistsException in Java
 >> View Kafka Headers in Java
 >> Event Externalization with Spring Modulith
 >> How to Catch Deserialization Errors in Spring-Kafka?
 
-- [Read Multiple Messages with Apache Kafka](https://www.baeldung.com/kafka-read-multiple-messages)
-- [Sending Data to a Specific Partition in Kafka](https://www.baeldung.com/kafka-send-data-partition)
+- [x] [Read Multiple Messages with Apache Kafka](https://www.baeldung.com/kafka-read-multiple-messages)
+- [x] [Sending Data to a Specific Partition in Kafka](https://www.baeldung.com/kafka-send-data-partition)
 
 >> Dead Letter Queue for Kafka With Spring
 
-- [Creating a Kafka Listener Using the Consumer API](https://www.baeldung.com/kafka-create-listener-consumer-api)
+- [x] [Creating a Kafka Listener Using the Consumer API](https://www.baeldung.com/kafka-create-listener-consumer-api)
 
 >> Spring Kafka Trusted Packages Feature
 >> Manage Kafka Consumer Groups
@@ -93,12 +94,12 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 >> Splitting Streams in Kafka
 >> How to Subscribe a Kafka Consumer to Multiple Topics
 
-- [Introduction to Apache Kafka](https://www.baeldung.com/apache-kafka)
+- [x] [Introduction to Apache Kafka](https://www.baeldung.com/apache-kafka)
 
 >> JSON File Data Into Kafka Topic
 >> bootstrap-server in Kafka Configuration
 
-- [Understanding Kafka Topics and Partitions](https://www.baeldung.com/kafka-topics-partitions)
+- [x] [Understanding Kafka Topics and Partitions](https://www.baeldung.com/kafka-topics-partitions)
 
 >> Documenting Spring Event-Driven API Using AsyncAPI and Springwolf
 >> Get Partition Count for a Topic in Kafka
@@ -113,7 +114,7 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 >> Guide to Check if Apache Kafka Server Is Running
 >> Get the Number of Messages in an Apache Kafka Topic
 
-- [Apache ActiveMQ vs. Kafka](https://www.baeldung.com/apache-activemq-vs-kafka)
+- [x] [Apache ActiveMQ vs. Kafka](https://www.baeldung.com/apache-activemq-vs-kafka)
 
 >> Kafka Streams With Spring Boot
 >> Connect to Apache Kafka Running in Docker
@@ -122,8 +123,8 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 >> Send Large Messages With Kafka
 >> Monitor the Consumer Lag in Apache Kafka
 
-- [Kafka Topic Creation Using Java](https://www.baeldung.com/kafka-topic-creation)
-- [Kafka Streams vs. Kafka Consumer](https://www.baeldung.com/java-kafka-streams-vs-kafka-consumer)
+- [x] [Kafka Topic Creation Using Java](https://www.baeldung.com/kafka-topic-creation)
+- [x] [Kafka Streams vs. Kafka Consumer](https://www.baeldung.com/java-kafka-streams-vs-kafka-consumer)
 
 >> Guide to Setting Up Apache Kafka Using Docker
 >> Guide to Purging an Apache Kafka Topic
@@ -135,8 +136,10 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 >> Using Kafka MockProducer
 >> Using Kafka MockConsumer
 >> Building a Data Pipeline with Kafka, Spark Streaming and Cassandra
->> Introduction to Kafka Connectors
+
+- [x] Introduction to Kafka Connectors
+
 >> Exactly Once Processing in Kafka with Java
 >> Building a Data Pipeline with Flink and Kafka
 
-- [Introduction to KafkaStreams in Java](https://www.baeldung.com/java-kafka-streams)
+- [x] [Introduction to KafkaStreams in Java](https://www.baeldung.com/java-kafka-streams)
