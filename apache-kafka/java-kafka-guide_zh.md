@@ -19,9 +19,12 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 
 - [使用 Spring 的 Apache Kafka 简介](../spring-kafka/spring-kafka_zh.md)
 - [了解 Kafka 主题和分区](../spring-kafka-2/kafka-topics-partitions_zh.md)
-- 在 Spring Boot 中动态管理 Kafka 监听器
+- 在Spring Boot中动态管理Kafka监听器
 
 - [Kafka连接器介绍](kafka-connectors-guide_zh.md)
+- [使用 MQTT 和 MongoDB 的 Kafka 连接示例](kafka-connect-mqtt-mongodb_zh.md)
+- [使用 Kafka MockProducer](kafka-mockproducer_zh.md)
+- [使用 Kafka MockConsumer](kafka-mockconsumer_zh.md)
 
 >> Kafka 中的提交偏移量
 >> Redpanda 简介
@@ -59,8 +62,7 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 >> 清理 Apache Kafka Topic 指南
 >> 在 Apache Kafka 中配置消息保留期
 >> 测试 Kafka 和 Spring Boot
->> 使用 Kafka MockProducer
->> 使用 Kafka MockConsumer
+
 >> 使用 Kafka、Spark Streaming 和 Cassandra 构建数据管道
 >> 使用 Java 在 Kafka 中进行精确一次处理
 >> 用 Flink 和 Kafka 构建数据管道
@@ -133,8 +135,10 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 - Data Modeling with Apache Kafka
 
 >> Testing Kafka and Spring Boot
->> Using Kafka MockProducer
->> Using Kafka MockConsumer
+
+- Using Kafka MockProducer
+- Using Kafka MockConsumer
+
 >> Building a Data Pipeline with Kafka, Spark Streaming and Cassandra
 
 - [x] Introduction to Kafka Connectors

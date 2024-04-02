@@ -1,5 +1,9 @@
 # [Kafka连接器介绍](https://www.baeldung.com/kafka-connectors-guide)
 
+[Data](https://www.baeldung.com/category/data)
+
+[Kafka](https://www.baeldung.com/tag/kafka)
+
 1. 概述
 
     Apache Kafka® 是一个分布式流平台。在上一篇教程中，我们讨论了如何使用[Spring实现Kafka消费者和生产者](https://www.baeldung.com/spring-kafka)。

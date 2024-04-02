@@ -1,5 +1,9 @@
 # [Java中的KafkaStreams简介](https://www.baeldung.com/java-kafka-streams)
 
+[Cloud](https://www.baeldung.com/category/cloud) [Data](https://www.baeldung.com/category/data)
+
+[Kafka](https://www.baeldung.com/tag/kafka)
+
 1. 概述
 
     本文将介绍 [KafkaStreams](https://kafka.apache.org/documentation/streams/) 库。
