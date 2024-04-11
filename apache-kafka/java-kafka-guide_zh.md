@@ -40,7 +40,8 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 - [用Flink和Kafka构建数据管道](kafka-flink-data-pipeline_zh.md)
 
 - [使用 Spring 的 Apache Kafka 简介](../spring-kafka/spring-kafka_zh.md)
-
+- [测试 Kafka 和 Spring Boot](../spring-kafka/spring-boot-kafka-testing_zh.md)
+- [在 Apache Kafka 中监控消费者滞后情况](../spring-kafka/java-kafka-consumer-lag_zh.md)
 - 在Spring Boot中动态管理Kafka监听器
 
 >> Redpanda 简介
@@ -63,11 +64,9 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 >> 连接到在 Docker 中运行的 Apache Kafka
 >> 使用 Spring Boot 配置 Kafka SSL
 >> 使用 Kafka 发送大消息
->> 在 Apache Kafka 中监控消费者滞后情况
 >> 使用 Docker 设置 Apache Kafka 指南
 >> 清理 Apache Kafka Topic 指南
 >> 在 Apache Kafka 中配置消息保留期
->> 测试 Kafka 和 Spring Boot
 >> 使用 Kafka、Spark Streaming 和 Cassandra 构建数据管道
 >> Java 中的 KafkaStreams 简介
 
@@ -140,25 +139,22 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 - Custom Serializers in Apache Kafka
 
 >> Send Large Messages With Kafka
->> Monitor the Consumer Lag in Apache Kafka
-
-- [x] [Kafka Topic Creation Using Java](https://www.baeldung.com/kafka-topic-creation)
-- [x] [Kafka Streams vs. Kafka Consumer](https://www.baeldung.com/java-kafka-streams-vs-kafka-consumer)
+- Monitor the Consumer Lag in Apache Kafka
+- [Kafka Topic Creation Using Java](https://www.baeldung.com/kafka-topic-creation)
+- [Kafka Streams vs. Kafka Consumer](https://www.baeldung.com/java-kafka-streams-vs-kafka-consumer)
 
 >> Guide to Setting Up Apache Kafka Using Docker
 >> Guide to Purging an Apache Kafka Topic
 >> Configuring Message Retention Period in Apache Kafka
 
 - Data Modeling with Apache Kafka
-
->> Testing Kafka and Spring Boot
-
+- Testing Kafka and Spring Boot
 - Using Kafka MockProducer
 - Using Kafka MockConsumer
 
- Building a Data Pipeline with Kafka, Spark Streaming and Cassandra
+>> Building a Data Pipeline with Kafka, Spark Streaming and Cassandra
 
-- [x] Introduction to Kafka Connectors
+- Introduction to Kafka Connectors
 - Exactly Once Processing in Kafka with Java
 - Building a Data Pipeline with Flink and Kafka
-- [x] [Introduction to KafkaStreams in Java](https://www.baeldung.com/java-kafka-streams)
+- [Introduction to KafkaStreams in Java](https://www.baeldung.com/java-kafka-streams)
