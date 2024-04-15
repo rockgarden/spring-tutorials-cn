@@ -25,6 +25,7 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 - [确保 Kafka 中的消息排序：策略和配置](../apache-kafka-2/kafka-message-ordering_zh.md)
 - [使用 Apache Kafka 读取多个消息](../apache-kafka-2/kafka-read-multiple-messages_zh.md)
 - [向Kafka消息添加自定义标题](../apache-kafka-2/java-kafka-custom-headers_zh.md)
+- [使用 Kafka 发送大消息](../spring-kafka/java-kafka-send-large-message_zh.md)
 
 - [使用Java在Kafka中进行精确一次处理](kafka-exactly-once_zh.md)
 - [Apache ActiveMQ vs. Kafka](apache-activemq-vs-kafka_zh.md)
@@ -41,7 +42,9 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 
 - [使用 Spring 的 Apache Kafka 简介](../spring-kafka/spring-kafka_zh.md)
 - [测试 Kafka 和 Spring Boot](../spring-kafka/spring-boot-kafka-testing_zh.md)
+- [使用 Spring Boot 的 Kafka 流](../spring-kafka/spring-boot-kafka-streams_zh.md)
 - [在 Apache Kafka 中监控消费者滞后情况](../spring-kafka/java-kafka-consumer-lag_zh.md)
+- [在 Kafka 消费者中实现重试](../spring-kafka/spring-retry-kafka-consumer_zh.md)
 - 在Spring Boot中动态管理Kafka监听器
 
 >> Redpanda 简介
@@ -57,13 +60,11 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 >> 将 JSON 文件数据导入 Kafka Topic
 >> 使用 AsyncAPI 和 Springwolf 记录 Spring 事件驱动 API
 >> Spring Kafka： 在同一个主题上配置多个监听器
->> 在 Kafka 消费者中实现重试
 >> Kafka 从 ZooKeeper 到 Kraft 的转变
 >> 流平台中的消息传递语义
->> 使用 Spring Boot 的 Kafka 流
+
 >> 连接到在 Docker 中运行的 Apache Kafka
 >> 使用 Spring Boot 配置 Kafka SSL
->> 使用 Kafka 发送大消息
 >> 使用 Docker 设置 Apache Kafka 指南
 >> 清理 Apache Kafka Topic 指南
 >> 在 Apache Kafka 中配置消息保留期
@@ -123,7 +124,9 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 - Add Custom Headers to a Kafka Message
 
 >> Spring Kafka: Configure Multiple Listeners on Same Topic
->> Implementing Retry in Kafka Consumer
+
+- Implementing Retry in Kafka Consumer
+
 >> Kafka’s Shift from ZooKeeper to Kraft
 >> Message Delivery Semantics in Streaming Platforms
 
@@ -132,13 +135,14 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 - Get the Number of Messages in an Apache Kafka Topic
 - [Apache ActiveMQ vs. Kafka](https://www.baeldung.com/apache-activemq-vs-kafka)
 
->> Kafka Streams With Spring Boot
+- Kafka Streams With Spring Boot
+
 >> Connect to Apache Kafka Running in Docker
 >> Configuring Kafka SSL Using Spring Boot
 
 - Custom Serializers in Apache Kafka
 
->> Send Large Messages With Kafka
+- Send Large Messages With Kafka
 - Monitor the Consumer Lag in Apache Kafka
 - [Kafka Topic Creation Using Java](https://www.baeldung.com/kafka-topic-creation)
 - [Kafka Streams vs. Kafka Consumer](https://www.baeldung.com/java-kafka-streams-vs-kafka-consumer)
