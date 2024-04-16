@@ -41,10 +41,12 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 - [用Flink和Kafka构建数据管道](kafka-flink-data-pipeline_zh.md)
 
 - [使用 Spring 的 Apache Kafka 简介](../spring-kafka/spring-kafka_zh.md)
+- [Spring Kafka：在同一个主题上配置多个监听器](../spring-kafka-2/spring-kafka-multiple-listeners-same-topic_zh.md)
 - [测试 Kafka 和 Spring Boot](../spring-kafka/spring-boot-kafka-testing_zh.md)
 - [使用 Spring Boot 的 Kafka 流](../spring-kafka/spring-boot-kafka-streams_zh.md)
 - [在 Apache Kafka 中监控消费者滞后情况](../spring-kafka/java-kafka-consumer-lag_zh.md)
 - [在 Kafka 消费者中实现重试](../spring-kafka/spring-retry-kafka-consumer_zh.md)
+
 - 在Spring Boot中动态管理Kafka监听器
 
 >> Redpanda 简介
@@ -59,10 +61,8 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 >> 如何将 Kafka 消费者订阅到多个主题
 >> 将 JSON 文件数据导入 Kafka Topic
 >> 使用 AsyncAPI 和 Springwolf 记录 Spring 事件驱动 API
->> Spring Kafka： 在同一个主题上配置多个监听器
 >> Kafka 从 ZooKeeper 到 Kraft 的转变
 >> 流平台中的消息传递语义
-
 >> 连接到在 Docker 中运行的 Apache Kafka
 >> 使用 Spring Boot 配置 Kafka SSL
 >> 使用 Docker 设置 Apache Kafka 指南
@@ -123,7 +123,7 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 - Get Last N Messages in Apache Kafka Topic
 - Add Custom Headers to a Kafka Message
 
->> Spring Kafka: Configure Multiple Listeners on Same Topic
+- Spring Kafka: Configure Multiple Listeners on Same Topic
 
 - Implementing Retry in Kafka Consumer
 
