@@ -1,4 +1,4 @@
-# 探索新的Spring Cloud Gateway
+# [探索新的Spring Cloud Gateway](https://www.baeldung.com/spring-cloud-gateway)
 
 1. 概述
 
@@ -35,7 +35,7 @@
     注意我们是如何利用这个API的主要构建模块的。
 
     - Route - 网关的主要API。它由一个给定的标识（ID）、一个目的地（URI）和一组谓词和过滤器定义。
-    - Predicate - 一个Java 8的谓词--用于使用头信息、方法或参数来匹配HTTP请求。
+    - Predicate - 一个Java 8的谓词-用于使用头信息、方法或参数来匹配HTTP请求。
     - Filter - 一个标准的Spring WebFilter。
 
 3. 动态路由
@@ -61,7 +61,7 @@
 
     Spring Cloud Gateway使用Spring WebFlux HandlerMapping基础设施匹配路由。
 
-    它还包括许多内置的路由谓词因子。所有这些谓词都匹配HTTP请求的不同属性。多个路由谓词因子可以通过逻辑 "和 "来组合。
+    它还包括许多内置的路由谓词因子。所有这些谓词都匹配HTTP请求的不同属性。多个路由谓词因子可以通过逻辑 "和" 来组合。
 
     路由匹配可以通过编程方式应用，也可以通过配置属性文件使用不同类型的路由谓词因子。
 
@@ -177,7 +177,7 @@
         }
         ```
 
-        应用程序启动后，我们可以访问网址 "<http://localhost/actuator/gateway/routes/baeldung_route> "来检查所有创建的路由配置。
+        应用程序启动后，我们可以访问网址 <http://localhost/actuator/gateway/routes/baeldung_route> 来检查所有创建的路由配置。
 
         ```json
         {
@@ -197,5 +197,3 @@
 9. 总结
 
     在这篇文章中，我们探索了作为Spring Cloud Gateway一部分的一些功能和组件。这个新的API为网关和代理支持提供了开箱即用的工具。
-
-    这里介绍的例子可以在我们的[GitHub](https://github.com/eugenp/tutorials/tree/master/spring-cloud-modules/spring-cloud-gateway)资源库中找到。
