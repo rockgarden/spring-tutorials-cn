@@ -12,10 +12,13 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 - [Apache Kafka 中 GroupId 和 ConsumerId 的区别](../spring-kafka-3/apache-kafka-groupid-vs-consumerid_zh.md)
 - [Java中的KafkaStreams简介](java-kafka-streams_zh.md)
 - [Kafka流与Kafka消费者](java-kafka-streams-vs-kafka-consumer_zh.md)
+- [在 Kafka 中分割流](../spring-kafka-2/kafka-splitting-streams_zh.md)
 
 - [Kafka中的提交偏移量](../apache-kafka-3/kafka-commit-offsets_zh.md)
 
 - [使用Java创建Kafka主题](kafka-topic-creation_zh.md)
+- [如何将 Kafka 消费者订阅到多个主题](../spring-kafka-2/spring-kafka-multiple-listeners-same-topic_zh.md)
+- 管[理 Kafka 消费者组](../spring-kafka-2/kafka-manage-consumer-groups_zh.md)
 - [获取 Kafka 主题中的消息数量](../spring-kafka/java-kafka-count-topic-messages_zh.md)
 - [获取 Kafka 中某个 Topic 的分区计数](../apache-kafka-2/java-kafka-partition-count-topic_zh.md)
 - [获取 Kafka Topic 中的最后 N 条消息](../apache-kafka-2/java-apache-kafka-get-last-n-messages_zh.md)
@@ -46,7 +49,8 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 - [使用 Spring Boot 的 Kafka 流](../spring-kafka/spring-boot-kafka-streams_zh.md)
 - [在 Apache Kafka 中监控消费者滞后情况](../spring-kafka/java-kafka-consumer-lag_zh.md)
 - [在 Kafka 消费者中实现重试](../spring-kafka/spring-retry-kafka-consumer_zh.md)
-
+- [使用 Spring 为 Kafka 创建死信队列](../spring-kafka-2/kafka-spring-dead-letter-queue_zh.md)
+- [使用 Spring Boot 配置 Kafka SSL](../spring-kafka-2/spring-boot-kafka-ssl_zh.md)
 - 在Spring Boot中动态管理Kafka监听器
 
 >> Redpanda 简介
@@ -54,11 +58,7 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 >> 用 Java 查看 Kafka 头文件
 >> 使用 Spring Modulith 实现事件外部化
 >> 如何在 Spring-Kafka 中捕获反序列化错误？
->> 使用 Spring 为 Kafka 创建死信队列
 >> Spring Kafka 可信包功能
->> 管理 Kafka 消费者组
->> 在 Kafka 中分割流
->> 如何将 Kafka 消费者订阅到多个主题
 >> 将 JSON 文件数据导入 Kafka Topic
 >> 使用 AsyncAPI 和 Springwolf 记录 Spring 事件驱动 API
 >> Kafka 从 ZooKeeper 到 Kraft 的转变
@@ -98,12 +98,11 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 - [Creating a Kafka Listener Using the Consumer API](https://www.baeldung.com/kafka-create-listener-consumer-api)
 
 >> Spring Kafka Trusted Packages Feature
->> Manage Kafka Consumer Groups
 
+- Manage Kafka Consumer Groups
 - Ensuring Message Ordering in Kafka: Strategies and Configurations
-
->> Splitting Streams in Kafka
->> How to Subscribe a Kafka Consumer to Multiple Topics
+- Splitting Streams in Kafka
+- How to Subscribe a Kafka Consumer to Multiple Topics
 
 - [Introduction to Apache Kafka](https://www.baeldung.com/apache-kafka)
 
