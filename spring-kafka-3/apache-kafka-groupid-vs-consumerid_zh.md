@@ -1,4 +1,4 @@
-# Apache Kafka 中 GroupId 和 ConsumerId 的区别
+# [Apache Kafka 中 GroupId 和 ConsumerId 的区别](https://www.baeldung.com/apache-kafka-groupid-vs-consumerid)
 
 [Data](https://www.baeldung.com/category/data)
 
@@ -89,5 +89,3 @@
 7. 结论
 
     在本文中，我们了解了与 Kafka 消费者相关的一些关键标识符： GroupId、ClientId 和 ConsumerId。现在我们了解了它们的用途以及如何配置它们。
-
-    与往常一样，我们可以在 [GitHub](https://github.com/eugenp/tutorials/tree/master/spring-kafka-3) 上获取完整的源代码。

@@ -18,11 +18,11 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 
 - [使用Java创建Kafka主题](kafka-topic-creation_zh.md)
 - [如何将 Kafka 消费者订阅到多个主题](../spring-kafka-2/spring-kafka-multiple-listeners-same-topic_zh.md)
-- 管[理 Kafka 消费者组](../spring-kafka-2/kafka-manage-consumer-groups_zh.md)
+- [管理 Kafka 消费者组](../spring-kafka-2/kafka-manage-consumer-groups_zh.md)
 - [获取 Kafka 主题中的消息数量](../spring-kafka/java-kafka-count-topic-messages_zh.md)
 - [获取 Kafka 中某个 Topic 的分区计数](../apache-kafka-2/java-kafka-partition-count-topic_zh.md)
 - [获取 Kafka Topic 中的最后 N 条消息](../apache-kafka-2/java-apache-kafka-get-last-n-messages_zh.md)
-
+- [用 Java 查看 Kafka 头文件](../spring-kafka-3/java-kafka-view-headers_zh.md)
 - [在Kafka中向特定分区发送数据](../spring-kafka/kafka-send-data-partition_zh.md)
 - [向 Kafka 发送消息是否需要密钥？](../apache-kafka-2/java-kafka-message-key_zh.md)
 - [确保 Kafka 中的消息排序：策略和配置](../apache-kafka-2/kafka-message-ordering_zh.md)
@@ -52,12 +52,11 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 - [使用 Spring 为 Kafka 创建死信队列](../spring-kafka-2/kafka-spring-dead-letter-queue_zh.md)
 - [使用 Spring Boot 配置 Kafka SSL](../spring-kafka-2/spring-boot-kafka-ssl_zh.md)
 - 在Spring Boot中动态管理Kafka监听器
+- [理解 Java 中的 Kafka InstanceAlreadyExistsException](../spring-kafka-3/kafka-instancealreadyexistsexception_zh.md)
+- [如何在 Spring-Kafka 中捕获反序列化错误？](../spring-kafka-3/spring-kafka-deserialization-errors_zh.md)
 
 >> Redpanda 简介
->> 理解 Java 中的 Kafka InstanceAlreadyExistsException
->> 用 Java 查看 Kafka 头文件
 >> 使用 Spring Modulith 实现事件外部化
->> 如何在 Spring-Kafka 中捕获反序列化错误？
 >> Spring Kafka 可信包功能
 >> 将 JSON 文件数据导入 Kafka Topic
 >> 使用 AsyncAPI 和 Springwolf 记录 Spring 事件驱动 API
@@ -84,12 +83,12 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 >> Introduction to Redpanda
 
 - [x] [Difference Between GroupId and ConsumerId in Apache Kafka](https://www.baeldung.com/apache-kafka-groupid-vs-consumerid)
+- Understanding Kafka InstanceAlreadyExistsException in Java
+- View Kafka Headers in Java
 
->> Understanding Kafka InstanceAlreadyExistsException in Java
->> View Kafka Headers in Java
 >> Event Externalization with Spring Modulith
->> How to Catch Deserialization Errors in Spring-Kafka?
 
+- How to Catch Deserialization Errors in Spring-Kafka?
 - [Read Multiple Messages with Apache Kafka](https://www.baeldung.com/kafka-read-multiple-messages)
 - [Sending Data to a Specific Partition in Kafka](https://www.baeldung.com/kafka-send-data-partition)
 
@@ -103,7 +102,6 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 - Ensuring Message Ordering in Kafka: Strategies and Configurations
 - Splitting Streams in Kafka
 - How to Subscribe a Kafka Consumer to Multiple Topics
-
 - [Introduction to Apache Kafka](https://www.baeldung.com/apache-kafka)
 
 >> JSON File Data Into Kafka Topic
@@ -137,7 +135,8 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 - Kafka Streams With Spring Boot
 
 >> Connect to Apache Kafka Running in Docker
->> Configuring Kafka SSL Using Spring Boot
+
+- Configuring Kafka SSL Using Spring Boot
 
 - Custom Serializers in Apache Kafka
 
