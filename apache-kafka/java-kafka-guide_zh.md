@@ -83,11 +83,11 @@ Apache Kafka 是一个分布式流处理系统。通过以下指南了解如何�
 
 ## [reference-tag](https://www.baeldung.com/tag/kafka)
 
-- [x] [Intro to Apache Kafka with Spring](https://www.baeldung.com/spring-kafka)
+- [Intro to Apache Kafka with Spring](https://www.baeldung.com/spring-kafka)
 - Dynamically Managing Kafka Listeners in Spring Boot
 - Commit Offsets in Kafka
 - Introduction to Redpanda
-- [x] [Difference Between GroupId and ConsumerId in Apache Kafka](https://www.baeldung.com/apache-kafka-groupid-vs-consumerid)
+- [Difference Between GroupId and ConsumerId in Apache Kafka](https://www.baeldung.com/apache-kafka-groupid-vs-consumerid)
 - Understanding Kafka InstanceAlreadyExistsException in Java
 - View Kafka Headers in Java
 - Event Externalization with Spring Modulith
