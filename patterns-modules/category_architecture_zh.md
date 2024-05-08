@@ -9,7 +9,9 @@
 >> Java 和 Spring 中的事务简介
 >> Apache Pulsar 简介
 >> Micronaut 框架简介
->> SOLID 原理扎实指南
+
+- [SOLID 原理扎实指南](/solid/solid-principles_zh.md)
+
 >> 在 Java 运行时添加骆驼路由
 >> 实体和 DTO 之间的区别
 >> 确保 Kafka 中的消息排序： 策略和配置
@@ -59,7 +61,9 @@
 >> REST API 错误处理的最佳实践
 >> Spring Boot 微服务中的十二要素方法论
 >> Apache Mesos 指南
->> Java 中的依赖反转原则
+
+- [Java 中的依赖反转原则](/dip/java-dependency-inversion-principle_zh.md)
+
 >> 使用 Kubernetes 和 Spring Boot 自愈应用程序
 >> 使用 Oracle Helidon 的微服务
 >> Apache Storm 简介
@@ -82,15 +86,14 @@
 
 ## [Architecture](https://www.baeldung.com/category/architecture)
 
-Have a look at some common architectural patterns and issues in web and other enterprise applications.
-
-Design Pattern (23)Microservices (7)Servlet (4)Apache Camel (3)Kafka (3)Observability (3)Messaging (2)AWS (2)Lightrun (2)JSP (2)Transactions (2)DDD (2)
 >> Introduction to Lightrun with Java
 >> Observability in Distributed Systems
 >> Introduction to Transactions in Java and Spring
 >> Introduction to Apache Pulsar
 >> Introduction to Micronaut Framework
->> A Solid Guide to SOLID Principles
+
+- A Solid Guide to SOLID Principles
+
 >> Add Camel Route at Runtime in Java
 >> Differences Between Entities and DTOs
 >> Ensuring Message Ordering in Kafka: Strategies and Configurations
@@ -140,7 +143,9 @@ Design Pattern (23)Microservices (7)Servlet (4)Apache Camel (3)Kafka (3)Observab
 >> Best Practices for REST API Error Handling
 >> Twelve-Factor Methodology in a Spring Boot Microservice
 >> A Guide to Apache Mesos
->> The Dependency Inversion Principle in Java
+
+- The Dependency Inversion Principle in Java
+
 >> Self-Healing Applications with Kubernetes and Spring Boot
 >> Microservices with Oracle Helidon
 >> Intro to Apache Storm
