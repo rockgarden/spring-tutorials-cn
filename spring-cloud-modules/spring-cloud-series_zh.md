@@ -13,6 +13,7 @@
 - [Spring云合同简介](/spring-cloud-contract/spring-cloud-contract_zh.md)
 - [探索新的Spring云网关](/spring-cloud-gateway/spring-cloud-gateway_zh.md)
 - [Spring Cloud OpenFeign简介](/spring-cloud-openfeign/spring-cloud-openfeign_zh.md)
+- [Spring Cloud 断路器快速指南](./spring-cloud-circuit-breaker/spring-cloud-circuit-breaker_zh.md)
 
 ## 更进一步
 
@@ -28,7 +29,7 @@
 ## Spring Cloud Netflix
 
 - Spring Cloud Netflix简介 - Eureka
-- Spring Cloud Netflix指南--Hystrix
+- [Spring Cloud Netflix指南 - Hystrix](./spring-cloud-hystrix/spring-cloud-netflix-hystrix_zh.md)
 - Spring Cloud Netflix中的速率限制Zuul
 - 使用Zuul和Eureka进行负载平衡的例子
 - 使用Spring Cloud的Netflix Archaius介绍
