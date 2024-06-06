@@ -326,7 +326,6 @@
                             </excludes>
                         </configuration>
                     </plugin>
-
                 </plugins>
             </build>
 
@@ -367,6 +366,11 @@
                 <module>video-tutorials</module>
             </modules>
 
+            <properties>
+                <maven.compiler.source>1.8</maven.compiler.source>
+                <maven.compiler.target>1.8</maven.compiler.target>
+            </properties>
+
         </profile>
 
 
@@ -374,7 +378,6 @@
             <id>default-heavy</id>
             <build>
                 <plugins>
-
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-surefire-plugin</artifactId>
@@ -396,7 +399,6 @@
                             </excludes>
                         </configuration>
                     </plugin>
-
                 </plugins>
             </build>
 
@@ -421,7 +423,6 @@
 
         <profile>
             <id>integration-jdk8</id>
-
             <build>
                 <plugins>
                     <plugin>
@@ -477,11 +478,15 @@
                 <module>video-tutorials</module>
             </modules>
 
+            <properties>
+                <maven.compiler.source>1.8</maven.compiler.source>
+                <maven.compiler.target>1.8</maven.compiler.target>
+            </properties>
+
         </profile>
 
         <profile>
             <id>integration-heavy</id>
-
             <build>
                 <plugins>
                     <plugin>
@@ -522,7 +527,6 @@
 
         <profile>
             <id>default</id>
-
             <build>
                 <plugins>
                     <plugin>
@@ -780,7 +784,6 @@
 
         <profile>
             <id>integration</id>
-
             <build>
                 <plugins>
                     <plugin>
@@ -1093,7 +1096,7 @@
         <jstl.version>1.2</jstl.version>
         <jackson.version>2.16.1</jackson.version>
         <commons-fileupload.version>1.5</commons-fileupload.version>
-        <junit-platform.version>1.9.2</junit-platform.version>
+        <junit-platform.version>1.11.0-M1</junit-platform.version>
         <junit-jupiter.version>5.10.2</junit-jupiter.version>
         <junit-platform-surefire-provider.version>1.3.2</junit-platform-surefire-provider.version>
         <directory-maven-plugin.version>1.0</directory-maven-plugin.version>
