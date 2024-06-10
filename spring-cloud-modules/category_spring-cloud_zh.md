@@ -31,7 +31,9 @@
 >> 利用 OAuth 2.0 模式使用 Spring 云网关
 >> Spring 云负载平衡器介绍
 >> 使用 Spring 云网关的 Dapr 介绍
->> 阿里巴巴哨兵介绍
+
+- 阿里巴巴哨兵介绍
+
 >> 使用 Open Feign 上传文件
 >> 利用 Spring Cloud Netflix 和 Feign 进行集成测试
 >> Netflix Feign 与 OpenFeign 的区别
@@ -113,7 +115,9 @@
 >> Using Spring Cloud Gateway with OAuth 2.0 Patterns
 >> Introduction to Spring Cloud Load Balancer
 >> An Intro to Dapr with Spring Cloud Gateway
->> Introduction to Alibaba Sentinel
+
+- Introduction to Alibaba Sentinel
+
 >> File Upload With Open Feign
 >> Integration Tests With Spring Cloud Netflix and Feign
 >> Differences Between Netflix Feign and OpenFeign

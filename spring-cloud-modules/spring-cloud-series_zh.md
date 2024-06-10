@@ -20,49 +20,52 @@
 - [带有Zuul代理的Spring REST](/spring-cloud-zuul/spring-rest-with-zuul-proxy_zh.md)
 - [Spring Cloud 总线](/spring-cloud-bus/spring-cloud-bus_zh.md)
 - [Spring Cloud Consul快速指南](/spring-cloud-consul/spring-cloud-consul_zh.md)
-- 使用Spring Cloud App Starter
-- [Spring Cloud--Bootstrapping](/spring-cloud-bootstrap/spring-cloud-bootstrapping_zh.md)
-- Spring Cloud--保障服务安全
-- Spring CloudVault介绍
-- 编写自定义Spring Cloud网关过滤器
+- [使用Spring Cloud App Starter](/spring-cloud-stream-starters/spring-cloud-app-starter_zh.md)
+- [Spring Cloud - Bootstrapping](/spring-cloud-bootstrap/spring-cloud-bootstrapping_zh.md)
+- [Spring Cloud - 保障服务安全](./spring-cloud-bootstrap/spring-cloud-securing-services_zh.md)
+- [Spring CloudVault 介绍](./spring-cloud-vault/spring-cloud-vault_zh.md)
+- [编写自定义Spring Cloud网关过滤器](/spring-cloud-gateway/spring-cloud-custom-gateway-filters_zh.md)
 
 ## Spring Cloud Netflix
 
-- Spring Cloud Netflix简介 - Eureka
+- [Spring Cloud Netflix简介 - Eureka](/spring-cloud-eureka/spring-cloud-netflix-eureka_zh.md)
 - [Spring Cloud Netflix指南 - Hystrix](./spring-cloud-hystrix/spring-cloud-netflix-hystrix_zh.md)
-- Spring Cloud Netflix中的速率限制Zuul
-- 使用Zuul和Eureka进行负载平衡的例子
-- 使用Spring Cloud的Netflix Archaius介绍
-- 使用各种数据库配置的Netflix Archaius
-- 使用Netflix Ribbon的Spring Cloud Rest Client介绍
-- 使用Spring Cloud Netflix和Feign的集成测试
+- [Spring Cloud Netflix中的速率限制Zuul](./spring-cloud-zuul/spring-cloud-zuul-rate-limit_zh.md)
+- [使用Zuul和Eureka进行负载平衡的例子](./spring-cloud-zuul-eureka-integration/zuul-load-balancing_zh.md)
+- [使用Spring Cloud的Netflix Archaius介绍](./spring-cloud-archaius/netflix-archaius-spring-cloud-integration_zh.md)
+- [使用各种数据库配置的Netflix Archaius](./spring-cloud-archaius/netflix-archaius-database-configurations_zh.md)
+- [使用Netflix Ribbon的Spring Cloud Rest Client介绍](./spring-cloud-ribbon-client/spring-cloud-rest-client-with-netflix-ribbon_zh.md)
+- [使用Spring Cloud Netflix和Feign的集成测试](./spring-cloud-eureka/spring-cloud-feign-integration-tests_zh.md)
 
 ## Spring Cloud Data Flow
 
-- Getting Started with Stream Processing with Spring Cloud Data Flow
-- ETL with Spring Cloud Data Flow
-- Batch Processing with Spring Cloud Data Flow
-- spring aws - icon
+- [Getting Started with Stream Processing with Spring Cloud Data Flow](./spring-cloud-data-flow/spring-cloud-data-flow-stream-processing/spring-cloud-data-flow-stream-processing_zh.md)
+- [ETL with Spring Cloud Data Flow](./spring-cloud-data-flow/spring-cloud-data-flow-etl/spring-cloud-data-flow-etl_zh.md)
+- [Batch Processing with Spring Cloud Data Flow](./spring-cloud-data-flow/spring-cloud-data-flow-batch-job/spring-cloud-data-flow-batch-processing_zh.md)
 
 ## Spring Cloud AWS
 
-- Spring Cloud AWS – Messaging Support
-- Spring Cloud AWS – RDS
-- Spring Cloud AWS – EC2
-- Spring Cloud AWS – S3
-- Instance Profile Credentials using Spring Cloud
-- Serverless Functions with Spring Cloud Function
+- [Spring Cloud AWS – Messaging Support](https://www.baeldung.com/spring-cloud-aws-messaging)
+- [Spring Cloud AWS – RDS](https://www.baeldung.com/spring-cloud-aws-rds)
+- [Spring Cloud AWS – EC2](https://www.baeldung.com/spring-cloud-aws-ec2)
+- [Spring Cloud AWS – S3](https://www.baeldung.com/spring-cloud-aws-s3)
+- [Instance Profile Credentials using Spring Cloud](https://www.baeldung.com/spring-cloud-instance-profiles)
+- [Serverless Functions with Spring Cloud Function](https://www.baeldung.com/spring-cloud-function)
+
+## Spring Cloud Alibaba
+
+- [阿里巴巴哨兵介绍](/spring-cloud-sentinel/java-sentinel-intro_zh.md)
 
 ## Spring Cloud DevOps
 
-- Spring 云 - 使用 Zipkin 跟踪服务
+- [Spring 云 - 使用 Zipkin 跟踪服务](/spring-cloud-bootstrap/tracing-services-with-zipkin_zh.md)
 - [Spring Cloud Kubernetes 指南](/spring-cloud-kubernetes/spring-cloud-kubernetes_zh.md)
-- Spring 云连接器和 Heroku
+- [Spring 云连接器和 Heroku](/spring-cloud-connectors-heroku/spring-cloud-heroku_zh.md)
 
 ## Spring Cloud Examples
 
-- Spring Cloud Series – The Gateway Pattern
-- Spring Cloud – Adding Angular 4
+- [Spring Cloud 系列 - 网关模式](/spring-cloud-bootstrap/spring-cloud-gateway-pattern_zh.md)
+- [Spring Cloud – Adding Angular 4](/spring-cloud-bootstrap/spring-cloud-angular_zh.md)
 
 ## 原文链接
 
