@@ -21,6 +21,7 @@ import org.testcontainers.utility.TestcontainersConfiguration;
 /**
  * Reference: https://github.com/neo4j/neo4j-ogm/blob/master/neo4j-ogm-tests/neo4j-ogm-integration-tests/src/test/java/org/neo4j/ogm/testutil/TestContainersTestBase.java
  */
+@SuppressWarnings("resource")
 public class TestContainersTestBase {
 
     public static final Logger LOGGER = LoggerFactory.getLogger(TestContainersTestBase.class);
@@ -39,8 +40,9 @@ public class TestContainersTestBase {
 
     public static final String SYS_PROPERTY_NEO4J_PASSWORD = "NEO4J_OGM_NEO4J_PASSWORD";
 
-    public static final String DEFAULT_PASSWORD = "12345";
+    public static final String DEFAULT_PASSWORD = "12345678";
 
+    @SuppressWarnings("rawtypes")
     public static Neo4jContainer neo4jServer;
 
     public static Configuration.Builder baseConfigurationBuilder;
