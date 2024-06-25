@@ -2,13 +2,15 @@
 
 1. 简介
 
-    在本教程中，我们将学习 Java TestContainers 库。它允许我们在测试中使用 Docker 容器。因此，我们可以编写依赖于外部资源的自包含集成测试。
+    在本教程中，我们将学习 Java [TestContainers](https://java.testcontainers.org/) 库。它允许我们在测试中使用 Docker 容器。因此，我们可以编写依赖于外部资源的自包含集成测试。
 
     我们可以在测试中使用任何拥有 docker 镜像的资源。例如，数据库、网络浏览器、网络服务器和消息队列都有镜像。因此，我们可以在测试中将它们作为容器运行。
 
 2. 需求
 
     TestContainers 库可用于 Java 8 及更高版本。此外，它与 JUnit Rules API 兼容。
+
+    > 本示例需要用 Java 11
 
     首先，让我们定义核心功能的 maven 依赖关系：
 
@@ -27,12 +29,12 @@
     ```xml
     <dependency>
         <groupId>org.testcontainers</groupId>
-        <artifactId>postgresql </artifactId>
+        <artifactId>postgresql</artifactId>
         <version>1.19.6</version>
     </dependency>
     <dependency>
         <groupId>org.testcontainers</groupId>
-        <artifactId>selenium </artifactId>
+        <artifactId>selenium</artifactId>
         <version>1.19.6</version>
     </dependency>
     ```
@@ -42,6 +44,8 @@
     此外，我们还需要 Docker 来运行容器。有关安装说明，请参阅 Docker [文档](https://docs.docker.com/install/)。
 
     确保您能在测试环境中运行 Docker 容器。
+
+    > 通过 BrowserWebDriverContainer 自动创建？
 
 3. 使用方法
 
@@ -60,7 +64,7 @@
 
     - 我们使用 withExposedPorts 从容器中暴露一个端口
     - withCommand 定义了一个容器命令。它将在容器启动时执行。
-    
+
     该规则使用 @ClassRule 进行注解。因此，它会在该类中的任何测试运行之前启动 Docker 容器。所有方法执行完毕后，容器将被销毁。
 
     如果使用 @Rule 注解，GenericContainer 规则将为每个测试方法启动一个新容器。当测试方法结束时，它将停止容器。
@@ -75,7 +79,6 @@
         + simpleWebServer.getContainerIpAddress() 
         + ":" + simpleWebServer.getMappedPort(80);
         String response = simpleGetRequest(address);
-        
         assertEquals(response, "Hello World!");
     }
     ```
@@ -94,7 +97,7 @@
 
         例如，我们使用 PostgreSQLContainer 规则启动 PostgreSQL 容器。然后，我们就能使用辅助方法了。这些方法包括用于数据库连接的 getJdbcUrl、getUsername 和 getPassword：
 
-        test/.testconainers/PostgreSqlContainerLiveTest.java
+        ![PostgreSqlContainerLiveTest.java](/src/test/java/com/baeldung/testconainers/PostgreSqlContainerLiveTest.java)
 
         也可以将 PostgreSQL 作为通用容器运行。但配置连接会更加困难。
 
@@ -104,7 +107,7 @@
 
         这对于自动化网络应用程序的用户界面/验收测试非常有用：
 
-        test/.testconainers/WebDriverContainerLiveTest.java
+        ![WebDriverContainerLiveTest.java](/src/test/java/com/baeldung/testconainers/WebDriverContainerLiveTest.java)
 
     3. Docker Compose
 
@@ -120,21 +123,7 @@
 
         我们使用 getServiceHost 和 getServicePost 方法建立服务的连接地址：
 
-        ```java
-        @ClassRule
-        public static DockerComposeContainer compose = 
-        new DockerComposeContainer(
-            new File("src/test/resources/test-compose.yml"))
-            .withExposedService("simpleWebServer_1", 80);
-
-        @Test
-        public void givenSimpleWebServerContainer_whenGetReuqest_thenReturnsResponse()
-        throws Exception {
-            String address = "http://" + compose.getServiceHost("simpleWebServer_1", 80) + ":" + compose.getServicePort("simpleWebServer_1", 80);
-            String response = simpleGetRequest(address);
-            assertEquals(response, "Hello World");
-        }
-        ```
+        ![DockerComposeContainerLiveTest.java](/src/test/java/com/baeldung/testconainers/DockerComposeContainerLiveTest.java)
 
 5. 结论
 
