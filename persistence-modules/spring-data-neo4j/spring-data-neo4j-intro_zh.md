@@ -10,6 +10,8 @@
 
     让我们从设置项目开始。我们将创建一个 Spring Boot 应用程序，其中包含与数据库交互的实体和存储库。然后，我们将了解如何配置项目以连接到数据库并测试存储库。
 
+    > JDK Runtime 17
+
     1. 依赖关系
 
         首先，让我们为项目添加所需的依赖项。我们将添加 Spring Boot Starter Data Neo4j 依赖项：
@@ -22,7 +24,7 @@
         </dependency>
         ```
 
-    2. Neo4j 线束
+    2. Neo4j Harness
 
         为了测试目的，我们将使用 Neo4j Harness：
 
@@ -47,7 +49,7 @@
 
         接下来，让我们配置数据库的方言。为此，我们需要创建一个 org.neo4j.ogm.config.Configuration 类型的 bean：
 
-        ![Neo4jConfig](/src/main/java/com/baeldung/spring/data/neo4j/config/Neo4jConfig.java)
+        ![Neo4jConfig.java](/src/main/java/com/baeldung/spring/data/neo4j/config/Neo4jConfig.java)
 
         在此，我们将方言设置为 NEO4J_5。这将引导 Spring Data Neo4J 使用 Neo4J 5 规范生成类型和查询。
 
@@ -61,7 +63,7 @@
 
         首先，我们将创建一个 Book 实体：
 
-        ![Book](/src/main/java/com/baeldung/spring/data/neo4j/domain/Book.java)
+        ![Book.java](/src/main/java/com/baeldung/spring/data/neo4j/domain/Book.java)
 
         让我们来看看上述实体中使用的注解：
 
@@ -72,7 +74,7 @@
 
         同样，让我们创建作者实体：
 
-        ![Author](/src/main/java/com/baeldung/spring/data/neo4j/domain/Author.java)
+        ![Author.java](/src/main/java/com/baeldung/spring/data/neo4j/domain/Author.java)
 
         正如我们所见，Author 实体与 Book 实体类似。唯一不同的是，Author 实体有一个 Book 实体的列表，并且关系的方向是 INCOMING。
 
@@ -80,7 +82,7 @@
 
         接下来，我们将创建与数据库交互的存储库，从BookRepository开始：
 
-        ![BookRepository](/src/main/java/com/baeldung/spring/data/neo4j/repository/BookRepository.java)
+        ![BookRepository.java](/src/main/java/com/baeldung/spring/data/neo4j/repository/BookRepository.java)
 
         这些方法与 Spring Data JPA 储藏库中的方法类似。findOneByTitle() 方法将根据书名查找图书，而 findAllByYear() 方法将查找在给定年份出版的所有图书。
 
@@ -90,7 +92,7 @@
 
         让我们在 AuthorRepository 中创建一个自定义查询，查找某作者在给定年份之后出版的所有书籍：
 
-        ![AuthorRepository](/src/main/java/com/baeldung/spring/data/neo4j/repository/AuthorRepository.java)
+        ![AuthorRepository.java](/src/main/java/com/baeldung/spring/data/neo4j/repository/AuthorRepository.java)
 
         为了创建查询，我们使用 MATCH 关键字来匹配数据库中的节点。我们指定节点的标签以及它们之间的关系。最后，我们使用 WHERE 关键字指定查询的条件。
 
@@ -118,7 +120,7 @@
 
         - 我们使用 newInProcessBuilder() 方法获取一个生成器实例。
         - withDisabledServer() 属性会创建一个没有 HTTP 访问权限的服务器，因为我们不需要在服务器上启用外部流量。
-        - 作为选项，我们可以使用 withFixture() 在创建服务器时运行初始 [Cypher](https://www.baeldung.com/java-neo4j#cypher-query-language) 查询。
+        - 作为选项，我们可以使用 withFixture() 在创建服务器时运行初始 Cypher 查询。
         - 在这里，我们提供了在服务器启动时创建两本书和一个作者的查询。这有助于在需要时进行初始数据设置。
 
         接下来，我们创建一个 @DynamicPropertySource 方法来设置嵌入式数据库的属性。我们为数据库设置了 URI、用户名和密码。这将覆盖 application.properties 文件中提供的属性。
