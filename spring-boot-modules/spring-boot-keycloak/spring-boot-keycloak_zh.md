@@ -54,19 +54,24 @@
 
         现在，我们将导航到客户端(Clients)页面。如下图所示，Keycloak 已经内置了客户端。
 
-        我们还需要在应用程序中添加一个新客户端，因此点击"Create"。我们将调用新客户端 login-app。
+        我们还需要在应用程序中添加一个新客户端，因此点击"Create"：
 
-        在下一步操作中，为了本教程的目的，我们将保留所有默认设置，有效重定向 URIs 字段除外。该字段应包含使用该客户端进行身份验证的应用程序 URL。
+        - 编辑客户端ID(Client ID)：login-app；
+        - 客户端协议(Client Protocol)默认选择：openid-connect；
 
-        稍后，我们将创建一个运行于 8081 端口的 Spring Boot 应用程序，它将使用此客户端。因此，我们使用的重定向 URL 是 <http://localhost:8081/*>。
+        在下一步配置操作中，为了本教程的目的，我们将保留大部分默认设置，除了以下配置项：
+
+        - 有效重定向URIs字段(Valid Redirect URIs)：该字段应包含使用该客户端进行身份验证的应用程序URL；
+          - 稍后，我们将创建一个运行于 8081 端口的 Spring Boot 应用程序，它将使用此客户端。因此，我们使用的重定向 URL 是 <http://localhost:8081/*>，注意后面加星号；
+        - 访问类型(Access Type)：选择 confidential（保密）；
 
     4. 创建角色和用户
 
         Keycloak 使用基于角色的访问；因此，每个用户都必须有一个角色。
 
-        为此，我们需要导航到"Realm Roles"页面。
+        为此，我们需要导航到"Realm Roles"页面，然后添加 user 角色，配置领域级别的角色。
 
-        然后添加 user 角色。
+        > 也可选择客户端配置归属客户端级别的角色。
 
         现在我们有了一个可以分配给用户的角色，但由于还没有用户，让我们去用户页面添加一个。
 
@@ -80,7 +85,40 @@
 
         最后，我们需要正确设置客户端作用域(Client Scopes)，以便 KeyCloak 将验证用户的所有角色都传递给令牌。因此，我们需要导航到客户端作用域页面，然后将 microprofile-jwt 设置为"default"。
 
-        > 注意：Keycloak 25 配置方式改变。
+        > 注意：Keycloak > 23 配置方式改变。也可通过 "管理-用户(Manage-Users)" 创建用户，编辑用户名、邮件地址、名字信息；在下一步操作中，点击“凭据(Credentials)”，点击“Set Password”完成密码设置，关闭“临时”；角色映射。
+
+    5. 查看 API 信息
+        Keycloak 查看 API 信息，进入“领域设置”，在“通用”中点击“服务路径”中的“OpenID Endpoint Configuration”可打开openid-configuration页面，输出信息如下图：
+
+        ```json
+        {
+            "issuer": "http://192.168.97.167:8080/auth/realms/springboot",
+            "authorization_endpoint": "http://192.168.97.167:8080/auth/realms/springboot/protocol/openid-connect/auth",
+            "token_endpoint": "http://192.168.97.167:8080/auth/realms/springboot/protocol/openid-connect/token",
+            "introspection_endpoint": "http://192.168.97.167:8080/auth/realms/springboot/protocol/openid-connect/token/introspect",
+            "userinfo_endpoint": "http://192.168.97.167:8080/auth/realms/springboot/protocol/openid-connect/userinfo",
+            "end_session_endpoint": "http://192.168.97.167:8080/auth/realms/springboot/protocol/openid-connect/logout",
+            "jwks_uri": "http://192.168.97.167:8080/auth/realms/springboot/protocol/openid-connect/certs",
+            "check_session_iframe": "http://192.168.97.167:8080/auth/realms/springboot/protocol/openid-connect/login-status-iframe.html"
+            ...
+        }
+        ```
+
+        API说明：
+
+        - "authorization_endpoint": `http://<keycloak>/auth/realms/dataease/protocol/openid-connect/auth`
+        - 此设置定义 OIDC 提供程序的授权终端节点URL；
+        - "token_endpoint": `http://<keycloak>/auth/realms/dataease/protocol/openid-connect/token`
+        - 此设置定义 OIDC 提供程序的令牌信息获取地址URL；
+        - "userinfo_endpoint": `http://<keycloak>/auth/realms/dataease/protocol/openid-connect/userinfo`
+        - 此设置定义 OIDC 提供程序的用户信息获取地址URL；
+        - "end_session_endpoint": `http://<keycloak>/auth/realms/dataease/protocol/openid-connect/logout`
+        - Logout Endpoint，此设置定义 OIDC 提供程序的用户信息获取地址URL
+
+    6. 查看客户端信息
+        Keycloak 查看客户端凭据，进入“客户端”，选择客户端，查看创建的ID，点击“凭据”查看客户端密钥(secret)。
+
+        点击 “客户端模板(Client Scopes)” 设置定义在身份验证期间要请求的 OpenID Connect 作用域，如 openid profile email。
 
 4. 使用 Keycloak 的 API 生成访问令牌
 
