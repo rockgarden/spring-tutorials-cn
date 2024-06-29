@@ -1,4 +1,4 @@
-package com.baeldung.reducingIfElse;
+package com.baeldung.reducingifelse;
 
 public class AddRule implements Rule {
 

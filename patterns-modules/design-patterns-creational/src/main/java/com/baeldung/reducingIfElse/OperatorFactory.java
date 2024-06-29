@@ -1,4 +1,4 @@
-package com.baeldung.reducingIfElse;
+package com.baeldung.reducingifelse;
 
 import java.util.HashMap;
 import java.util.Map;

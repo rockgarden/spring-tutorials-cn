@@ -1,4 +1,4 @@
-package com.baeldung.reducingIfElse;
+package com.baeldung.reducingifelse;
 
 public class Division implements Operation {
         @Override public int apply(int a, int b) {

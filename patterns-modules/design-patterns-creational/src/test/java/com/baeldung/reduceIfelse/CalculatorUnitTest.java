@@ -1,8 +1,8 @@
 package com.baeldung.reduceIfelse;
 
-import com.baeldung.reducingIfElse.AddCommand;
-import com.baeldung.reducingIfElse.Calculator;
-import com.baeldung.reducingIfElse.Operator;
+import com.baeldung.reducingifelse.AddCommand;
+import com.baeldung.reducingifelse.Calculator;
+import com.baeldung.reducingifelse.Operator;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
