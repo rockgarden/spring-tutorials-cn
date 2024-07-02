@@ -1,4 +1,4 @@
-# Keycloak 集成 - 使用 Swagger UI 的 OAuth2 和 OpenID
+# [Keycloak 集成 - 使用 Swagger UI 的 OAuth2 和 OpenID](https://www.baeldung.com/keycloak-oauth2-openid-swagger)
 
 1. 概述
 
@@ -30,65 +30,70 @@
 
     使用特定于供应商的代码扩展 Swagger UI 只适用于特殊情况。因此，我们更倾向于使用独立于供应商的标准。下文将介绍如何实现这一点。
 
-4.1. 现有标准
+    1. 现有标准
 
-首先，我们需要了解现有的标准。对于身份验证和授权，可以使用 [OAuth2](https://oauth.net/2/) 这样的协议。对于 SSO，我们可以使用 OpenID Connect（[OIDC](https://openid.net/connect/)）作为 [OAuth2 的扩展](https://developer.okta.com/blog/2019/10/21/illustrated-guide-to-oauth-and-oidc)。
+        首先，我们需要了解现有的标准。对于身份验证和授权，可以使用 [OAuth2](https://oauth.net/2/) 这样的协议。对于 SSO，我们可以使用 OpenID Connect（[OIDC](https://openid.net/connect/)）作为 [OAuth2 的扩展](https://developer.okta.com/blog/2019/10/21/illustrated-guide-to-oauth-and-oidc)。
 
-描述 REST API 的标准是 [OpenAPI](https://www.openapis.org/)。该标准包括定义多种[安全方案](https://swagger.io/docs/specification/authentication)，其中包括 OAuth2 和 OIDC：
+        描述 REST API 的标准是 [OpenAPI](https://www.openapis.org/)。该标准包括定义多种[安全方案](https://swagger.io/docs/specification/authentication)，其中包括 OAuth2 和 OIDC：
 
-```yml
-paths:
-  /api/v1/products:
-    get:
-      ...
-      security:
-        - my_oAuth_security_schema:
-          - read_access
-...
-securitySchemes:
-  my_oAuth_security_schema:
-    type: oauth2
-    flows:
-      implicit:
-        authorizationUrl: https://api.example.com/oauth2/authorize
-        scopes:
-          read_access: read data
-          write_access: modify data
-```
+        ```yml
+        paths:
+        /api/v1/products:
+            get:
+            ...
+            security:
+                - my_oAuth_security_schema:
+                - read_access
+        ...
+        securitySchemes:
+        my_oAuth_security_schema:
+            type: oauth2
+            flows:
+            implicit:
+                authorizationUrl: https://api.example.com/oauth2/authorize
+                scopes:
+                read_access: read data
+                write_access: modify data
+        ```
 
-4.2. 扩展服务提供者
+    2. 扩展服务提供者
 
-在代码优先方法中，服务提供者可以根据代码生成 OpenAPI 文档。因此，安全方案也必须以这种方式提供。例如，使用 Spring Boot（包括 SpringDoc），我们可以编写这样一个配置类：
+        在代码优先方法中，服务提供者可以根据代码生成 OpenAPI 文档。因此，安全方案也必须以这种方式提供。例如，使用 Spring Boot（包括 SpringDoc），我们可以编写这样一个配置类：
 
-@Configuration
-公共类 OpenAPISecurityConfig {
+        ![OpenAPISecurityConfig](/src/main/java/com/baeldung/swaggerkeycloak/OpenAPISecurityConfig.java)
 
-当然，使用其他技术会导致不同的实现。但我们应该始终注意必须生成的 OpenAPI。
+        当然，使用其他技术会导致不同的实现。但我们应该始终注意必须生成的 OpenAPI。
 
-4.3. 扩展服务消费者
+        4.3. 扩展服务消费者
 
-Swagger UI 默认支持 OpenAPI 身份验证方案，无需对其进行自定义。这样我们就可以进行身份验证了：
+        Swagger UI 默认支持 OpenAPI 身份验证方案，无需对其进行自定义。这样我们就可以进行身份验证了：
 
-Swagger UI 身份验证
-其他客户端会有不同的解决方案。例如，有一个用于 Angular 应用程序的 NPM 模块可以直接提供 OAuth2 和 OpenID Connect (OIDC)。
+        ![Swagger UI 身份验证](pic/swagger-ui-auth.webp)
 
-1. 从 SwaggerUI 测试端点
+        其他客户端会有不同的解决方案。例如，有一个用于 Angular 应用程序的 NPM 模块可以直接提供 OAuth2 和 OpenID Connect (OIDC)。
 
-按照本文提供的配置，您应该已经配置了一个可以登录应用程序的用户。为了使用 Swagger-UI，还应该配置客户端（login-app）并启用隐式流身份验证方法：
+5. 从 SwaggerUI 测试端点
 
-隐式流程身份验证
-您还需要链接应用程序作用域（读取和写入），首先在客户端作用域会话中创建作用域：
+    按照[此文](https://www.baeldung.com/spring-boot-keycloak)提供的配置，您应该已经配置了一个可以登录应用程序的用户。为了使用 Swagger-UI，还应该配置客户端（login-app）并启用隐式流身份验证方法(Implicit Flow Authentication method)：
 
-创建作用域
-然后将其添加到应用程序的启用作用域列表中：
+    ![隐式流程身份验证](pic/implicit-flow.webp)
 
-添加作用域
-现在，您就可以在 swagger-ui 应用程序中使用正确的作用域进行身份验证，访问地址为 http://localhost:8081/swagger-ui/index.html：
+    您还需要链接应用程序作用域（读取和写入），首先在客户端作用域会话中创建作用域：
 
-授权 swagger
-最后，我们可以使用 swagger 中定义的控制器端点：
+    ![创建作用域](pic/scopes-creation.webp)
 
-todos 控制器
+    然后将其添加到应用程序的启用作用域列表中：
+
+    ![添加作用域](pic/add-scopes.webp)
+
+    现在，您就可以在 [swagger-ui 应用](https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api)程序中使用正确的作用域进行身份验证，访问地址为 <http://localhost:8081/swagger-ui/index.html>：
+
+    ![授权 swagger](pic/auhtorized-swagger.webp)
+
+    最后，我们可以使用 swagger 中定义的控制器端点：
+
+    ![todos 控制器](pic/todos-controller.webp)
+
 6. 结论
 
-在本文中，我们指出了在使用 Keycloak 作为 IAM 的情况下使用 Swagger UI 测试 REST 服务的可能性。最好的解决方案是使用 OpenAPI、OAuth2 和 OpenID Connect 等标准，这些工具都支持这些标准。
+    在本文中，我们指出了在使用 Keycloak 作为 IAM 的情况下使用 Swagger UI 测试 REST 服务的可能性。最好的解决方案是使用 OpenAPI、OAuth2 和 OpenID Connect 等标准，这些工具都支持这些标准。

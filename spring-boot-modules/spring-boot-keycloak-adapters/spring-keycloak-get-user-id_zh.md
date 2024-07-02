@@ -1,4 +1,4 @@
-# [在春天获取 Keycloak 用户 ID](https://www.baeldung.com/spring-keycloak-get-user-id)
+# [在 Spring 中获取 Keycloak 用户 ID](https://www.baeldung.com/spring-keycloak-get-user-id)
 
 1. 概述
 
