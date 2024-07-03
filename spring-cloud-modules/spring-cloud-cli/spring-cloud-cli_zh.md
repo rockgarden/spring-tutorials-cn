@@ -1,4 +1,4 @@
-# Spring Cloud CLI简介
+# [Spring Cloud CLI简介](https://www.baeldung.com/spring-cloud-cli)
 
 1. 简介
 
@@ -183,5 +183,3 @@
 7. 总结
 
     我们在这里重点介绍了Spring Boot Cloud CLI。欲了解更多信息，请查看官方[文档](https://cloud.spring.io/spring-cloud-static/spring-cloud-cli/1.3.2.RELEASE/)。
-
-    本文中使用的配置和bash示例可以在[GitHub](https://github.com/eugenp/tutorials/tree/master/spring-cloud-modules/spring-cloud-cli)上找到。
