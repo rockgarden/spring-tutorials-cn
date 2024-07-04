@@ -109,7 +109,7 @@
 
     - 我们在哪里存储 ACL？
     - 在检索大型对象集合时，如何有效地应用 ACL 限制？
-    
+
     [Spring Security ACL](https://docs.spring.io/spring-security/site/docs/current/reference/html5/#domain-acls) 库就是 ACL 库的一个很好的例子。它使用专用数据库模式和缓存来实现 ACL，并与 Spring Security 紧密集成。下面是从我们关于该库的文章中改编的一个简短示例，展示了如何在对象级实施访问控制：
 
     ```java
