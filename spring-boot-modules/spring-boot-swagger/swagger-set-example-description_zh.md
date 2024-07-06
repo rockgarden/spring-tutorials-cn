@@ -18,9 +18,7 @@
 
     1. 模型
 
-        让我们定义 Product 类：
-
-        `public class Product implements Serializable {}`
+        让我们定义实体 [Product](/src/main/java/com/baeldung/swaggerexample/entity/Product.java) 类。
 
     2. 控制器
 
@@ -45,9 +43,13 @@
         }
         ```
 
-        当我们运行项目时，库将读取所有公开的路径并创建相应的文档。
+        当我们运行项目时（jdk17），库将读取所有公开的路径并创建相应的文档。
 
         让我们在默认 URL <http://localhost:8080/swagger-ui/index.html> 上查看文档。
+
+        - [ ] Whitelabel Error Page
+        This application has no explicit mapping for /error, so you are seeing this as a fallback.
+        There was an unexpected error (type=Not Found, status=404).
 
         我们可以进一步扩展控制器方法，查看它们各自的文档。接下来，我们将详细介绍它们。
 
