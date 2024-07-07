@@ -21,16 +21,16 @@
     @RequestMapping("/customers")
     class CustomerController {
 
-    private final CustomerService customerService;
+        private final CustomerService customerService;
 
-    public CustomerController(CustomerService customerService) {
-        this.customerService = customerService;
-    }
-    
-    @GetMapping("/{id}")
-    public ResponseEntity<CustomerResponse> getCustomer(@PathVariable("id") Long id) {
-        return ResponseEntity.ok(customerService.getById(id));
-    }
+        public CustomerController(CustomerService customerService) {
+            this.customerService = customerService;
+        }
+        
+        @GetMapping("/{id}")
+        public ResponseEntity<CustomerResponse> getCustomer(@PathVariable("id") Long id) {
+            return ResponseEntity.ok(customerService.getById(id));
+        }
     }
     ```
 
