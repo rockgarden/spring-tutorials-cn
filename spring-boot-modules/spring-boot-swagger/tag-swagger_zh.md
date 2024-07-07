@@ -2,11 +2,12 @@
 
 >> Swagger @参数 vs @模式
 >> 更改 Swagger-UI URL 前缀
->> Swagger 中的 @Operation vs @ApiResponse
 
 - [ ] [使用 Swagger 设置示例和说明](swagger-set-example-description_zh.md)
+  - [Swagger 中的 @Operation vs @ApiResponse](swagger-operation-vs-apiresponse_zh.md)
+- [使用 Swagger 生成 Spring Boot REST 客户端](../spring-boot-springdoc-2/spring-rest-openapi-documentation_zh.md)
+  - [ ] [从 Swagger API 文档生成 PDF](/swagger-generate-pdf_zh.md)
 
->> 使用 Swagger 生成 Spring Boot REST 客户端
 >> Swagger 解析器指南
 >> 使用 OpenAPI 生成器映射日期类型
 >> Springdoc-openapi 中的表单登录和基本身份验证

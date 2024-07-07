@@ -21,17 +21,17 @@
             <version>3.1.3</version>
             <configuration>
                 <apiSources>
-                <apiSource>
-                    <springmvc>false</springmvc>
-                <locations>com.baeldung.swagger2pdf.controller.UserController</locations>
-                <basePath>/api</basePath>
-                <info>
-                        <title>DEMO REST API</title>
-                    <description>A simple DEMO project for REST API documentation</description>
-                    <version>v1</version>
-                </info>
-                <swaggerDirectory>${project.build.directory}/api</swaggerDirectory>
-                    <attachSwaggerArtifact>true</attachSwaggerArtifact>
+                    <apiSource>
+                        <springmvc>false</springmvc>
+                        <locations>com.baeldung.swagger2pdf.controller.UserController</locations>
+                        <basePath>/api</basePath>
+                        <info>
+                            <title>DEMO REST API</title>
+                            <description>A simple DEMO project for REST API documentation</description>
+                            <version>v1</version>
+                        </info>
+                        <swaggerDirectory>${project.build.directory}/api</swaggerDirectory>
+                        <attachSwaggerArtifact>true</attachSwaggerArtifact>
                     </apiSource>
                 </apiSources>
             </configuration>
@@ -39,7 +39,7 @@
                 <execution>
                     <phase>package</phase>
                     <goals>
-                <goal>generate</goal>
+                        <goal>generate</goal>
                     </goals>
                 </execution>
             </executions>
@@ -91,7 +91,7 @@
             </configuration>
             <executions>
                 <execution>
-                <phase>package</phase>
+                    <phase>package</phase>
                     <goals>
                         <goal>process-swagger</goal>
                     </goals>
