@@ -44,7 +44,7 @@
 
     1. 支持 Swagger-ui 属性
 
-        springdoc-openapi 库还支持 swagger-ui 属性。这些属性可作为 Spring Boot 属性使用，前缀为 springdoc.swagger-ui。
+        springdoc-openapi 库还支持 [swagger-ui 属性](https://springdoc.org/#swagger-ui-properties)。这些属性可作为 Spring Boot 属性使用，前缀为 springdoc.swagger-ui。
 
         例如，我们可以通过更改应用程序 .properties 文件中的 springdoc.swagger-ui.path 属性来自定义 API 文档的路径：
 
@@ -228,13 +228,13 @@
     ```java
     @Operation(summary = "Get a book by its id")
     @ApiResponses(value = { 
-    @ApiResponse(responseCode = "200", description = "Found the book", 
-        content = { @Content(mediaType = "application/json", 
-        schema = @Schema(implementation = Book.class)) }),
-    @ApiResponse(responseCode = "400", description = "Invalid id supplied", 
-        content = @Content), 
-    @ApiResponse(responseCode = "404", description = "Book not found", 
-        content = @Content) })
+        @ApiResponse(responseCode = "200", description = "Found the book", 
+            content = { @Content(mediaType = "application/json", 
+            schema = @Schema(implementation = Book.class)) }),
+        @ApiResponse(responseCode = "400", description = "Invalid id supplied", 
+            content = @Content), 
+        @ApiResponse(responseCode = "404", description = "Book not found", 
+            content = @Content) })
     @GetMapping("/{id}")
     public Book findById(@Parameter(description = "id of book to be searched") 
     @PathVariable long id) {
