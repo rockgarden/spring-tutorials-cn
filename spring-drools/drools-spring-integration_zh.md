@@ -2,7 +2,7 @@
 
 1. 简介
 
-    在本快速教程中，我们将把 Drools 与 Spring 集成。如果您刚开始使用 Drools，请查看这篇介绍文章。
+    在本快速教程中，我们将把 Drools 与 Spring 集成。
 
 2. Maven 依赖项
 
