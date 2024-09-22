@@ -1,8 +1,4 @@
-# Spring MVC XML
-
-This module contains articles about Spring MVC with XML configuration
-
-## 探索SpringMVC的表单标签库
+# [探索SpringMVC的表单标签库](https://www.baeldung.com/spring-mvc-form-tags)
 
 1. 概述
    在本系列的[第一篇](https://www.baeldung.com/spring-mvc-form-tutorial)文章，介绍了表单标签库的使用以及如何将数据绑定到控制器中。
@@ -162,7 +158,7 @@ This module contains articles about Spring MVC with XML configuration
 
    `<form:errors path="*" />`
 
-### 验证器
+## 验证器
 
 为了显示一个给定字段的错误，我们需要定义一个验证器Validator。
 
@@ -226,7 +222,7 @@ public String submit(
 }
 ```
 
-### JSR 303 Bean验证
+## JSR 303 Bean验证
 
 从Spring 3开始，我们可以使用JSR 303（通过 @Valid annotation 注解）进行bean验证。要做到这一点，我们需要在classpath上有一个JSR303验证器框架。我们将使用Hibernate验证器（参考实现）。以下是我们需要在POM中包含的依赖关系。
 
@@ -283,203 +279,6 @@ private String password;
 
 `NotEmpty.person.password = Password is required!`
 
-## 在Spring中验证RequestParams和PathVariables
-
-1. 简介
-
-    在本教程中，我们将学习如何在Spring MVC中验证HTTP请求参数和路径变量。
-
-    具体来说，我们将用[JSR 303注解](https://beanvalidation.org/1.0/spec/)来验证字符串和数字参数。
-
-    要探索其他类型的验证，我们可以参考我们关于[Java Bean验证](https://www.baeldung.com/javax-validation)和[方法约束](https://www.baeldung.com/javax-validation-method-constraints)的教程，或者我们可以学习[如何创建自己的验证器](https://www.baeldung.com/spring-mvc-custom-validator)。
-
-2. 配置
-
-    为了使用Java验证API，我们必须添加一个JSR 303实现，例如hibernate-validator。
-
-    我们还必须通过添加@Validated注解来启用控制器中的请求参数和路径变量的验证。
-
-    ```java
-    @RestController
-    @RequestMapping("/")
-    @Validated
-    public class Controller {
-        // ...
-    }
-    ```
-
-    值得注意的是，启用参数验证还需要一个**MethodValidationPostProcessor Bean**。如果我们使用的是Spring Boot应用程序，那么这个Bean是自动配置的，因为我们的classpath上有hibernate-validator依赖。
-
-    否则，在标准的Spring应用程序中，我们必须明确添加这个Bean。
-
-    ```java
-    @EnableWebMvc
-    @Configuration
-    @ComponentScan("com.baeldung.spring")
-    public class ClientWebConfigJava implements WebMvcConfigurer {
-        @Bean
-        public MethodValidationPostProcessor methodValidationPostProcessor() {
-            return new MethodValidationPostProcessor();
-        }
-        // ...
-    }
-    ```
-
-    默认情况下，Spring中路径或请求验证过程中的任何错误都会导致HTTP 500响应。在本教程中，我们将使用[ControllerAdvice](https://www.baeldung.com/exception-handling-for-rest-with-spring)的一个自定义实现，以更可读的方式处理这类错误，对任何不良请求返回HTTP 400。我们可以在GitHub上找到这个解决方案的[源代码](https://github.com/eugenp/tutorials/tree/master/spring-web-modules/spring-mvc-xml)。
-
-3. 验证一个RequestParam
-
-    让我们考虑一个例子，我们将一个数字的工作日作为请求参数传入控制器方法。
-
-    ```java
-    @GetMapping("/name-for-day")
-    public String getNameOfDayByNumber(@RequestParam Integer dayOfWeek) {
-        // ...
-    }
-    ```
-
-    我们的目标是确保dayOfWeek的值在1到7之间。为了做到这一点，我们将使用@Min和@Max注解。
-
-    ```java
-    @GetMapping("/name-for-day")
-    public String getNameOfDayByNumber(@RequestParam @Min(1) @Max(7) Integer dayOfWeek) {
-        // ...
-    }
-    ```
-
-    任何不符合这些条件的请求都会返回HTTP状态400，并带有一个默认的错误信息。
-
-    例如，如果我们调用<http://localhost:8080/name-for-day?dayOfWeek=24>，响应信息将是。
-
-    `getNameOfDayByNumber.dayOfWeek: must be less than or equal to 7`
-
-    我们可以通过添加一个自定义的信息来改变默认的信息。
-
-    `@Max(value = 1, message = “day number has to be less than or equal to 7”)`
-
-4. 验证一个PathVariable
-
-    就像@RequestParam一样，我们可以使用javax.validation.constraints包中的任何注解来验证一个@PathVariable。
-
-    让我们考虑一个例子，我们验证一个字符串参数不是空白的，并且长度小于或等于10。
-
-    ```java
-    @GetMapping("/valid-name/{name}")
-    public void createUsername(@PathVariable("name") @NotBlank @Size(max = 10) String username) {
-        // ...
-    }
-    ```
-
-    例如，任何带有超过10个字符的名字参数的请求，都会导致HTTP 400错误，并有一个消息。
-
-    `createUser.name:size must be between 0 and 10`
-
-    通过设置@Size注解中的消息参数，可以很容易地覆盖默认的消息。
-
-## 调试Spring MVC 404 "没有找到HTTP请求的映射 "错误
-
-1. 简介
-
-    Spring MVC是使用Front Controller Pattern构建的传统应用程序。[DispatcherServlet](https://www.baeldung.com/spring-dispatcherservlet)充当前端控制器，负责路由和请求处理。
-
-    与任何web应用程序或网站一样，当找不到请求的资源时，SpringMVC会返回HTTP 404响应代码。在本教程中，我们将研究SpringMVC中404错误的常见原因。
-
-2. 404响应的可能原因-错误的URI
-
-    假设我们有一个GreetingController，它映射到/greeting并呈现greeting.jsp：
-
-    ```java
-    @Controller
-    public class GreetingController {
-
-        @RequestMapping(value = "/greeting", method = RequestMethod.GET)
-        public String get(ModelMap model) {
-            model.addAttribute("message", "Hello, World!");
-            return "greeting";
-        }
-    }
-    ```
-
-    相应的视图呈现消息变量的值：
-
-    ```html
-    <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-    <html>
-        <head>
-            <title>Greeting</title>
-        </head>
-        <body>
-            <h2>${message}</h2>
-        </body>
-    </html>
-    ```
-
-    正如预期的那样，向/问候发送GET请求是有效的：
-
-    `curl http://localhost:8080/greeting`
-
-    我们将看到一个带有“Hello World”消息的HTML页面。
-
-    看到404的最常见原因之一是使用了错误的URI。例如，向/greetings而不是/greeting发出GET请求是错误的。
-
-    在这种情况下，我们会在服务器日志中看到一条警告消息：
-
-    ```log
-    [http-nio-8080-exec-6] WARN  o.s.web.servlet.PageNotFound - 
-    No mapping found for HTTP request with URI [/greetings] in DispatcherServlet with name 'mvc'
-    ```
-
-    客户端将看到一个错误页面：
-
-    ```html
-    <html>
-        <head>
-            <title>Home</title>
-        </head>
-        <body>
-            <h1>Http Error Code : 404. Resource not found</h1>
-        </body>
-    </html>
-    ```
-
-    为了避免这种情况，我们需要确保正确输入了URI。
-
-3. 404响应的可能原因-错误的Servlet映射
-
-    如前所述，DispatcherServlet是SpringMVC中的前端控制器。因此，就像在标准的基于servlet的应用程序中一样，我们需要使用web.xml文件为servlet创建映射。
-
-    我们在servlet标记内定义servlet，并将其映射到servlet-mapping标记内的URI。我们需要确保 url-pattern 的值是正确的，因为在servlet映射到“/*”很常见-请注意后面的星号：
-
-    ```xml
-    <?xml version="1.0" encoding="UTF-8"?>
-    <web-app ...>
-        <!-- Additional config omitted -->
-        <servlet>
-            <servlet-name>mvc</servlet-name>
-            <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-            <load-on-startup>1</load-on-startup>
-        </servlet>
-        <servlet-mapping>
-            <servlet-name>mvc</servlet-name>
-            <url-pattern>/*</url-pattern>
-        </servlet-mapping>
-        <!-- Additional config omitted -->
-    </web-app>
-    ```
-
-    现在，如果我们请求/问候，我们会在服务器日志中看到一条警告：
-
-    ```log
-    WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI 
-    [/WEB-INF/view/greeting.jsp] in DispatcherServlet with name 'mvc'
-    ```
-
-    这一次，错误陈述找不到greeting.jsp，用户会看到一个空白页面。
-
-    要修复此错误，我们需要将DispatcherServlet映射到“/”（不带尾随星号）：修复映射后，一切都应该正常工作。请求/问候现在显示消息“你好，世界！”。
-
-    问题背后的原因是，如果我们将DispatcherServlet映射到/*，那么我们会告诉应用程序，到达应用程序的每个请求都将由Dispatcher Servlet提供服务。然而，这不是一种正确的方法，因为DispatcherServlet无法做到这一点。相反，SpringMVC期望ViewResolver的实现为JSP文件等视图提供服务。
-
 ## code
 
 我们探讨了Spring提供的用于处理表单的各种标签。
@@ -499,10 +298,3 @@ spring MVC 与 springBoot 版本不匹配 导致运行 SpringContextTest.java �
 ```log
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]: Factory method 'requestMappingHandlerMapping' threw exception; nested exception is java.lang.ClassCastException: org.springframework.web.accept.ContentNegotiationManagerFactoryBean$$EnhancerBySpringCGLIB$$6dd798c1 cannot be cast to org.springframework.web.accept.ContentNegotiationManager
 ```
-
-## Relevant Articles
-
-- [x] [Exploring SpringMVC’s Form Tag Library](https://www.baeldung.com/spring-mvc-form-tags)
-- [x] [Validating RequestParams and PathVariables in Spring](https://www.baeldung.com/spring-validate-requestparam-pathvariable)
-- [x] [Debugging the Spring MVC 404 “No mapping found for HTTP request” Error](https://www.baeldung.com/spring-mvc-404-error)
-- More articles: [[<-- prev]](../spring-mvc-xml)

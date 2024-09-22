@@ -1,8 +1,4 @@
-# Spring Boot MVC
-
-本模块包含有关Spring Boot项目中Spring Web MVC的文章。
-
-## SpringBoot中的CharacterEncodingFilter
+# [SpringBoot中的CharacterEncodingFilter](https://www.baeldung.com/spring-boot-characterencodingfilter)
 
 1. 概述
 
@@ -42,18 +38,3 @@
 4. 总结
 
     在这篇文章中，我们描述了对CharacterEncodingFilter的需求，并看到了一个配置的例子。
-
-## Relevant Articles
-
-- [Circular View Path Error](https://www.baeldung.com/spring-circular-view-path-error)
-- [Download an Image or a File with Spring MVC](https://www.baeldung.com/spring-controller-return-image-file)
-- [Spring MVC Async vs Spring WebFlux](https://www.baeldung.com/spring-mvc-async-vs-webflux)
-- [Differences in @Valid and @Validated Annotations in Spring](https://www.baeldung.com/spring-valid-vs-validated)
-- [CharacterEncodingFilter In SpringBoot](https://www.baeldung.com/spring-boot-characterencodingfilter)
-- [HandlerInterceptors vs. Filters in Spring MVC](https://www.baeldung.com/spring-mvc-handlerinterceptor-vs-filter)
-- [ETags for REST with Spring](https://www.baeldung.com/etags-for-rest-with-spring)
-- More articles: [[<-- Prev]](/spring-boot-modules/spring-boot-mvc-2) [[Next -->]](/spring-boot-modules/spring-boot-mvc-4)
-
-## Code
-
-像往常一样，本文的完整代码可以在[GitHub](https://github.com/eugenp/tutorials/tree/master/spring-boot-modules/spring-boot-mvc-3)上找到。

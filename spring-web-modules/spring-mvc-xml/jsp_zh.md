@@ -1,8 +1,4 @@
-# Spring MVC XML
-
-本模块包含关于Spring MVC与XML配置的文章。
-
-## JSP指南
+# [JSP指南](https://www.baeldung.com/jsp)
 
 1. 概述
 
@@ -67,9 +63,11 @@
         隐式对象包括HttpRequest和HttpResponse对象，并暴露了各种服务器端的功能，以便在你的Servlet中使用，并与你的.jsp进行交互！下面是创建的隐式对象的列表：
 
         **请求**
+
         request属于javax.servlet.http.HttpServletRequest类。request对象暴露了所有用户输入的数据，并使其在服务器端可用。
 
         **响应**
+
         response属于javax.servlet.http.HttpServletResponse类，它决定了在一个请求发出后，客户端会传回什么。
 
         让我们仔细看看请求和响应的隐含对象，因为它们是最重要和最大量使用的对象。
@@ -92,6 +90,7 @@
         上面我们对它设置了内容类型。我们不需要返回响应对象来让它的有效载荷在渲染时显示在JSP页面上!
 
         **out**
+
         out属于javax.servlet.jsp.JspWriter类，用于向客户端写入内容。
 
         至少有两种方法可以打印到你的JSP页面，这里值得讨论这两种方法。out是自动创建的，允许你写入内存，然后写入响应对象：
@@ -113,21 +112,27 @@
         这里有一些其他的Implicit对象，也是值得我们了解的!
 
         **会话**
+
         session属于javax.servlet.http.HttpSession类，在会话期间保持用户数据。
 
         **应用**
+
         application属于javax.servlet.ServletContext类，存储初始化时设置的应用范围内的参数或需要在应用范围内访问的参数。
 
         **异常**
+
         exception属于javax.servlet.jsp.JspException类，用于在有`<%@ page isErrorPage="true" %>`标签的JSP页面上显示错误信息。
 
         **页**
+
         page属于java.lang.Object类，允许人们访问或引用当前的Servlet信息。
 
         **pageContext**
+
         pageContext属于java.servlet.jsp.PageContext类，默认为页面范围，但可用于访问请求、应用程序和会话属性。
 
         **配置**
+
         config属于javax.servlet.ServletConfig类，是Servlet的配置对象，允许人们获取Servlet的上下文、名称和配置参数。
 
         现在我们已经涵盖了JSP提供的隐含对象，让我们转向允许.jsp页面（间接地）访问这些对象的指令。
@@ -317,22 +322,3 @@
 4. 总结
 
     我们已经覆盖了相当多的领域! 我们已经了解了什么是JavaServer Pages，它们被引入的目的是什么，它们的生命周期，如何创建它们，最后还有一些实现它们的不同方法。
-
-## Relevant Articles
-
-- [Java Session Timeout](https://www.baeldung.com/servlet-session-timeout)
-- [Returning Image/Media Data with Spring MVC](https://www.baeldung.com/spring-mvc-image-media-data)
-- [Geolocation by IP in Java](https://www.baeldung.com/geolocation-by-ip-with-maxmind)
-- [x] [Guide to JavaServer Pages (JSP)](https://www.baeldung.com/jsp)
-- [web.xml vs Initializer with Spring](https://www.baeldung.com/spring-xml-vs-java-config)
-- [A Java Web Application Without a web.xml](https://www.baeldung.com/java-web-app-without-web-xml)
-- [Introduction to Servlets and Servlet Containers](https://www.baeldung.com/java-servlets-containers-intro)
-- More articles: [[more -->]](../spring-mvc-xml-2)
-
-## Spring MVC with XML Configuration Example Project
-
-- access a sample jsp page at: `http://localhost:8080/spring-mvc-xml/sample.html`
-
-## Code
-
-从以下网站获取工作副本：[GitHub](https://github.com/eugenp/tutorials/tree/master/spring-web-modules/spring-mvc-xml)。
