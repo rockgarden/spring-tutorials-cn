@@ -1,6 +1,4 @@
-# Spring Boot Basic Customization
-
-## Spring Boot配置一个主类
+# [Spring Boot配置一个主类](https://www.baeldung.com/spring-boot-main-class)
 
 1. 概述
 
@@ -98,17 +96,3 @@
 5. 总结
 
     指定Spring Boot应用程序的入口点的方法不止一种。要知道，所有这些配置只是修改JAR或WAR文件清单的不同方式。
-
-## Relevant Articles
-
-- [How to Change the Default Port in Spring Boot](https://www.baeldung.com/spring-boot-change-port)
-- [Using Custom Banners in Spring Boot](https://www.baeldung.com/spring-boot-custom-banners)
-- [Create a Custom FailureAnalyzer with Spring Boot](https://www.baeldung.com/spring-boot-failure-analyzer)
-- [Spring Boot: Customize Whitelabel Error Page](https://www.baeldung.com/spring-boot-custom-error-page)
-- [x] [Spring Boot: Configuring a Main Class](https://www.baeldung.com/spring-boot-main-class)
-- [How to Define a Spring Boot Filter?](https://www.baeldung.com/spring-boot-add-filter)
-- [Guide to the Favicon in Spring Boot](https://www.baeldung.com/spring-boot-favicon)
-
-## Code
-
-这个Maven配置的例子可以在[GitHub](https://github.com/eugenp/tutorials/tree/master/spring-boot-modules/spring-boot-basic-customization)上找到。
