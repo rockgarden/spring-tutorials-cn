@@ -42,25 +42,30 @@ Spring Boot - 自定义
 
 Spring Boot - 测试
 
-在Spring Boot中测试
-探索Spring Boot的TestRestTemplate
-Spring Boot中的@RestClientTest快速指南
-Spring Boot中的日志记录
-Spring - 图标
+- [在Spring Boot中测试](/spring-boot-modules/spring-boot-simple/spring-boot-testing_zh.md)
+- [探索Spring Boot的TestRestTemplate](/spring-web-modules/spring-resttemplate/spring-boot-testresttemplate_zh.md)
+- [Spring Boot中的@RestClientTest快速指南](/spring-boot-modules/spring-boot-client/restclienttest-in-spring-boot_zh.md)
+- [Spring Boot中的日志记录](/spring-boot-modules/spring-boot-simple/spring-boot-logging_zh.md)
+- [在 Spring Boot 测试中使用 @Autowired 和 @InjectMocks](/testing-modules/spring-mockito/spring-test-autowired-injectmocks_zh.md)
+- [在 Spring Boot 中设置测试时的日志级别](/spring-boot-modules/spring-boot-testing-2/spring-boot-testing-log-level_zh.md)
+- [在 Spring Boot 测试中排除自动配置类](/spring-boot-modules/spring-boot-testing/spring-boot-exclude-auto-configuration-test_zh.md)
+- [Spring Boot 集成测试的 Spring 安全性](/spring-boot-modules/spring-boot-security/spring-security-integration-tests_zh.md)
+
 Spring Boot - 引擎盖下
-用Spring Boot创建一个自定义启动器
-用Spring Boot创建一个自定义的自动配置程序
-在Spring Boot中显示自动配置报告
-如何获得所有Spring管理的Bean？
-Spring Boot安全自动配置
-春天的组件扫描
-春天的持久性--图标
+
+- [用Spring Boot创建一个自定义启动器](/spring-boot-modules/spring-boot-custom-starter/spring-boot-custom-starter_zh.md)
+- [用Spring Boot创建一个自定义的自动配置程序](/spring-boot-modules/spring-boot-autoconfiguration/spring-boot-custom-auto-configuration_zh.md)
+- [在Spring Boot中显示自动配置报告](/spring-boot-modules/spring-boot-autoconfiguration/spring-boot-auto-configuration-report_zh.md)
+- [如何获得所有Spring管理的Bean？](/spring-boot-modules/spring-boot-di/spring-show-all-beans_zh.md)
+- [Spring Boot安全自动配置](/spring-boot-modules/spring-boot-security/spring-boot-security-autoconfiguration_zh.md)
+- [Spring组件扫描](/spring-boot-modules/spring-boot-di/spring-component-scanning_zh.md)
+
 Spring Boot - 持久性
 使用Spring Boot加载初始数据的快速指南
 带有多个SQL导入文件的Spring Boot
 从Spring Boot显示Hibernate/JPA的SQL语句
 使用H2数据库的Spring Boot
-Spring - 图标
+
 Spring Boot - DevOps工具
 用Minikube运行Spring Boot应用程序
 构建Spring Boot应用的Docker化
@@ -68,11 +73,13 @@ Spring Boot - DevOps工具
 将Spring Boot WAR部署到Tomcat服务器上
 指南：Spring Boot管理
 Spring-Boot开发工具概述
+
 Spring Boot CLI简介
 Spring Boot应用程序作为一种服务
 Spring Boot Gradle Plugin
 将Spring Boot应用部署到Azure
-Spring api - 图标
+
+Spring api
 Spring Boot - 与其他库的集成
 在Spring Boot中使用Keycloak的快速指南
 使用Spring Boot的Mustache指南
