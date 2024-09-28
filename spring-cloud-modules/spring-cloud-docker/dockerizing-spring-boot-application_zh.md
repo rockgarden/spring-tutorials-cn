@@ -1,6 +1,4 @@
-# Spring Cloud Docker
-
-## 对Spring Boot应用程序进行Docker化
+# [对Spring Boot应用程序进行Docker化](https://www.baeldung.com/dockerizing-spring-boot-application)
 
 1. 概述
     在本教程中，我们将重点讨论如何对Spring Boot应用程序进行dockerize，使其在一个隔离的环境（又称容器）中运行。
@@ -217,13 +215,3 @@
 
     在这篇文章中，我们学习了如何构建自定义Docker镜像，将Spring Boot应用作为Docker容器运行，以及用docker-compose创建容器。
     关于构建文件的进一步阅读，我们参考了官方的[Dockerfile](https://docs.docker.com/engine/reference/builder/)参考和[docker-compose.yml](https://docs.docker.com/compose/compose-file/)参考。
-
-## Relevant Articles
-
-- [x] [Dockerizing a Spring Boot Application](https://www.baeldung.com/dockerizing-spring-boot-application)
-- [Docker Compose Restart Policies](https://www.baeldung.com/ops/docker-compose-restart-policies)
-- [Restart a Single Container With Docker Compose](https://www.baeldung.com/ops/docker-compose-restart-container)
-
-## Code
-
-像往常一样，这篇文章的源代码可以在[Github](https://github.com/eugenp/tutorials/tree/master/spring-cloud-modules/spring-cloud-docker)上找到。

@@ -1,6 +1,4 @@
-# Spring Boot持久性
-
-## 用Spring Boot加载初始数据的快速指南
+# [用Spring Boot加载初始数据的快速指南](https://www.baeldung.com/spring-boot-data-sql-and-schema-sql)
 
 1. 概述
 
@@ -146,18 +144,3 @@
     我们还看了如何使用@Sql、@SqlConfig和@SqlGroup注解来为测试加载测试数据。
 
     请记住，这种方法更适合于基本的和简单的场景，任何高级的数据库处理都需要更高级和精炼的工具，如[Liquibase](https://www.baeldung.com/liquibase-refactor-schema-of-java-app)或[Flyway](https://www.baeldung.com/database-migrations-with-flyway)。
-
-## Relevant Articles
-
-- [Spring Boot with Multiple SQL Import Files](https://www.baeldung.com/spring-boot-sql-import-files)
-- [Configuring Separate Spring DataSource for Tests](https://www.baeldung.com/spring-testing-separate-data-source)
-- [x] [Quick Guide on Loading Initial Data with Spring Boot](https://www.baeldung.com/spring-boot-data-sql-and-schema-sql)
-- [Configuring a DataSource Programmatically in Spring Boot](https://www.baeldung.com/spring-boot-configure-data-source-programmatic)
-- [Resolving “Failed to Configure a DataSource” Error](https://www.baeldung.com/spring-boot-failed-to-configure-data-source)
-- [Hibernate Field Naming with Spring Boot](https://www.baeldung.com/hibernate-field-naming-spring-boot)
-- [Spring Boot with Hibernate](https://www.baeldung.com/spring-boot-hibernate)
-- More articles: [[more -->]](../spring-boot-persistence-2)
-
-## Code
-
-一如既往，代码片段可以在[GitHub](https://github.com/eugenp/tutorials/tree/master/persistence-modules/spring-boot-persistence)上找到。

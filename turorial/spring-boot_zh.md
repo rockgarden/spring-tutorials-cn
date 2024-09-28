@@ -61,26 +61,30 @@ Spring Boot - 引擎盖下
 - [Spring组件扫描](/spring-boot-modules/spring-boot-di/spring-component-scanning_zh.md)
 
 Spring Boot - 持久性
-使用Spring Boot加载初始数据的快速指南
-带有多个SQL导入文件的Spring Boot
-从Spring Boot显示Hibernate/JPA的SQL语句
-使用H2数据库的Spring Boot
+
+- [使用Spring Boot加载初始数据的快速指南](/persistence-modules/spring-boot-persistence/spring-boot-data-sql-and-schema-sql_zh.md)
+- [带有多个SQL导入文件的Spring Boot](/persistence-modules/spring-boot-persistence/spring-boot-sql-import-files_zh.md)
+- [从Spring Boot显示Hibernate/JPA的SQL语句](/persistence-modules/spring-boot-persistence/sql-logging-spring-boot_zh.md)
+- [使用H2数据库的Spring Boot](/persistence-modules/spring-boot-persistence-h2/spring-boot-h2-database_zh.md)
+- [在 Spring Boot 中配置和使用多个数据源](/persistence-modules/spring-data-jdbc/spring-boot-configure-multiple-datasources_zh.md)
+- [禁用 Spring 数据自动配置](/spring-boot-modules/spring-boot-data/spring-data-disable-auto-config_zh.md)
+- [使用 Spring Boot 配置 Hikari 连接池](/persistence-modules/spring-boot-persistence-5/spring-boot-hikari_zh.md)
 
 Spring Boot - DevOps工具
-用Minikube运行Spring Boot应用程序
-构建Spring Boot应用的Docker化
-用Spring Boot创建Docker镜像
-将Spring Boot WAR部署到Tomcat服务器上
-指南：Spring Boot管理
-Spring-Boot开发工具概述
 
-Spring Boot CLI简介
+- [用Minikube运行Spring Boot应用程序](/spring-cloud-modules/spring-cloud-kubernetes/spring-boot-minikube_zh.md)
+- [构建Spring Boot应用的Docker化](/spring-cloud-modules/spring-cloud-docker/dockerizing-spring-boot-application_zh.md)
+- [用Spring Boot创建Docker镜像](/docker-modules/docker-spring-boot/spring-boot-docker-images_zh.md)
+- [将Spring Boot WAR部署到Tomcat服务器上](/spring-boot-modules/spring-boot-deployment/spring-boot-war-tomcat-deploy_zh.md)
+- [指南：Spring Boot管理](/spring-boot-modules/spring-boot-admin/spring-boot-admin_zh.md)
+- [Spring-Boot开发工具概述](/spring-boot-modules/spring-boot-devtools_zh.md)
+- [Spring Boot CLI简介](/spring-boot-modules/spring-boot-cli/spring-boot-cli_zh.md)
 Spring Boot应用程序作为一种服务
 Spring Boot Gradle Plugin
 将Spring Boot应用部署到Azure
 
-Spring api
-Spring Boot - 与其他库的集成
+Spring Boot - 与其他库集成
+
 在Spring Boot中使用Keycloak的快速指南
 使用Spring Boot的Mustache指南
 GraphQL和Spring Boot入门
