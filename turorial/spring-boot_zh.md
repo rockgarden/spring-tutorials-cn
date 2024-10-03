@@ -79,15 +79,18 @@ Spring Boot - DevOps工具
 - [指南：Spring Boot管理](/spring-boot-modules/spring-boot-admin/spring-boot-admin_zh.md)
 - [Spring-Boot开发工具概述](/spring-boot-modules/spring-boot-devtools_zh.md)
 - [Spring Boot CLI简介](/spring-boot-modules/spring-boot-cli/spring-boot-cli_zh.md)
-Spring Boot应用程序作为一种服务
-Spring Boot Gradle Plugin
-将Spring Boot应用部署到Azure
+- [Spring Boot应用程序作为一种服务](/spring-boot-modules/spring-boot-app-as-a-service_zh.md)
+- [Spring Boot Gradle 插件](/spring-boot-modules/spring-boot-gradle-plugin_zh.md)
+- [将Spring Boot应用部署到Azure](/azure/spring-boot-azure_zh.md)
+- [在 Spring Boot 应用程序中设置 OpenTelemetry](/spring-cloud-modules/spring-cloud-open-telemetry/spring-boot-opentelemetry-setup_zh.md)
+- [使用 Spring Boot 实现可观察性](/spring-boot-modules/spring-boot-3-observation/spring-boot-3-observability_zh.md)
+- [使用 Bucket4j 对 Spring API 进行速率限制](/spring-boot-modules/spring-boot-libraries/spring-bucket4j_zh.md)
 
 Spring Boot - 与其他库集成
 
-在Spring Boot中使用Keycloak的快速指南
-使用Spring Boot的Mustache指南
-GraphQL和Spring Boot入门
-使用Spring Boot的Apache Camel
-在Spring Boot应用中使用Spring Data的DynamoDB
-使用Jasypt的Spring Boot配置
+- [在Spring Boot中使用Keycloak的快速指南](/spring-boot-modules/spring-boot-keycloak/spring-boot-keycloak_zh.md)
+- [使用Spring Boot的Mustache指南](/mustache/spring-boot-mustache_zh.md)
+- [GraphQL和Spring Boot入门](/spring-boot-modules/spring-boot-graphql/spring-graphql_zh.md)
+- [使用Spring Boot的Apache Camel](/messaging-modules/spring-apache-camel/apache-camel-spring-boot_zh.md)
+- [在Spring Boot应用中使用Spring Data的DynamoDB](/persistence-modules/spring-data-dynamodb/spring-data-dynamodb_zh.md)
+- [使用Jasypt的Spring Boot配置](/spring-boot-modules/spring-boot-jasypt/spring-boot-jasypt_zh.md)
