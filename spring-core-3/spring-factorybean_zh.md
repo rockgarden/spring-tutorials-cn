@@ -1,8 +1,4 @@
-# Spring Core
-
-This module contains articles about core Spring functionality
-
-## 如何使用Spring FactoryBean？
+# [如何使用Spring FactoryBean？](https://www.baeldung.com/spring-factorybean)
 
 1. 概述
 
@@ -142,18 +138,3 @@ This module contains articles about core Spring functionality
     使用FactoryBean可以很好地封装复杂的构造逻辑，或者让Spring中配置高度可配置的对象变得更容易。
 
     所以在这篇文章中，我们介绍了如何实现我们的FactoryBean，如何在基于XML的配置和基于Java的配置中使用它，以及FactoryBean的一些其他杂项，如FactoryBean和AbstractFactoryBean的初始化等基本内容。
-
-## Relevant Articles
-
-- [Understanding getBean() in Spring](https://www.baeldung.com/spring-getbean)
-- [Guide to the Spring BeanFactory](https://www.baeldung.com/spring-beanfactory)
-- [x] [How to use the Spring FactoryBean?](https://www.baeldung.com/spring-factorybean)
-- [Design Patterns in the Spring Framework](https://www.baeldung.com/spring-framework-design-patterns)
-- [Difference Between BeanFactory and ApplicationContext](https://www.baeldung.com/spring-beanfactory-vs-applicationcontext)
-- [A Spring Custom Annotation for a Better DAO](http://www.baeldung.com/spring-annotation-bean-pre-processor)
-- [Custom Scope in Spring](http://www.baeldung.com/spring-custom-scope)
-- More articles: [[<-- prev]](/spring-core-2) [[next -->]](/spring-core-4)
-
-## Code
-
-一如既往，完整的源代码在[GitHub](https://github.com/eugenp/tutorials/tree/master/spring-core-3)上。

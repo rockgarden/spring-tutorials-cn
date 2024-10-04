@@ -1,8 +1,4 @@
-# Spring Core
-
-This module contains articles about core Spring functionality
-
-## 用Lombok在Spring中注入构造函数
+# [用Lombok在Spring中注入构造函数](https://www.baeldung.com/spring-injection-lombok)
 
 1. 简介
 
@@ -23,8 +19,32 @@ This module contains articles about core Spring functionality
 
     然而，由于需要编写一个构造函数，这将导致代码库明显增大。考虑一下GreetingService和FarewellService这两个例子：
 
-    - lombok/GreetingService.java
-    - lombok/FarewellService.java
+    ```java
+    @Component
+    public class GreetingService {
+
+        @Autowired
+        private Translator translator;
+
+        public String produce() {
+            return translator.translate("hello");
+        }
+    }
+
+    @Component
+    public class FarewellService {
+
+        private final Translator translator;
+
+        public FarewellService(Translator translator) {
+            this.translator = translator;
+        }
+
+        public String produce() {
+            return translator.translate("bye");
+        }
+    }
+    ```
 
     基本上，这两个组件都做了同样的事情--它们用一个特定的任务词调用一个可配置的翻译器。
 
@@ -39,6 +59,19 @@ This module contains articles about core Spring functionality
     让我们创建第三个组件，与前两个类似：
 
     lombok/ThankingService.java
+
+    ```java
+    @Component
+    @RequiredArgsConstructor
+    public class ThankingService {
+
+        private final Translator translator;
+
+        public String produce() {
+            return translator.translate("thank you");
+        }
+    }
+    ```
 
     上面的注解将使Lombok为我们生成一个构造函数：
 
@@ -67,6 +100,25 @@ This module contains articles about core Spring functionality
 
     lombok/ApologizeService.java
 
+    ```java
+    @Component
+    @RequiredArgsConstructor
+    public class ApologizeService {
+
+        private final Translator translator;
+        private final String message;
+
+        @Autowired
+        public ApologizeService(Translator translator) {
+            this(translator, "sorry");
+        }
+
+        public String produce() {
+            return translator.translate(message);
+        }
+    }
+    ```
+
     上述组件可选择配置的消息字段在组件创建后不能改变（因此没有setter）。因此，它要求我们提供两个构造函数--一个具有完整的配置，另一个具有隐含的、默认的消息值。
 
     除非其中一个构造函数带有@Autowired、@Inject或@Resource的注释，否则Spring会抛出一个错误：
@@ -92,18 +144,3 @@ This module contains articles about core Spring functionality
     在本教程中，我们展示了在增加模板代码方面，没有必要倾向于基于字段的DI而不是基于构造函数的DI。
 
     感谢Lombok，它可以在不影响运行时性能的情况下自动生成普通代码，将长而不明显的代码缩写为使用单行注释。
-
-## Relevant Articles
-
-- [Creating Spring Beans Through Factory Methods](https://www.baeldung.com/spring-beans-factory-methods)
-- [How to dynamically Autowire a Bean in Spring](https://www.baeldung.com/spring-dynamic-autowire)
-- [Spring @Import Annotation](https://www.baeldung.com/spring-import-annotation)
-- [Spring BeanPostProcessor](https://www.baeldung.com/spring-beanpostprocessor)
-- [Using @Autowired in Abstract Classes](https://www.baeldung.com/spring-autowired-abstract-class)
-- [x] [Constructor Injection in Spring with Lombok](https://www.baeldung.com/spring-injection-lombok)
-- [The Spring ApplicationContext](https://www.baeldung.com/spring-application-context)
-- More articles: [[<-- prev]](/spring-core-3) [[next -->]](/spring-core-5)
-
-## Code
-
-教程中使用的代码可以在[GitHub](https://github.com/eugenp/tutorials/tree/master/spring-core-4)上找到。

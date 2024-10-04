@@ -2,7 +2,7 @@
 
 1. 一览表
 
-    在本教程中，我们将学习如何在Spring中使路径变量成为可选变量。首先，我们将描述Spring[如何](https://www.baeldung.com/spring-requestmapping)在处理程序方法中绑定@PathVariable参数。然后，我们将展示在不同的Spring版本中使路径变量成为可选的不同方法。
+    在本教程中，我们将学习如何在Spring中使路径变量成为可选变量。首先，我们将描述Spring如何在处理程序方法中绑定@PathVariable参数。然后，我们将展示在不同的Spring版本中使路径变量成为可选的不同方法。
 
     有关路径变量的快速概述，请阅读我们的Spring MVC[文章](https://www.baeldung.com/spring-mvc-interview-questions#q5describe-apathvariable)。
 

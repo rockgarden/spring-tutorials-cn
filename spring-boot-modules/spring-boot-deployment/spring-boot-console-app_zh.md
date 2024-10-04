@@ -20,7 +20,7 @@
 
     下面是我们的控制台应用程序：springbootnonwebapp/SpringBootConsoleApplication.java
 
-    我们还应该指定`spring.main.web-application-type=NONE` [Spring属性](https://www.baeldung.com/properties-with-spring)。这个属性将明确告知Spring，这不是一个Web应用。
+    我们还应该指定`spring.main.web-application-type=NONE` Spring属性。这个属性将明确告知Spring，这不是一个Web应用。
 
     当我们执行SpringBootConsoleApplication时，我们可以看到以下记录：
 

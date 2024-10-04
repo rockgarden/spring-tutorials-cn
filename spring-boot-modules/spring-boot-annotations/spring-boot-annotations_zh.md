@@ -1,14 +1,5 @@
 # [Spring Boot注解](https://www.baeldung.com/spring-boot-annotations)
 
-这篇文章是系列文章的一部分：
-
-- [Spring Core 注解](https://www.baeldung.com/spring-core-annotations)
-- [Spring Web 注解](https://www.baeldung.com/spring-mvc-annotations)
-- Spring Boot注解
-- [Spring Scheduling 注解](https://www.baeldung.com/spring-scheduling-annotations)
-- [Spring Data 注解](https://www.baeldung.com/spring-data-annotations)
-- [Spring Bean 注释](https://www.baeldung.com/spring-bean-annotations)
-
 1. 概述
 
     Spring Boot通过其自动配置功能使配置Spring更加容易。

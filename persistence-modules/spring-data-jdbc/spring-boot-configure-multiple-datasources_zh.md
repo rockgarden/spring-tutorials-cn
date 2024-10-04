@@ -6,8 +6,6 @@
 
     在本教程中，我们将学习如何使用 Spring Boot 配置和使用多个数据源。
 
-    要了解如何处理单个数据源，请查看我们的 [Spring Data JPA 介绍](https://www.baeldung.com/the-persistence-layer-with-spring-data-jpa)。
-
 2. 默认行为
 
     让我们回忆一下在 application.yml 中声明 Spring Boot 数据源的样子：

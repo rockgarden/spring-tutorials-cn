@@ -4,7 +4,7 @@
 
 我们将研究如何定位资源并读取其内容。
 
-此外，我们还将演示如何在多个Bean中共享加载的资源。我们将通过使用与[依赖性注入有关的注解](https://www.baeldung.com/spring-annotations-resource-inject-autowire)来展示这一点，尽管同样可以通过使用[基于XML的注入](https://www.baeldung.com/spring-xml-injection)和在XML属性文件中声明bean来实现。
+此外，我们还将演示如何在多个Bean中共享加载的资源。我们将通过使用与依赖性注入有关的注解来展示这一点，尽管同样可以通过使用[基于XML的注入](https://www.baeldung.com/spring-xml-injection)和在XML属性文件中声明bean来实现。
 
 1. 使用资源
 
@@ -96,7 +96,7 @@
         }
         ```
 
-        现在让我们通过添加[@Autowired](https://www.baeldung.com/spring-autowire)注解将注册的Bean注入到字段中。
+        现在让我们通过添加@Autowired注解将注册的Bean注入到字段中。
 
         ```java
         public class LoadResourceAsStringIntegrationTest {

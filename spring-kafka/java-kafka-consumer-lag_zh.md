@@ -18,7 +18,7 @@
 
         main/..monitoring.service/LagAnalyzerService.java:getAdminClient()
 
-        我们必须注意使用 [@Value](https://www.baeldung.com/spring-value-annotation) 注解从属性文件中获取引导服务器列表。同样，我们将使用此注解获取其他值，如 groupId 和 topicName。
+        我们必须注意使用 @Value 注解从属性文件中获取引导服务器列表。同样，我们将使用此注解获取其他值，如 groupId 和 topicName。
 
     2. 消费者组偏移
 

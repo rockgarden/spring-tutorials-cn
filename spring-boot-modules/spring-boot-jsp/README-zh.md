@@ -144,8 +144,6 @@
 
     由于使用这个标签，我们需要单独定义表单动作的URL，因为我们不能把标签放在标签里面。我们还使用`<form:input>`标签中的路径属性，将每个输入字段绑定到Book对象中的一个属性。
 
-    请参阅我们的文章《[Spring MVC中的表单入门](https://www.baeldung.com/spring-mvc-form-tutorial)》，了解更多关于如何处理表单提交的细节。
-
 7. 处理错误
 
     由于使用Spring Boot和JSP的现有限制，我们不能提供自定义error.html来定制默认的/error映射。相反，我们需要创建自定义错误页面来处理不同的错误。

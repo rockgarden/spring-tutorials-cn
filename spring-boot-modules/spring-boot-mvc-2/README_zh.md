@@ -14,7 +14,7 @@ Spring 5引入了[WebFlux](https://www.baeldung.com/spring-5-functional-web)，�
 
     这个框架支持我们熟悉的基于注解的定义控制器的方法。但它也增加了一种新的特定领域语言，提供了一种定义控制器的功能方式。
 
-    从Spring 5.2开始，[Spring Web MVC](https://www.baeldung.com/spring-mvc-tutorial)框架也将提供这种功能化方法。与WebFlux模块一样，RouterFunctions和RouterFunction是这个API的主要抽象。
+    从Spring 5.2开始，Spring Web MVC框架也将提供这种功能化方法。与WebFlux模块一样，RouterFunctions和RouterFunction是这个API的主要抽象。
 
     因此，让我们从导入[spring-boot-starter-web](https://search.maven.org/artifact/org.springframework.boot/spring-boot-starter-web)依赖项开始。
 
@@ -552,7 +552,7 @@ Spring 5引入了[WebFlux](https://www.baeldung.com/spring-5-functional-web)，�
 
 我们还将看看我们如何轻松地采用RESTful HTTP语义。
 
-For simplicity, we won't include a [persistence layer](https://www.baeldung.com/the-persistence-layer-with-spring-and-jpa), but [Spring Data](https://www.baeldung.com/the-persistence-layer-with-spring-data-jpa) also makes this easy to add.
+For simplicity, we won't include a [persistence layer](https://www.baeldung.com/the-persistence-layer-with-spring-and-jpa), but Spring Data also makes this easy to add.
 
 1. REST服务
 
@@ -573,7 +573,7 @@ For simplicity, we won't include a [persistence layer](https://www.baeldung.com/
     ...
     ```
 
-    通过用[@RestController](https://www.baeldung.com/spring-controller-vs-restcontroller)注解我们的StudentController，我们已经告诉Spring Boot将读取方法的返回类型写入响应体中。由于我们在类的层面上也有一个@RequestMapping，所以对于我们添加的更多公共方法也是如此。
+    通过用@RestController注解我们的StudentController，我们已经告诉Spring Boot将读取方法的返回类型写入响应体中。由于我们在类的层面上也有一个@RequestMapping，所以对于我们添加的更多公共方法也是如此。
 
     虽然简单，但这种方法缺乏HTTP语义。例如，如果我们没有找到要求的学生，会发生什么？我们可能不希望返回200或500状态代码，而是返回404。
 

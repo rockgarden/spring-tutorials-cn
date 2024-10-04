@@ -97,7 +97,7 @@
 
         除了像之前那样禁用 Keycloak 外，我们现在还需要禁用 Spring Security。
 
-        我们可以使用[配置文件](https://www.baeldung.com/spring-profiles)告诉 Spring 在测试期间是否激活 Keycloak 配置：
+        我们可以使用 配置文件 告诉 Spring 在测试期间是否激活 Keycloak 配置：
 
         ```java
         @Configuration

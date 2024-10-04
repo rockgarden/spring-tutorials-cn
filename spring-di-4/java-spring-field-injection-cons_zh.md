@@ -8,7 +8,7 @@
 
 2. 依赖注入
 
-    对象使用其依赖对象而无需定义或创建依赖对象的过程称为[依赖注入](https://www.baeldung.com/spring-dependency-injection)。它是 Spring 框架的核心功能之一。
+    对象使用其依赖对象而无需定义或创建依赖对象的过程称为依赖注入。它是 Spring 框架的核心功能之一。
 
     我们可以通过以下三种方式注入依赖对象：
 
@@ -16,7 +16,7 @@
     - 设置器注入
     - 字段注入
 
-    第三种方法是使用 [@Autowired](https://www.baeldung.com/spring-autowire) 注解将依赖对象直接注入类中。虽然这可能是最简单的方法，但我们必须明白它可能会导致一些潜在的问题。
+    第三种方法是使用 @Autowired 注解将依赖对象直接注入类中。虽然这可能是最简单的方法，但我们必须明白它可能会导致一些潜在的问题。
 
     此外，即使是 Spring [官方文档](https://docs.spring.io/spring-framework/reference/core/beans/dependencies/factory-collaborators.html)也不再将字段注入作为 DI 选项之一。
 

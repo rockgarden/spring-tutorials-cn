@@ -43,7 +43,7 @@
 
     1. 实现 GatewayFilterFactory
 
-        顾名思义，GatewayFilterFactory 是给定时间过滤器的工厂。启动时，Spring 会查找任何实现此接口的 [@Component](https://www.baeldung.com/spring-component-annotation)-注释类。然后，它会创建一个可用过滤器注册表，供我们在声明路由时使用：
+        顾名思义，GatewayFilterFactory 是给定时间过滤器的工厂。启动时，Spring 会查找任何实现此接口的@Component-注释类。然后，它会创建一个可用过滤器注册表，供我们在声明路由时使用：
 
         ```yml
         spring:

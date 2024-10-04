@@ -201,7 +201,7 @@
     - 当我们要将主题信息与应用程序事件分开时
     - 如果我们想为应用程序事件和外部化事件建立不同的模型
 
-    对于这些用例，我们可以使用 EventExternalizationConfiguration 的生成器配置必要的路由和事件映射。之后，我们只需将此配置作为 [Spring Bean](https://www.baeldung.com/spring-bean) 公开即可：
+    对于这些用例，我们可以使用 EventExternalizationConfiguration 的生成器配置必要的路由和事件映射。之后，我们只需将此配置作为 Spring Bean 公开即可：
 
     ```java
     @Bean

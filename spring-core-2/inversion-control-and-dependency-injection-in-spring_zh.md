@@ -4,16 +4,6 @@
 
     在本教程中，我们将介绍IoC（控制反转）和DI（依赖注入）的概念，以及如何在Spring框架中实现这些概念。
 
-    进一步阅读：
-
-    [在 Spring 中布线： @Autowired、@Resource 和 @Inject](https://www.baeldung.com/spring-annotations-resource-inject-autowire)
-
-    本文将比较和对比与依赖注入相关的注解（即 @Resource、@Inject 和 @Autowired 注解）的使用。
-
-    [Spring 中的 @Component 与 @Repository 和 @Service](https://www.baeldung.com/spring-component-repository-service)
-
-    了解 @Component、@Repository 和 @Service 注释之间的区别以及何时使用它们。
-
 2. 什么是控制反转？
 
     控制反转是软件工程中的一个原理，它将对象或程序部分的控制转移到容器或框架。我们通常在面向对象编程的上下文中使用它。
@@ -91,7 +81,7 @@
 
 5. 基于构造函数的依赖注入
 
-    在[基于构造函数的依赖项注入](https://www.baeldung.com/constructor-injection-in-spring)的情况下，容器将调用一个构造函数，每个构造函数的参数表示我们想要设置的依赖项。
+    在基于构造函数的依赖项注入的情况下，容器将调用一个构造函数，每个构造函数的参数表示我们想要设置的依赖项。
 
     Spring主要按类型解析每个参数，后跟属性名和索引以消除歧义。让我们看看使用注释的bean及其依赖项的配置：
 
@@ -167,11 +157,9 @@
     - 此方法使用反射来注入依赖项，这比基于构造函数或基于setter的注入成本更高。
     - 使用这种方法可以很容易地添加多个依赖项。如果我们使用构造函数注入，有多个参数会让我们认为类做了不止一件事，这可能违反单一责任原则。
 
-    有关@Autowired注释的更多信息，请参阅[Wiring in Spring](https://www.baeldung.com/spring-annotations-resource-inject-autowire)文章。
-
 8. Autowiring Dependencies
 
-    [连线](https://www.baeldung.com/spring-annotations-resource-inject-autowire)允许Spring容器通过检查已定义的bean来自动解决协作bean之间的依赖关系。
+    连线(autowire)允许Spring容器通过检查已定义的bean来自动解决协作bean之间的依赖关系。
 
     使用XML配置自动连接bean有四种模式：
 

@@ -28,7 +28,7 @@
     })
     ```
 
-    最后，我们来看看如何禁用 [Spring Data JPA](https://www.baeldung.com/the-persistence-layer-with-spring-data-jpa) 的自动配置：
+    最后，我们来看看如何禁用 Spring Data JPA 的自动配置：
 
     ```java
     @SpringBootApplication(exclude = {

@@ -1,9 +1,9 @@
 # [探索SpringMVC的表单标签库](https://www.baeldung.com/spring-mvc-form-tags)
 
 1. 概述
-   在本系列的[第一篇](https://www.baeldung.com/spring-mvc-form-tutorial)文章，介绍了表单标签库的使用以及如何将数据绑定到控制器中。
 
    在这篇文章中，我们将介绍Spring MVC提供的各种标签，帮助我们创建和验证表单(create and validate forms)。
+
 2. input标签
    我们将从输入标签开始。这个标签默认使用绑定的值和type='text'来渲染一个HTML输入标签。
 

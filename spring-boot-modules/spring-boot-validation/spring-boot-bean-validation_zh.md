@@ -87,7 +87,7 @@
 
     此外，除了@NotBlank之外，[Bean Validation](https://www.baeldung.com/javax-validation)还提供了许多其他方便的约束。这允许我们对受约束的类应用和组合不同的验证规则。有关更多信息，请阅读[官方的bean验证文档](https://beanvalidation.org/2.0/)。
 
-    由于我们将使用[Spring Data JPA](https://www.baeldung.com/the-persistence-layer-with-spring-data-jpa)将用户保存到内存中的H2数据库，我们还需要定义一个简单的存储库接口，以便在用户对象上具有基本的CRUD功能：
+    由于我们将使用 Spring Data JPA 将用户保存到内存中的H2数据库，我们还需要定义一个简单的存储库接口，以便在用户对象上具有基本的CRUD功能：
 
     ```java
     @Repository

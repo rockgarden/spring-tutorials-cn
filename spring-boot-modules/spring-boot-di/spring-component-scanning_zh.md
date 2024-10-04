@@ -8,11 +8,6 @@
 
     首先，让我们看看默认设置。
 
-    进一步阅读：
-
-    - [ ] [Spring Bean注释](https://www.baeldung.com/spring-bean-annotations)
-    - [ ] [在Spring Boot中创建自定义自动配置](https://www.baeldung.com/spring-boot-custom-auto-configuration)
-
 2. @ComponentScan无参数
 
     1. 在Spring应用程序中使用@ComponentScan

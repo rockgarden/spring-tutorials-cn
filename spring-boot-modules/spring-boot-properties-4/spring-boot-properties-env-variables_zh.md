@@ -6,10 +6,6 @@
 
     进一步阅读：
 
-    [带有Spring和Spring Boot的属性](https://www.baeldung.com/properties-with-spring)
-
-    关于如何在Spring中处理属性文件和属性值的教程。
-
     [在Spring Boot中使用application.yml vs application.properties](https://www.baeldung.com/spring-boot-yaml-vs-properties)
 
     Spring Boot同时支持.properties和YAML。我们探索了注入属性之间的差异，以及如何提供多种配置。
@@ -34,7 +30,7 @@
 
     `baeldung.presentation=${HELLO_BAELDUNG}. Java is installed in the folder: ${JAVA_HOME}`
 
-    [属性](https://www.baeldung.com/properties-with-spring)baeldung.presentation现在包含以下文本：“Hello Baeldung. Java is installed in the folder: C:\Program Files\Java\jdk-11.0.14“。
+    属性 baeldung.presentation 现在包含以下文本：“Hello Baeldung. Java is installed in the folder: C:\Program Files\Java\jdk-11.0.14“。
 
     这样，我们的属性根据环境有不同的价值。
 
@@ -44,7 +40,7 @@
 
     1. 用@Value注入值
 
-        首先，我们可以使用[@Value](https://www.baeldung.com/spring-value-annotation)注释。@Value处理 setter、[constructor](https://www.baeldung.com/constructor-injection-in-spring)和 field [injections](https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring)：
+        首先，我们可以使用 @Value 注释。@Value处理 setter、[constructor](https://www.baeldung.com/constructor-injection-in-spring)和 field [injections](https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring)：
 
         ```java
         @Value("${baeldung.presentation}")
@@ -53,7 +49,7 @@
 
     2. 从Spring的环境中获取它
 
-        我们还可以通过Spring's Environment获得财产的价值。我们需要[autowire](https://www.baeldung.com/spring-autowire)：
+        我们还可以通过Spring's Environment获得财产的价值。我们需要@Autowire：
 
         ```java
         @Autowired
@@ -66,7 +62,7 @@
 
     3. 使用@ConfigurationProperties的组属性
 
-        如果我们想将属性分组在一起，[@ConfigurationProperties](https://www.baeldung.com/configuration-properties-in-spring-boot)注释非常有用。我们将定义一个[组件](https://www.baeldung.com/spring-component-annotation)，该组件将收集具有给定前缀的所有属性，在我们的案例中是baeldung。然后，我们可以为每个属性定义一个[设置器](https://www.baeldung.com/java-why-getters-setters)。设置器的名称是属性名称的其余部分。就我们而言，我们只有一个，叫做演示：
+        如果我们想将属性分组在一起，[@ConfigurationProperties](https://www.baeldung.com/configuration-properties-in-spring-boot)注释非常有用。我们将定义一个组件，该组件将收集具有给定前缀的所有属性，在我们的案例中是baeldung。然后，我们可以为每个属性定义一个[设置器](https://www.baeldung.com/java-why-getters-setters)。设置器的名称是属性名称的其余部分。就我们而言，我们只有一个，叫做演示：
 
         ```java
         @Component

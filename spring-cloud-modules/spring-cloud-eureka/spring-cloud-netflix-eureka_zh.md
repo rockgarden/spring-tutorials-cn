@@ -185,7 +185,7 @@
 
     此外，还需要在项目中包含 spring-cloud-starter-eureka 软件包，并用 @EnableEurekaClient 对主应用程序类进行注解，以启用该软件包。
 
-    spring-boot-starter-web 和 spring-boot-starter-thymeleaf 依赖项用于显示包含从 REST 服务获取的数据的[视图](https://www.baeldung.com/spring-mvc-form-tutorial)。
+    spring-boot-starter-web 和 spring-boot-starter-thymeleaf 依赖项用于显示包含从 REST 服务获取的数据的视图。
 
     这就是我们的 Feign 客户端接口：[GreetingClient.java](./spring-cloud-eureka-feign-client/src/main/java/com/baeldung/spring/cloud/feign/client/GreetingClient.java)
 

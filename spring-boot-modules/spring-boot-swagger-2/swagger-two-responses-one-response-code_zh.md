@@ -131,7 +131,7 @@
 
         1.6.10 版的 springdoc-openapi-ui 依赖于 4.13.2 版的 swagger-ui，后者可正确处理 oneOf 和各种响应示例。
 
-        要从 YAML 文件生成 Swagger UI 文档，我们需要声明一个 [SpringBootApplication](https://www.baeldung.com/spring-boot-start) 并添加以下三个 [Bean](https://www.baeldung.com/spring-bean)：
+        要从 YAML 文件生成 Swagger UI 文档，我们需要声明一个 [SpringBootApplication](https://www.baeldung.com/spring-boot-start) 并添加以下三个Bean：
 
         ```java
         @Bean

@@ -70,7 +70,7 @@
 
         虽然将设置放入 src/test/application.properties 在大多数情况下都可行，但在某些情况下，我们可能希望对一个测试或一组测试进行不同的设置。
 
-        在这种情况下，我们可以使用 ActiveProfiles 注解为测试添加 [Spring 配置文件](https://www.baeldung.com/spring-profiles)：
+        在这种情况下，我们可以使用 ActiveProfiles 注解为测试添加 Spring 配置文件：
 
         ```java
         @RunWith(SpringRunner.class)

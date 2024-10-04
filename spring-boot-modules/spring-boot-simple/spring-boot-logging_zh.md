@@ -8,7 +8,7 @@
 
 2. 初始设置
 
-    让我们先创建一个Spring Boot模块。推荐这样做的方法是使用[Spring Initializr](https://start.spring.io/)，我们在Spring Boot[教程](https://www.baeldung.com/spring-boot-start)中涵盖了它。
+    让我们先创建一个Spring Boot模块。推荐这样做的方法是使用[Spring Initializr](https://start.spring.io/)，我们在Spring Boot教程中涵盖了它。
 
     现在让我们创建我们唯一的类文件，LoggingController：
 

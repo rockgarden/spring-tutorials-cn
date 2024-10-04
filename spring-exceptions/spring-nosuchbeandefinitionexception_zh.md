@@ -1,8 +1,4 @@
-# Spring Exceptions
-
-This module contains articles about Spring `Exception`s
-
-## NoSuchBeanDefinitionException
+# [Spring NoSuchBeanDefinitionException](https://www.baeldung.com/spring-nosuchbeandefinitionexception)
 
 1. 概述
 
@@ -257,16 +253,3 @@ This module contains articles about Spring `Exception`s
 7. 总结
 
     本文讨论了常见的NoSuchBeanDefinitionException的可能原因的例子--重点是如何在实践中解决这些异常。
-
-## Relevant articles
-
-- [Spring BeanCreationException](https://www.baeldung.com/spring-beancreationexception)
-- [Spring DataIntegrityViolationException](https://www.baeldung.com/spring-dataIntegrityviolationexception)
-- [Spring BeanDefinitionStoreException](https://www.baeldung.com/spring-beandefinitionstoreexception)
-- [x] [Spring NoSuchBeanDefinitionException](https://www.baeldung.com/spring-nosuchbeandefinitionexception)
-- [Guide to Spring NonTransientDataAccessException](https://www.baeldung.com/nontransientdataaccessexception)
-- [Hibernate Mapping Exception – Unknown Entity](https://www.baeldung.com/hibernate-mappingexception-unknown-entity)
-
-## Code
-
-所有这些异常例子的实现都可以在[GitHub项目](https://github.com/eugenp/tutorials/tree/master/spring-exceptions)中找到。这是一个基于Eclipse的项目，所以应该很容易导入并按原样运行。

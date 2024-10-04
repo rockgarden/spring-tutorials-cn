@@ -22,7 +22,7 @@
     </dependency>
     ```
 
-    项目本身有意保持简单。它由一个控制器接口（带有一个 [@RequestMapping](https://www.baeldung.com/spring-requestmapping) 注解的 GET 方法，仅返回一个字符串）、一个实现该接口的 @RestController 和一个 [@SpringBootApplication](https://www.baeldung.com/spring-boot-application-configuration) 组成。
+    项目本身有意保持简单。它由一个控制器接口（带有一个 @RequestMapping 注解的 GET 方法，仅返回一个字符串）、一个实现该接口的 @RestController 和一个 [@SpringBootApplication](https://www.baeldung.com/spring-boot-application-configuration) 组成。
 
     我们从接口开始：
 

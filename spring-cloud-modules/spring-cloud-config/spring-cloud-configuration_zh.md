@@ -6,7 +6,7 @@
 
     Spring Cloud Config是Spring的客户端/服务器方法，用于存储和服务跨多个应用程序和环境的分布式配置。
 
-    这种配置存储最好在 Git 版本控制下进行版本控制，并可在应用程序运行时进行修改。虽然它很适合在Spring应用程序中使用所有支持的配置文件格式以及像Environment、[PropertySource或@Value](https://www.baeldung.com/properties-with-spring)这样的结构，但它可以在运行任何编程语言的任何环境中使用。
+    这种配置存储最好在 Git 版本控制下进行版本控制，并可在应用程序运行时进行修改。虽然它很适合在Spring应用程序中使用所有支持的配置文件格式以及像Environment、PropertySource或@Value这样的结构，但它可以在运行任何编程语言的任何环境中使用。
 
     在本教程中，我们将重点介绍如何设置 Git 支持的配置服务器，如何在简单的 REST 应用程序服务器中使用它，以及如何设置包括加密属性值在内的安全环境。
 

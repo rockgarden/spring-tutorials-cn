@@ -1,4 +1,6 @@
-# Spring Cloud 教程
+# [Spring Cloud 教程](https://www.baeldung.com/spring-cloud-series)
+
+Last updated: September 28, 2023
 
 学习 Spring Cloud，包括分布式系统的概念、附加库和示例。
 
@@ -66,7 +68,3 @@
 
 - [Spring Cloud 系列 - 网关模式](/spring-cloud-bootstrap/spring-cloud-gateway-pattern_zh.md)
 - [Spring Cloud – Adding Angular 4](/spring-cloud-bootstrap/spring-cloud-angular_zh.md)
-
-## 原文链接
-
-[Spring Cloud Tutorial](https://www.baeldung.com/spring-cloud-series)

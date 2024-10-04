@@ -2,7 +2,7 @@
 
 1. 一览表
 
-    在之前的教程中，我们介绍了[表单处理](https://www.baeldung.com/spring-mvc-form-tutorial)的基础知识，并探索了Spring MVC中的[表单标签库](https://www.baeldung.com/spring-mvc-form-tags)。
+    在之前的教程中，我们介绍了表单处理的基础知识，并探索了Spring MVC中的[表单标签库](https://www.baeldung.com/spring-mvc-form-tags)。
 
     在本教程中，我们专注于Spring为Web应用程序中的多部分（文件上传）支持提供的内容。
 

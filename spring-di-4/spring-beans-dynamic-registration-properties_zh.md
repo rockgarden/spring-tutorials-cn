@@ -2,7 +2,7 @@
 
 1. 概述
 
-    在本教程中，我们将探讨如何根据自定义属性动态注册 [Bean](https://www.baeldung.com/spring-bean)。我们将探索 BeanDefinitionRegistryPostProcessor 接口，以及如何使用它将 Bean 添加到应用程序上下文中。
+    在本教程中，我们将探讨如何根据自定义属性动态注册Bean。我们将探索 BeanDefinitionRegistryPostProcessor 接口，以及如何使用它将 Bean 添加到应用程序上下文中。
 
 2. 代码设置
 
@@ -48,7 +48,7 @@
 
         假设我们想根据提供的属性使用此 bean 连接到不同的 API。我们不想为每个 API 创建类定义。相反，我们希望为每个 API 定义属性并动态注册 bean。
 
-        我们不应该用 [@Component 或 @Service](https://www.baeldung.com/spring-component-repository-service) 来注解 ApiClient 类，因为我们不想使用组件扫描将其注册为 bean。
+        我们不应该用 @Component 或 @Service 来注解 ApiClient 类，因为我们不想使用组件扫描将其注册为 bean。
 
     3. 属性
 

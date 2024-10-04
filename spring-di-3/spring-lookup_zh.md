@@ -1,8 +1,4 @@
-# Spring Dependency Injection
-
-This module contains articles about dependency injection with Spring
-
-## Spring中的@Lookup注解
+# [Spring中的@Lookup注解](ttps://www.baeldung.com/spring-lookup)
 
 1. 简介
 
@@ -147,14 +143,3 @@ This module contains articles about dependency injection with Spring
 5. 总结
 
     在这篇文章中，我们学习了如何以及何时使用Spring的@Lookup注解，包括如何使用它将原型范围的Bean注入到单例Bean中，以及如何使用它来程序化地注入依赖关系。
-
-## Relevant Articles
-
-- [x] [@Lookup Annotation in Spring](https://www.baeldung.com/spring-lookup)
-- [Spring @Autowired Field Null – Common Causes and Solutions](https://www.baeldung.com/spring-autowired-field-null)
-- [Finding All Beans with a Custom Annotation](https://www.baeldung.com/spring-injecting-all-annotated-beans)
-- More articles: [[<-- prev]](../spring-di-2/README-zh.md)
-
-## Code
-
-本教程使用的所有代码都可以在[Github](https://github.com/eugenp/tutorials/tree/master/spring-di-3)上找到。

@@ -119,8 +119,6 @@
 
         在这种情况下，我们可以用@ResponseBody标记请求处理程序方法，Spring将方法的结果值视为HTTP响应主体本身。
 
-        欲了解更多信息，[本文](https://www.baeldung.com/spring-request-response-body)是一个很好的开始。
-
     2. @ResponseStatus
 
         当端点成功返回时，Spring提供HTTP 200（OK）响应。如果端点抛出异常，Spring会寻找一个异常处理程序来告诉要使用哪个HTTP状态。

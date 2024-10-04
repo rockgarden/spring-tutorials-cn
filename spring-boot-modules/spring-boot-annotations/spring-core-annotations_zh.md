@@ -53,8 +53,6 @@
 
         从 4.3 版开始，除非我们声明了至少两个构造函数，否则无需用 @Autowired 明确注解构造函数。
 
-        更多详情，请访问我们关于 [@Autowired](https://www.baeldung.com/spring-autowire) 和[构造函数注入](https://www.baeldung.com/constructor-injection-in-spring)的文章。
-
     2. @Bean
 
         @Bean 是一个工厂方法，用于实例化 Spring Bean：
@@ -128,11 +126,9 @@
         Vehicle vehicle;
         ```
 
-        有关更详细的说明，请阅读[本文](https://www.baeldung.com/spring-autowire)。
-
     4. @Value
 
-        我们可以使用 [@Value](https://www.baeldung.com/spring-value-annotation) 向 Bean 注入属性值。它与构造函数注入、设置函数注入和字段注入兼容。
+        我们可以使用 @Value 向 Bean 注入属性值。它与构造函数注入、设置函数注入和字段注入兼容。
 
         构造函数注入：
 
@@ -180,7 +176,7 @@
         String fuelType;
         ```
 
-        我们甚至可以在 SpEL 中使用 @Value。更多高级示例请参阅我们关于 @Value 的[文章](https://www.baeldung.com/spring-value-annotation)。
+        我们甚至可以在 SpEL 中使用 @Value。
 
     5. @DependsOn
 
@@ -276,7 +272,7 @@
 
     9. @Scope
 
-        我们使用 [@Scope](https://www.baeldung.com/spring-bean-scopes) 来定义 @Component 类或 @Bean 定义的作用域。它可以是单例、原型、请求、会话、globalSession 或某些自定义作用域。
+        我们使用 @Scope 来定义 @Component 类或 @Bean 定义的作用域。它可以是单例、原型、请求、会话、globalSession 或某些自定义作用域。
 
         例如：
 
@@ -299,8 +295,6 @@
         @Profile("sportDay")
         class Bike implements Vehicle {}
         ```
-
-        有关配置文件的更多信息，请参阅[本文](https://www.baeldung.com/spring-profiles)。
 
     2. @Import
 

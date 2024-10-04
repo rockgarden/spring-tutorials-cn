@@ -325,7 +325,7 @@
 
     1. 测试 Spring Gateway 作为 OAuth 2.0 客户端
 
-        在测试设置中，我们还需要确保项目的三个部分都在运行。不过，这次我们将使用不同的 [Spring 配置文件](https://www.baeldung.com/spring-profiles)来运行网关，该配置文件包含使网关成为 OAuth 2.0 客户端所需的属性。示例项目的 POM 中包含一个配置文件，我们可以使用该配置文件启动项目：
+        在测试设置中，我们还需要确保项目的三个部分都在运行。不过，这次我们将使用不同的 Spring 配置文件来运行网关，该配置文件包含使网关成为 OAuth 2.0 客户端所需的属性。示例项目的 POM 中包含一个配置文件，我们可以使用该配置文件启动项目：
 
         `$ mvn spring-boot:run -Pgateway-as-oauth-client`
 

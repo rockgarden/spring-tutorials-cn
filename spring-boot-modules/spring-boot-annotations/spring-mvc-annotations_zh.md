@@ -6,7 +6,7 @@
 
 2. @RequestMapping
 
-    简单地说，[@RequestMapping](https://www.baeldung.com/spring-requestmapping) 在 @Controller 类中标记请求处理程序方法；可以使用：
+    简单地说，@RequestMapping 在 @Controller 类中标记请求处理程序方法；可以使用：
 
     - path或其aliases、name和value：方法映射到的 URL
     - method：兼容的 HTTP 方法
@@ -48,7 +48,7 @@
 
 3. @RequestBody
 
-    下面我们来看看 [@RequestBody](https://www.baeldung.com/spring-request-response-body) - 它将 HTTP 请求的正文映射到一个对象：
+    下面我们来看看 @RequestBody - 它将 HTTP 请求的正文映射到一个对象：
 
     ```java
     @PostMapping("/save")
@@ -126,7 +126,7 @@
 
     1. @ResponseBody
 
-        如果我们用 [@ResponseBody](https://www.baeldung.com/spring-request-response-body) 标记一个请求处理程序方法，Spring 就会将该方法的结果视为响应本身：
+        如果我们用 @ResponseBody 标记一个请求处理程序方法，Spring 就会将该方法的结果视为响应本身：
 
         ```java
         @ResponseBody

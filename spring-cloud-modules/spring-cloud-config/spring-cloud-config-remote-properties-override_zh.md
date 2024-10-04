@@ -190,7 +190,7 @@
 
     1. 使用Spring配置文件
 
-        不过，我们可以使用[Spring配置文件](https://www.baeldung.com/spring-profiles)。在配置文件中本地定义的属性比在服务器级别为应用程序定义的优先级更高。
+        不过，我们可以使用 Spring 配置文件。在配置文件中本地定义的属性比在服务器级别为应用程序定义的优先级更高。
 
         让我们为我们的客户端应用程序添加一个application-development.properties配置文件，并重写hello属性。
 

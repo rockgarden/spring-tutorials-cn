@@ -8,7 +8,6 @@ Spring 4.0引入了@RestController注解，以简化RESTful Web服务的创建�
 
 进一步阅读：
 
-- [Spring RequestMapping](https://www.baeldung.com/spring-requestmapping)
 - [Spring的@RequestParam注解](https://www.baeldung.com/spring-request-param)
 
 1. Spring MVC @Controller

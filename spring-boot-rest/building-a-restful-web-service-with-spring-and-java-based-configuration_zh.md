@@ -175,7 +175,7 @@
 
     请求映射简单明了。与任何控制器一样，映射的实际值和 HTTP 方法决定了请求的目标方法。@RequestBody 会将方法的参数绑定到 HTTP 请求的正文，而 @ResponseBody 也会将响应和返回类型绑定到正文。
 
-    @RestController 是在类中包含 @ResponseBody 和 @Controller 注解的[简写](https://www.baeldung.com/spring-controller-vs-restcontroller)。
+    @RestController 是在类中包含 @ResponseBody 和 @Controller 注解的简写。
 
     它们还能确保使用正确的 HTTP 转换器对资源进行 marshalled 和 unmarshalled。内容协商（Content negotiation）将主要根据接受头（Accept header）来选择使用哪个活动转换器，但也可能使用其他 HTTP 头来确定表示方式。
 

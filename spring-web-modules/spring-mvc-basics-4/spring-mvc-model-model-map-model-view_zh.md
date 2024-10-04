@@ -1,4 +1,4 @@
-# [Spring MVC中的模型、模型地图和模型和视](https://www.baeldung.com/spring-mvc-model-model-map-model-view)
+# [Spring MVC中的模型、ModelMap和ModelView](https://www.baeldung.com/spring-mvc-model-model-map-model-view)
 
 1. 一览表
 

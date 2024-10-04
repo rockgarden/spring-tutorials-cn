@@ -171,11 +171,11 @@
 
 7. 驱动程序和框架
 
-    事实上，我们通常不会在这里编写代码。这是因为这一层代表了与外部代理连接的最低层。例如，连接数据库或网络框架的 H2 驱动程序。在本例中，我们将使用 spring-boot 作为网络和[依赖注入](https://www.baeldung.com/spring-dependency-injection)框架。 因此，我们需要它的启动点：
+    事实上，我们通常不会在这里编写代码。这是因为这一层代表了与外部代理连接的最低层。例如，连接数据库或网络框架的 H2 驱动程序。在本例中，我们将使用 spring-boot 作为网络和依赖注入框架。 因此，我们需要它的启动点：
 
     main/.pattern.cleanarchitecture/CleanArchitectureApplication.java
 
-    到目前为止，我们还没有在业务中使用任何[Spring注解](https://www.baeldung.com/spring-bean-annotations)。除了 Spring 特有的适配器，就像我们的 UserRegisterController。这是因为我们应该像对待其他细节一样对待 spring-boot。
+    到目前为止，我们还没有在业务中使用任何Spring注解。除了 Spring 特有的适配器，就像我们的 UserRegisterController。这是因为我们应该像对待其他细节一样对待 spring-boot。
 
 8. 可怕的主类
 

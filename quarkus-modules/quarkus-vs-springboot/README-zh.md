@@ -20,7 +20,7 @@
 
 4. 比较
 
-    如上所述，两个框架都能很好地与其他项目和框架集成。然而，它们的内部实现和架构是不同的。例如，Spring Boot以两种方式提供Web功能：阻塞式（[Servlets](https://www.baeldung.com/spring-mvc-tutorial)）和非阻塞式（[WebFlux](https://www.baeldung.com/spring-webflux)）。
+    如上所述，两个框架都能很好地与其他项目和框架集成。然而，它们的内部实现和架构是不同的。例如，Spring Boot以两种方式提供Web功能：阻塞式（Servlets）和非阻塞式（[WebFlux](https://www.baeldung.com/spring-webflux)）。
 
     Quarkus也提供了这两种方式，但与Spring Boot不同，它允许我们[同时使用阻塞和非阻塞策略](https://developers.redhat.com/blog/2019/11/18/how-quarkus-brings-imperative-and-reactive-programming-together)。此外，Quarkus在其架构中嵌入了反应式方法。
 

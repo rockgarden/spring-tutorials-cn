@@ -1,6 +1,4 @@
-# Spring MyBatis
-
-## MyBatis与Spring
+# [MyBatis与Spring](https://www.baeldung.com/spring-mybatis)
 
 1. 简介
 
@@ -77,7 +75,7 @@
 
         我们还应用了MyBatis-Spring的@MapperScan注解，该注解扫描定义的包，并自动拾取使用任何映射器注解的接口，如@Select或@Delete。
 
-        使用@MapperScan还可以确保每一个提供的映射器都被自动注册为Bean，以后可以使用[@Autowired](https://www.baeldung.com/spring-autowire)注解。
+        使用@MapperScan还可以确保每一个提供的映射器都被自动注册为Bean，以后可以使用@Autowired注解。
 
         我们现在可以创建一个简单的ArticleMapper接口：
 
@@ -166,11 +164,3 @@
     在这篇文章中，我们探索了用Spring配置MyBatis的多种方法。
 
     我们看了使用基于注解和XML配置的例子，并展示了MyBatis与Spring Boot的自动配置功能。
-
-## Relevant Articles
-
-- [x] [MyBatis with Spring](https://www.baeldung.com/spring-mybatis)
-
-## Code
-
-一如既往，本文中使用的完整代码可以在[GitHub](https://github.com/eugenp/tutorials/tree/master/persistence-modules/spring-mybatis)上找到。
