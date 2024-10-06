@@ -19,8 +19,6 @@
 
         如果我们在类级别应用此注解，那么它将对类中的所有方法都有效。不过，我们可以将其应用于特定方法，从而覆盖其效果。
 
-        它有许多配置选项，请参见[本文](https://www.baeldung.com/transaction-configuration-with-jpa-and-spring)。
-
     2. @NoRepositoryBean
 
         有时，我们想创建版本库接口，目的只是为子版本库提供通用方法。
@@ -55,8 +53,6 @@
         ```
 
         请注意，我们使用 :name 语法引用参数。
-
-        有关更多示例，请访问[本文](https://www.baeldung.com/spring-data-jpa-query)。
 
     4. @Id
 
@@ -138,8 +134,6 @@
         int getAverageAge();
         ```
 
-        更多信息，请访问[本文](https://www.baeldung.com/spring-data-jpa-query)。
-
     2. @Procedure
 
         通过 Spring Data JPA，我们可以轻松地从存储库调用存储过程。
@@ -204,8 +198,6 @@
         @Query("UPDATE Person p SET p.name = :name WHERE p.id = :id")
         void changeName(@Param("id") long id, @Param("name") String name);
         ```
-
-        更多信息，请访问[本文](https://www.baeldung.com/spring-data-jpa-query)。
 
     5. @EnableJpaRepositories
 

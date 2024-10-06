@@ -1,4 +1,4 @@
-# [Spring数据JPA简介](https://www.baeldung.com/the-persistence-layer-with-spring-data-jpa)
+# [Spring Data JPA简介](https://www.baeldung.com/the-persistence-layer-with-spring-data-jpa)
 
 1. 一览表
 

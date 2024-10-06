@@ -166,7 +166,7 @@
     spring.datasource.password=
     ```
 
-    当然，与安全性一样，持久性是一个比这里的基本设置更广泛的主题，肯定需要[进一步探讨](https://www.baeldung.com/persistence-with-spring-series)。
+    当然，与安全性一样，持久性是一个比这里的基本设置更广泛的主题，肯定需要进一步探讨。
 
 7. Web和控制器
 

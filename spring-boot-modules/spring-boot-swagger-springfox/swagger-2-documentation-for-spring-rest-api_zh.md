@@ -151,7 +151,7 @@
 
 6. Spring Data REST
 
-    Springfox 通过其 [springfox-data-rest](https://mvnrepository.com/artifact/io.springfox/springfox-data-rest) 库为 [Spring Data REST](https://www.baeldung.com/spring-data-rest-intro) 提供支持。
+    Springfox 通过其 [springfox-data-rest](https://mvnrepository.com/artifact/io.springfox/springfox-data-rest) 库为 Spring Data REST 提供支持。
 
     如果 Spring Boot 在类路径上发现了 spring-boot-starter-data-rest，它将负责自动配置。
 

@@ -10,8 +10,6 @@
 
     如果你对 Redis 或 Spring Security 不熟悉，最好先快速复习一下这些主题。虽然这篇文章的大部分内容都可以复制粘贴到应用程序中，但了解引擎盖下发生了什么是无法替代的。
 
-    如需了解 Redis，请阅读[本教程](https://www.baeldung.com/spring-data-redis-tutorial)。要了解 Spring Security，请阅读 [spring-security-login](https://www.baeldung.com/spring-security-login)、[role-and-privilege-for-spring-security-registration](https://www.baeldung.com/role-and-privilege-for-spring-security-registration) 和 [spring-security-session](https://www.baeldung.com/spring-security-session)。要全面了解 Spring Security，请阅读 [learn-spring-security-the-master class](http://courses.baeldung.com/p/learn-spring-security-the-master-class)。
-
 2. Maven 设置
 
     首先，让我们为系统中的每个模块添加 spring-boot-starter-security 依赖项：

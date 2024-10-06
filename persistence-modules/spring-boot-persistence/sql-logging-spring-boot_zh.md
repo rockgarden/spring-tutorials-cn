@@ -2,7 +2,7 @@
 
 1. 概述
 
-    Spring [JDBC](https://www.baeldung.com/spring-jdbc-jdbctemplate) 和 JPA 提供了对本地 JDBC API 的抽象，使开发人员无需使用本地 SQL 查询。不过，我们经常需要查看这些自动生成的 SQL 查询及其执行顺序，以便进行调试。
+    Spring JDBC 和 JPA 提供了对本地 JDBC API 的抽象，使开发人员无需使用本地 SQL 查询。不过，我们经常需要查看这些自动生成的 SQL 查询及其执行顺序，以便进行调试。
 
     在本快速教程中，我们将了解在 Spring Boot 中记录这些 SQL 查询的不同方法。
 

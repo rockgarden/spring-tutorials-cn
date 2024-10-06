@@ -20,8 +20,6 @@
 
     此外，我们只需用预定义格式的名称声明方法，就能生成方法实现。我们无需编写存储库接口的实现。
 
-    有关 [Spring Data](https://www.baeldung.com/spring-data) 的 Baeldung 指南为我们提供了入门的基本要素。
-
     1. Maven 依赖
 
         Spring Data Elasticsearch 为搜索引擎提供了 Java API。为了使用它，我们需要在 pom.xml 中添加一个新的依赖项：

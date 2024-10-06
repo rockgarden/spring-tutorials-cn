@@ -53,11 +53,11 @@
 
     1. 模型
 
-        假设我们正在实现一个用户账户系统，其中有一个名为 "账户" 的[实体](https://www.baeldung.com/jpa-entities)：
+        假设我们正在实现一个用户账户系统，其中有一个名为 "账户" 的实体：
 
         main/.jpa.schemageneration.model/Account.java
 
-        每个账户可以有多个账户设置，因此我们将使用[一对多](https://www.baeldung.com/hibernate-one-to-many)的映射：
+        每个账户可以有多个账户设置，因此我们将使用一对多的映射：
 
         main/.jpa.schemageneration.model/AccountSetting.java
 
@@ -135,7 +135,7 @@
 
     例如，我们可以用它来快速启动开发或测试数据库。
 
-    相反，对于数据库迁移等更复杂的情况，我们应该使用更精细的工具，如 [Liquibase](https://www.baeldung.com/liquibase-refactor-schema-of-java-app) 或 [Flyway](https://www.baeldung.com/database-migrations-with-flyway)。
+    相反，对于数据库迁移等更复杂的情况，我们应该使用更精细的工具，如 Liquibase 或 Flyway。
 
 6. 总结
 

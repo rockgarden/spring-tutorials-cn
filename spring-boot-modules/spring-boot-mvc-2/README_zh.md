@@ -615,7 +615,7 @@ For simplicity, we won't include a [persistence layer](https://www.baeldung.com/
 
     在这篇文章中，我们学习了如何在用Spring Boot开发的典型CRUD REST服务中消费和生产JSON内容。此外，我们还演示了如何实现适当的响应状态控制和错误处理。
 
-    为了保持简单，我们这次没有进入持久化，但[Spring Data REST](https://www.baeldung.com/spring-data-rest-intro)提供了一种快速有效的方法来构建RESTful数据服务。
+    为了保持简单，我们这次没有进入持久化，但 Spring Data REST 提供了一种快速有效的方法来构建RESTful数据服务。
 
 ## 在Postman中为每个请求添加标题
 

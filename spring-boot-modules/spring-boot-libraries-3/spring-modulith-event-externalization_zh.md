@@ -2,7 +2,7 @@
 
 1. 概述
 
-    在本文中，我们将讨论在 [@Transactional](https://www.baeldung.com/transaction-configuration-with-jpa-and-spring) 块中发布消息的需求以及相关的性能挑战，例如数据库连接时间过长。为了解决这个问题，我们将利用 [Spring Modulith](https://www.baeldung.com/spring-modulith) 的功能来监听 Spring 应用程序事件并自动将其发布到 Kafka 主题。
+    在本文中，我们将讨论在 @Transactional 块中发布消息的需求以及相关的性能挑战，例如数据库连接时间过长。为了解决这个问题，我们将利用 [Spring Modulith](https://www.baeldung.com/spring-modulith) 的功能来监听 Spring 应用程序事件并自动将其发布到 Kafka 主题。
 
 2. 事务操作和消息代理
 

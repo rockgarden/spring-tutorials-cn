@@ -19,7 +19,7 @@
     })
     ```
 
-    同样，我们来看看如何禁用 [Redis](https://www.baeldung.com/spring-data-redis-tutorial) 的自动配置：
+    同样，我们来看看如何禁用 Redis 的自动配置：
 
     ```java
     @SpringBootApplication(exclude = {

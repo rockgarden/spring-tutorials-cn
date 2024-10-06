@@ -10,10 +10,6 @@
 
     了解如何配置以及如何使用Spring Boot中的H2数据库。
 
-    [使用Flyway进行数据库迁移](https://www.baeldung.com/database-migrations-with-flyway)
-
-    本文介绍了Flyway的关键概念，以及我们如何使用这个框架来可靠、轻松地持续重塑我们应用程序的数据库模式。
-
     [用Spring Data JPA生成数据库模式](https://www.baeldung.com/spring-data-jpa-generate-db-schema)
 
     JPA提供了一个从我们的实体模型生成DDL的标准。在这里，我们探讨如何在Spring Data中做到这一点，并与本地Hibernate进行比较。
@@ -143,4 +139,4 @@
 
     我们还看了如何使用@Sql、@SqlConfig和@SqlGroup注解来为测试加载测试数据。
 
-    请记住，这种方法更适合于基本的和简单的场景，任何高级的数据库处理都需要更高级和精炼的工具，如[Liquibase](https://www.baeldung.com/liquibase-refactor-schema-of-java-app)或[Flyway](https://www.baeldung.com/database-migrations-with-flyway)。
+    请记住，这种方法更适合于基本的和简单的场景，任何高级的数据库处理都需要更高级和精炼的工具，如Liquibase或Flyway。

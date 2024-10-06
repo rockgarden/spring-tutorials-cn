@@ -48,7 +48,7 @@
         }
         ```
 
-        我们还将使用 schema.sql 和 data.sql [加载存储库](https://www.baeldung.com/spring-boot-data-sql-and-schema-sql)。
+        我们还将使用 schema.sql 和 data.sql 加载存储库。
 
     2. 控制器
 

@@ -137,7 +137,7 @@
 
         我们可以看到，映射器的目标是将我们的对象映射为数据库格式。
 
-        接下来，JpaRepository 将使用我们的[实体](https://www.baeldung.com/jpa-entities)：
+        接下来，JpaRepository 将使用我们的实体：
 
         main/.pattern.cleanarchitecture.usercreation/JpaUserRepository.java
 

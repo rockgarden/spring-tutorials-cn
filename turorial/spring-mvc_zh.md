@@ -2,6 +2,8 @@
 
 Last updated: September 28, 2023
 
+Spring MVC 提供了驱动典型网络应用程序和 REST API 的工具。
+
 Spring MVC 注释基础
 
 - [Spring Web 注释](/spring-boot-modules/spring-boot-annotations/spring-mvc-annotations_zh.md)

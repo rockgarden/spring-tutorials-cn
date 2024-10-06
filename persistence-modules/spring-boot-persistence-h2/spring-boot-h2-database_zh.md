@@ -85,11 +85,9 @@
 
         我们可以将 spring.sql.init.mode 属性设置为从不，从而禁用这一默认行为。此外，还可以配置[多个 SQL 文件](https://www.baeldung.com/spring-boot-sql-import-files#spring-jdbc-support)来加载初始数据。
 
-        我们关于[加载初始数据](https://www.baeldung.com/spring-boot-data-sql-and-schema-sql)的文章对此有更详细的介绍。
-
     2. Hibernate 和 data.sql
 
-        默认情况下，data.sql 脚本在 Hibernate 初始化之前执行。这使基于脚本的初始化与其他数据库迁移工具（如 [Flyway](https://www.baeldung.com/database-migrations-with-flyway) 和 [Liquibase](https://www.baeldung.com/liquibase-refactor-schema-of-java-app) ）保持一致。由于我们每次都要重新创建由 Hibernate 生成的模式，因此需要设置一个额外的属性：
+        默认情况下，data.sql 脚本在 Hibernate 初始化之前执行。这使基于脚本的初始化与其他数据库迁移工具（如 Flyway 和 Liquibase）保持一致。由于我们每次都要重新创建由 Hibernate 生成的模式，因此需要设置一个额外的属性：
 
         `spring.jpa.defer-datasource-initialization=true`
 
