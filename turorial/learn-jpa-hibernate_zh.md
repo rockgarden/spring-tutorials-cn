@@ -74,7 +74,7 @@ Hibernate 是当今最流行的 Java ORM 框架之一。它的首次发布距今
 查询结果
 
 - [SqlResultSetMapping 指南](/persistence-modules/java-jpa/jpa-sql-resultset-mapping_zh.md)
-- [使用聚合函数自定义 JPA 查询结果](/persistence-modules/spring-data-jpa-simple/jpa-queries-custom-result-with-aggregation-functions_zh.md)
+- ~~使用聚合函数自定义 JPA 查询结果~~
 
 写操作
 

@@ -4,53 +4,34 @@
 
 这是 Baeldung 上所有 Spring Data 文章的快速指南。
 
-Spring Date JPA - 图标
-Spring Data JPA - 基础
-类别-项目-图标
-Spring Data JPA简介（热门）
-类别-项目-图标
-Spring Data JPA @查询（热门）
-分类-项目-图标
-Spring Data JPA 存储库（热门）
-类别-项目-图标
-Spring Data JPA资源库中的派生查询方法（热门）
-类别-项目-图标
-Spring Data JPA - 派生的删除方法
-类别-项目-图标
-Spring Data JPA @修改注解（热门）
-类别-项目-图标
-使用Spring Data JPA进行分页和排序（热门）
-类别-项目-图标
-Spring @事务传播和隔离（热门）
-类别-项目-图标
-Spring Data JPA的删除和关系（热门）
-类别-项目-图标
-Spring 数据注解
- 图标字符串基础知识
-Spring Data JPA - 定制
-类别-项目-图标
-构建 REST 查询语言（系列）
-类别-项目-图标
-使用聚合函数自定义 JPA 查询结果（热门）
-类别-项目-图标
-如何使用Spring JPA实现软删除
-分类-项目-图标
-Spring Data JPA - 多个数据库（热门）
-类别-项目-图标
-使用Spring Data进行部分数据更新（热门）
-类别-项目-图标
-为测试配置独立的 Spring 数据源（热门）
-类别-项目-图标
-在 Spring Boot 中以编程方式配置数据源（热门）
-类别-项目-图标
-使用 Spring Data JPA 将列表转换为页面
-类别-项目-图标
-禁用 Spring Data 自动配置（热门）
- 高级持久性 - 图标
+## Spring Data JPA - 基础
+
+- [Spring Data JPA 简介](/persistence-modules/spring-data-jpa-simple/the-persistence-layer-with-spring-data-jpa_zh.md)
+- [Spring Data JPA @Query](/persistence-modules/spring-data-jpa-simple/spring-data-jpa-query_zh.md)
+- [Spring Data 中的存储库](/persistence-modules/spring-data-jpa-simple/spring-data-repositories_zh.md)
+- [Spring Data JPA 存储库中的派生查询方法](/persistence-modules/spring-data-jpa-simple/spring-data-derived-queries_zh.md)
+- [Spring Data JPA 派生的删除方法](/persistence-modules/spring-data-jpa-crud/spring-data-jpa-deleteby_zh.md)
+- [Spring Data JPA @modifying 注解](/persistence-modules/spring-data-jpa-simple/spring-data-jpa-modifying-annotation_zh.md)
+- [使用Spring Data JPA进行分页和排序](/persistence-modules/spring-data-jpa-simple/spring-data-jpa-pagination-sorting_zh.md)
+- ~~Spring @Transactional 中的事务传播和隔离~~
+- [Spring Data JPA的删除和关系](/persistence-modules/spring-data-jpa-crud/spring-data-jpa-delete_zh.md)
+- [Spring Data 注解](/spring-boot-modules/spring-boot-annotations/spring-data-annotations_zh.md)
+
+## Spring Data JPA - 定制
+
+- __[构建 REST 查询语言（系列）](spring-rest-api-query-search-language-tutorial_zh.md)__
+- [使用聚合函数自定义 JPA 查询结果](/persistence-modules/spring-data-jpa-simple/jpa-queries-custom-result-with-aggregation-functions_zh.md)
+- [如何使用Spring JPA实现软删除](/persistence-modules/spring-data-jpa-crud/spring-jpa-soft-delete_zh.md)
+- [Spring Data JPA - 多个数据库](/persistence-modules/spring-data-jpa-enterprise/spring-data-jpa-multiple-databases_zh.md)
+- [使用Spring Data进行部分数据更新](/persistence-modules/spring-data-jpa-enterprise/spring-data-partial-update_zh.md)
+- [为测试配置独立的 Spring 数据源](/persistence-modules/spring-boot-persistence/spring-testing-separate-data-source_zh.md)
+- [在 Spring Boot 中以编程方式配置数据源](/persistence-modules/spring-boot-persistence/spring-boot-configure-data-source-programmatic_zh.md)
+- [使用 Spring Data JPA 将列表转换为页面](/persistence-modules/spring-data-jpa-query-4/spring-data-jpa-convert-list-page_zh.md)
+- [禁用 Spring Data 自动配置](/spring-boot-modules/spring-boot-data/spring-data-disable-auto-config_zh.md)
+
 Spring Data JPA - 高级
-类别-项目-图标
-Spring Data JPA 预测（热门）
-类别-项目-图标
+
+[Spring Data JPA 预测](/persistence-modules/spring-data-jpa-simple/spring-data-jpa-projections_zh.md)
 Spring Data JPA 查询示例
 类别-项目-图标
 使用 JPA、Hibernate 和 Spring Data JPA 进行审计（热门）

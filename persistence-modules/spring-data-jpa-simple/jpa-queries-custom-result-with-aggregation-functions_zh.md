@@ -92,7 +92,7 @@
 
 4. 使用Spring Data Projection自定义结果
 
-    另一个可能的解决方案是使用[Spring Data Projection](https://www.baeldung.com/spring-data-jpa-projections)自定义JPA查询的结果。此功能允许我们用更少的代码来投影查询结果。
+    另一个可能的解决方案是使用 Spring Data Projection 自定义JPA查询的结果。此功能允许我们用更少的代码来投影查询结果。
 
     1. 自定义JPA查询的结果
 

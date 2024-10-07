@@ -1,4 +1,4 @@
-# [Spring 数据注解](https://www.baeldung.com/spring-data-annotations)
+# [Spring Data 注解](https://www.baeldung.com/spring-data-annotations)
 
 1. 简介
 

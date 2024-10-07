@@ -4,7 +4,7 @@
 
     在本文中，我们将讨论如何使用Java和XML配置使用Spring引导Hibernate 6。
 
-    本文聚焦于Spring MVC。我们的文章《[Spring Boot with Hibernate](https://www.baeldung.com/spring-boot-hibernate)》介绍了如何在Spring Boot中使用Hibernate。
+    本文聚焦于Spring MVC，介绍了如何在Spring Boot中使用Hibernate。
 
 2. Spring整合
 

@@ -46,4 +46,5 @@ Spring Web
 持久性的 Spring
 
 - [用 Spring 引导 Hibernate 5](/persistence-modules/spring-hibernate-6/hibernate-spring_zh.md)
-- [Spring Data JPA 简介](/persistence-modules/spring-data-jpa-simple/the-persistence-layer-with-spring-data-jpa_zh.md)
+- [Spring的持久性教程](persistence-with-spring-series_zh.md)
+  - Spring Data JPA 简介

@@ -64,10 +64,10 @@ Spring Boot - 持久性
 
 - [使用Spring Boot加载初始数据的快速指南](/persistence-modules/spring-boot-persistence/spring-boot-data-sql-and-schema-sql_zh.md)
 - [带有多个SQL导入文件的Spring Boot](/persistence-modules/spring-boot-persistence/spring-boot-sql-import-files_zh.md)
-- 从Spring Boot显示Hibernate/JPA的SQL语句
+- ~~从Spring Boot显示Hibernate/JPA的SQL语句~~
 - [使用H2数据库的Spring Boot](/persistence-modules/spring-boot-persistence-h2/spring-boot-h2-database_zh.md)
 - [在 Spring Boot 中配置和使用多个数据源](/persistence-modules/spring-data-jdbc/spring-boot-configure-multiple-datasources_zh.md)
-- [禁用 Spring 数据自动配置](/spring-boot-modules/spring-boot-data/spring-data-disable-auto-config_zh.md)
+- ~~禁用 Spring 数据自动配置~~
 - [使用 Spring Boot 配置 Hikari 连接池](/persistence-modules/spring-boot-persistence-5/spring-boot-hikari_zh.md)
 
 Spring Boot - DevOps工具
