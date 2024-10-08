@@ -6,14 +6,6 @@
 
     但有时我们需要对数据库的更改进行更精细的控制。这时我们就可以使用Spring中的data.sql和schema.sql文件。
 
-    [Spring Boot与H2数据库](https://www.baeldung.com/spring-boot-h2-database)
-
-    了解如何配置以及如何使用Spring Boot中的H2数据库。
-
-    [用Spring Data JPA生成数据库模式](https://www.baeldung.com/spring-data-jpa-generate-db-schema)
-
-    JPA提供了一个从我们的实体模型生成DDL的标准。在这里，我们探讨如何在Spring Data中做到这一点，并与本地Hibernate进行比较。
-
 2. data.sql文件
 
     让我们在此假设我们正在使用JPA，并在我们的项目中定义一个简单的国家实体：

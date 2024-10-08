@@ -29,29 +29,21 @@
 - [使用 Spring Data JPA 将列表转换为页面](/persistence-modules/spring-data-jpa-query-4/spring-data-jpa-convert-list-page_zh.md)
 - [禁用 Spring Data 自动配置](/spring-boot-modules/spring-boot-data/spring-data-disable-auto-config_zh.md)
 
-Spring Data JPA - 高级
+## Spring Data JPA - 高级
 
-[Spring Data JPA 预测](/persistence-modules/spring-data-jpa-simple/spring-data-jpa-projections_zh.md)
-Spring Data JPA 查询示例
-类别-项目-图标
-使用 JPA、Hibernate 和 Spring Data JPA 进行审计（热门）
-类别-项目-图标
-使用 Spring Data JPA 规范连接表（热门）
-类别-项目-图标
-使用 Spring Data JPA 实现多租户（热门）
-分类-项目-图标
-Spring JPA @Embedded 和 @EmbeddedId (热门)
-类别-项目-图标
-如何使用 Spring Data 访问 EntityManager（热门）
-类别-项目-图标
-使用 Spring Data JPA 生成数据库模式（热门）
-类别-项目-图标
-Spring Data JPA和命名实体图（热门）
-类别-项目-图标
-Spring Data JPA 和空参数（热门）
- 休息应用程序接口
-Spring Data REST
-类别-项目-图标
+- [Spring Data JPA 预测](/persistence-modules/spring-data-jpa-simple/spring-data-jpa-projections_zh.md)
+- [Spring Data JPA 查询示例](/persistence-modules/spring-data-jpa-query/spring-data-query-by-example_zh.md)
+- [使用 JPA、Hibernate 和 Spring Data JPA 进行审计](/persistence-modules/spring-data-jpa-query-2/database-auditing-jpa_zh.md)
+- [使用 Spring Data JPA 规范连接表](/persistence-modules/spring-data-jpa-query-3/spring-jpa-joining-tables_zh.md)
+- [使用 Spring Data JPA 实现多租户](/persistence-modules/spring-jpa-2/multitenancy-with-spring-data-jpa_zh.md)
+- [Spring JPA @Embedded 和 @EmbeddedId](/persistence-modules/spring-data-jpa-annotations/spring-jpa-embedded-method-parameters_zh.md)
+- [如何使用 Spring Data 访问 EntityManager](/persistence-modules/spring-data-jpa-repo-2/spring-data-entitymanager_zh.md)
+- [使用 Spring Data JPA 生成数据库模式](/persistence-modules/spring-boot-persistence/spring-boot-data-sql-and-schema-sql_zh.md)
+- [Spring Data JPA和命名实体图](/persistence-modules/spring-data-jpa-query/spring-data-jpa-named-entity-graphs_zh.md)
+- [Spring Data JPA 和空参数](/persistence-modules/spring-data-jpa-simple/spring-data-derived-queries_zh.md)
+
+## Spring Data REST
+
 Spring Data REST 简介
 类别-项目-图标
 Spring Data REST 验证器指南

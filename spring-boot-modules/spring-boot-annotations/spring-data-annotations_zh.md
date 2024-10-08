@@ -107,8 +107,6 @@
 
         请注意，如果我们想让 Spring 填充 principals，我们还需要使用 Spring Security。
 
-        有关更详细的说明，请访问[本文](https://www.baeldung.com/database-auditing-jpa)。
-
 3. Spring Data JPA 注释
 
     1. @Query
