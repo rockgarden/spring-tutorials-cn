@@ -14,11 +14,9 @@
     <dependency>
         <groupId>org.apache.poi</groupId>
         <artifactId>poi-ooxml</artifactId>
-        <version>5.2.3</version>
+        <version>5.2.5</version>
     </dependency>
     ```
-
-    请点击[这里](https://search.maven.org/classic/#search%7Cga%7C1%7Cg%3A%22org.apache.poi%22%20AND%20a%3A%22poi-ooxml%22)获取该工件的最新版本。
 
 3. 准备工作
 

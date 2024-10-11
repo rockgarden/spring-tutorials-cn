@@ -1,8 +1,4 @@
-# PDF
-
-This module contains articles about PDF files.
-
-## Java中的PDF转换
+# [Java中的PDF转换](https://www.baeldung.com/pdf-conversions-java)
 
 1. 简介
 
@@ -18,7 +14,7 @@ This module contains articles about PDF files.
     <dependency>
         <groupId>org.apache.pdfbox</groupId>
         <artifactId>pdfbox-tools</artifactId>
-        <version>2.0.25</version>
+        <version>3.0.0</version>
     </dependency>
     <dependency>
         <groupId>net.sf.cssbox</groupId>
@@ -27,9 +23,9 @@ This module contains articles about PDF files.
     </dependency>
     ```
 
-    我们将使用第一个依赖关系来加载选定的PDF文件。第二个依赖关系负责转换本身。最新的版本可以在这里找到：[pdfbox-tools](https://search.maven.org/classic/#search%7Cga%7C1%7Ca%3A%22pdfbox-tools%22)和[pdf2dom](https://search.maven.org/classic/#search%7Cga%7C1%7Cpdf2dom)。
+    我们将使用第一个依赖关系来加载选定的PDF文件。第二个依赖关系负责转换本身。
 
-    更重要的是，我们将使用iText从PDF文件中提取文本，并使用POI来创建.docx文档。
+    更重要的是，我们将使用[iText](http://itextpdf.com/)从PDF文件中提取文本，并使用POI来创建.docx文档。
 
     让我们来看看我们需要在项目中加入的Maven依赖项：
 
@@ -55,8 +51,6 @@ This module contains articles about PDF files.
         <version>3.15</version>
     </dependency>
     ```
-
-    最新版本的[iText](https://search.maven.org/classic/#search%7Cga%7C1%7Cg%3A%22com.itextpdf%22)可以在这里找到，你可以在这里寻找[Apache POI](https://search.maven.org/classic/#search%7Cga%7C1%7Cpoi)。
 
 3. PDF和HTML的转换
 
@@ -92,10 +86,10 @@ This module contains articles about PDF files.
         private static void generatePDFFromHTML(String filename) {
             Document document = new Document();
             PdfWriter writer = PdfWriter.getInstance(document,
-            new FileOutputStream("src/output/html.pdf"));
+                new FileOutputStream("src/output/html.pdf"));
             document.open();
             XMLWorkerHelper.getInstance().parseXHtml(writer, document,
-            new FileInputStream(filename));
+                new FileInputStream(filename));
             document.close();
         }
         ```
@@ -118,9 +112,9 @@ This module contains articles about PDF files.
             PDFRenderer pdfRenderer = new PDFRenderer(document);
             for (int page = 0; page < document.getNumberOfPages(); ++page) {
                 BufferedImage bim = pdfRenderer.renderImageWithDPI(
-                page, 300, ImageType.RGB);
+                    page, 300, ImageType.RGB);
                 ImageIOUtil.writeImage(
-                bim, String.format("src/output/pdf-%d.%s", page + 1, extension), 300);
+                    bim, String.format("src/output/pdf-%d.%s", page + 1, extension), 300);
             }
             document.close();
         }
@@ -207,7 +201,7 @@ This module contains articles about PDF files.
         ```java
         Document pdfDoc = new Document(PageSize.A4);
         PdfWriter.getInstance(pdfDoc, new FileOutputStream("src/output/txt.pdf"))
-        .setPdfVersion(PdfWriter.PDF_VERSION_1_7);
+            .setPdfVersion(PdfWriter.PDF_VERSION_1_7);
         pdfDoc.open();
         ```
 
@@ -254,7 +248,7 @@ This module contains articles about PDF files.
     ```java
     for (int i = 1; i <= reader.getNumberOfPages(); i++) {
         TextExtractionStrategy strategy =
-        parser.processContent(i, new SimpleTextExtractionStrategy());
+            parser.processContent(i, new SimpleTextExtractionStrategy());
         String text = strategy.getResultantText();
         XWPFParagraph p = doc.createParagraph();
         XWPFRun run = p.createRun();
@@ -280,19 +274,34 @@ This module contains articles about PDF files.
     - [JPEDAL](https://www.idrsolutions.com/jpedal/) - JPedal是一个积极开发的、非常有能力的原生Java PDF库SDK，用于打印、查看和转换文件
     - [pdfcrowd](http://pdfcrowd.com/web-html-to-pdf-java/) - 这是另一个Web/HTML到PDF和PDF到Web/HTML的转换库，有先进的GUI
 
-8. 结语
+8. Docx到PDF转换
+
+    要将Docx文件转换为PDF文档，我们需要Apache POI库来读取Word文档，iText库来生成PDF。
+
+    以下是一些读取Docx文件并将其内容写入PDF文件的简单代码：
+
+    ```java
+    InputStream docxInputStream = new FileInputStream("input.docx");
+    try (XWPFDocument document = new XWPFDocument(docxInputStream); 
+        OutputStream pdfOutputStream = new FileOutputStream("output.pdf");) {
+        Document pdfDocument = new Document();
+        PdfWriter.getInstance(pdfDocument, pdfOutputStream);
+        pdfDocument.open();
+                
+        List<XWPFParagraph> paragraphs = document.getParagraphs();
+        for (XWPFParagraph paragraph : paragraphs) {
+            pdfDocument.add(new Paragraph(paragraph.getText()));
+        }
+        pdfDocument.close();
+    }
+    ```
+
+    首先，我们创建一个InputStream对象来读取Docx文件。XWPFDocument类有助于在内存中表示Docx文件。接下来，我们创建一个OutputStream的实例来写入PDF文件。PdfWriter和Documentclasses帮助准备PDF文件进行编写。此外，我们通过在文档上调用getParagraphs（）方法从Docx文件中获取段落列表。
+
+    然后，我们循环浏览每个段落，创建一个新的段落对象，并使用add（）方法将其添加到PDF文档中。
+
+    最后，我们使用close（）方法关闭PDF文档。这最终确定了PDF文件，并确保所有更改都写入磁盘。
+
+9. 结语
 
     在这篇文章中，我们讨论了将PDF文件转换成各种格式的方法。
-
-## Relevant Articles
-
-- [x] [PDF Conversions in Java](https://www.baeldung.com/pdf-conversions-java)
-- [Creating PDF Files in Java](https://www.baeldung.com/java-pdf-creation)
-- [Generating PDF Files Using Thymeleaf](https://www.baeldung.com/thymeleaf-generate-pdf)
-- [Java Convert PDF to Base64](https://www.baeldung.com/java-convert-pdf-to-base64)
-- [HTML to PDF Using OpenPDF](https://www.baeldung.com/java-html-to-pdf)
-- [Reading PDF File Using Java](https://www.baeldung.com/java-pdf-file-read)
-
-## Code
-
-本教程的完整实现可以在[GitHub项目](https://github.com/eugenp/tutorials/tree/master/pdf)中找到 - 这是一个基于Maven的项目。为了测试，只需简单地运行示例，在输出文件夹中查看结果。

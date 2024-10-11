@@ -37,12 +37,12 @@ Last updated: August 30, 2024
 - [使用 Spring Boot 加载初始数据的快速指南](/persistence-modules/spring-boot-persistence/spring-boot-data-sql-and-schema-sql_zh.md)
 - [在 Spring Boot 中配置和使用多个数据源](/persistence-modules/spring-data-jdbc/spring-boot-configure-multiple-datasources_zh.md)
 
-## Spring 数据集成
+## Spring Data 集成
 
 - [Spring Data MongoDB 系列](spring-data-mongodb-series_zh.md)......
 - [Spring Data Redis 简介](/persistence-modules/spring-data-redis/spring-data-redis-tutorial_zh.md)
 - [Spring Data Elasticsearch 简介](/persistence-modules/spring-data-elasticsearch/spring-data-elasticsearch-tutorial_zh.md)
-- [Spring Data REST 简介](/persistence-modules/spring-data-rest/spring-data-rest-intro_zh.md)
+- ~~Spring Data REST 简介~~
 - [在 Spring Boot 应用程序中使用 Spring Data 中的 DynamoDB](/persistence-modules/spring-data-dynamodb/spring-data-dynamodb_zh.md)
 - [使用 Spring 的 MyBatis](/persistence-modules/spring-mybatis/spring-mybatis_zh.md)
 - [使用 Flyway 迁移数据库](/persistence-modules/flyway/database-migrations-with-flyway_zh.md)

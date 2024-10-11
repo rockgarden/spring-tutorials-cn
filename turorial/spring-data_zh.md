@@ -44,10 +44,8 @@
 
 ## Spring Data REST
 
-Spring Data REST 简介
-类别-项目-图标
-Spring Data REST 验证器指南
-类别-项目-图标
+- [Spring Data REST 简介](/persistence-modules/spring-data-rest/spring-data-rest-intro_zh.md)
+- [Spring Data REST 验证器指南](/persistence-modules/spring-data-rest-2/spring-data-rest-validators_zh.md)
 Spring Data REST中的投影和摘录
 类别-项目-图标
 在 Spring Data REST 中处理实体关系
