@@ -46,46 +46,34 @@
 
 - [Spring Data REST 简介](/persistence-modules/spring-data-rest/spring-data-rest-intro_zh.md)
 - [Spring Data REST 验证器指南](/persistence-modules/spring-data-rest-2/spring-data-rest-validators_zh.md)
-Spring Data REST中的投影和摘录
-类别-项目-图标
-在 Spring Data REST 中处理实体关系
-分类-项目-图标
-使用 Spring Data JPA 规范的 REST 查询语言（热门）
- Spring Cassandra - 图标
-Spring Data Cassandra
-类别-项目-图标
-Spring Data Cassandra 简介
-类别-项目-图标
-使用 Spring Data Cassandra 记录查询
-类别-项目-图标
-Spring Data 与 Reactive Cassandra
- Spring Oauth - 图标
-Spring Data Redis
-类别-项目-图标
-Spring Data Redis 简介（热门）
-类别-项目-图标
-使用 Redis 的 Spring Boot 缓存（热门）
-分类-项目-图标
-Spring Data Redis 基于属性的配置（热门）
-类别-项目-图标
-Spring Data Redis Reactive 简介
- Spring Persistence - 图标
-Spring Data Elasticsearch
-类别-项目-图标
-Spring Data Elasticsearch 简介（热门）
-类别-项目-图标
-使用 Spring Data 进行 Elasticsearch 查询
- Spring MongoDB - 图标
-Spring Data MongoDB
-类别-项目-图标
-Spring Data MongoDB 简介（热门）
-类别-项目-图标
-Spring Data MongoDB 中的查询指南（热门）
-类别-项目-图标
-Spring Data MongoDB 事务
-类别-项目-图标
-Spring Data MongoDB：索引、注解和转换器
-类别-项目-图标
+- [Spring Data REST中的投影和摘录](/persistence-modules/spring-data-rest/spring-data-rest-projections-excerpts_zh.md)
+- [在 Spring Data REST 中处理实体关系](/persistence-modules/spring-data-rest/spring-data-rest-relationships_zh.md)
+[使用 Spring Data JPA 规范的 REST 查询语言](/spring-web-modules/spring-rest-query-language/rest-api-search-language-spring-data-specifications_zh.md)
+
+## Spring Data Cassandra
+
+- [Spring Data Cassandra 简介](/persistence-modules/spring-data-cassandra/spring-data-cassandra-tutorial_zh.md)
+- [使用 Spring Data Cassandra 记录查询](/persistence-modules/spring-data-cassandra/spring-data-cassandra-logging-queries_zh.md)
+- [Spring Data 与 Reactive Cassandra](/persistence-modules/spring-data-cassandra-reactive/spring-data-cassandra-reactive_zh.md)
+
+## Spring Data Redis
+
+- [Spring Data Redis 简介](/persistence-modules/spring-data-redis/spring-data-redis-tutorial_zh.md)
+- [使用 Redis 的 Spring Boot 缓存](/spring-boot-modules/spring-boot-caching-2/spring-boot-redis-cache_zh.md)
+- [Spring Data Redis 基于属性的配置](/persistence-modules/redis/spring-data-redis-properties_zh.md)
+- [Spring Data Redis Reactive 简介](/persistence-modules/spring-data-redis/spring-data-redis-reactive_zh.md)
+
+## Spring Data Elasticsearch
+
+- [Spring Data Elasticsearch 简介](/persistence-modules/spring-data-elasticsearch/spring-data-elasticsearch-tutorial_zh.md)
+- [使用 Spring Data 进行 Elasticsearch 查询](/persistence-modules/spring-data-elasticsearch/java-elasticsearch-guide_zh.md)
+
+## Spring Data MongoDB
+
+- [Spring Data MongoDB 简介](/persistence-modules/spring-data-mongodb/spring-data-mongodb-tutorial_zh.md)
+- [Spring Data MongoDB 中的查询指南](/persistence-modules/spring-data-mongodb/queries-in-spring-data-mongodb_zh.md)
+- [Spring Data MongoDB 事务](/persistence-modules/spring-data-mongodb/spring-data-mongodb-transactions_zh.md)
+- [Spring Data MongoDB：索引、注解和转换器](/persistence-modules/spring-data-mongodb/spring-data-mongodb-index-annotations-converter_zh.md)
 使用MongoDB的Spring数据反应式存储库
 类别-项目-图标
 Spring Data MongoDB 系列（系列）

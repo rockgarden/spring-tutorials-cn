@@ -290,7 +290,7 @@
 
     ![反应式架构](pic/Reactive-Architecture.webp)
 
-    [Spring Data Mongo](https://www.baeldung.com/spring-data-mongodb-tutorial)通过MongoDB Reactive Streams Java Driver支持反应式访问。它提供了ReactiveMongoTemplate和ReactiveMongoRepository，两者都有广泛的映射功能。
+    Spring Data Mongo 通过MongoDB Reactive Streams Java Driver支持反应式访问。它提供了ReactiveMongoTemplate和ReactiveMongoRepository，两者都有广泛的映射功能。
     [Spring WebFlux](https://www.baeldung.com/spring-webflux)为Spring提供了反应堆网络框架，实现了非阻塞代码和反应流的反压。它利用Reactor作为其反应性库。此外，它还提供了WebClient，用于执行具有反应流反压的HTTP请求。它使用Reactor Netty作为HTTP客户端库。
     1. 库存服务
 

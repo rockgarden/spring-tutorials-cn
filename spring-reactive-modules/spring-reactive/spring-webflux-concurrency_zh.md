@@ -219,7 +219,7 @@
 
     1. Spring Data MongoDB
 
-        [Spring Data MongoDB](https://www.baeldung.com/spring-data-mongodb-tutorial)为建立在[MongoDB Reactive Streams驱动](https://mongodb.github.io/mongo-java-driver/)之上的MongoDB提供反应式存储库支持。最值得注意的是，该驱动完全实现了Reactive Streams API，以提供具有非阻塞反压的异步流处理。
+        Spring Data MongoDB 为建立在[MongoDB Reactive Streams驱动](https://mongodb.github.io/mongo-java-driver/)之上的MongoDB提供反应式存储库支持。最值得注意的是，该驱动完全实现了Reactive Streams API，以提供具有非阻塞反压的异步流处理。
 
         在Spring Boot应用程序中设置对MongoDB的反应式存储库的支持，就像添加一个依赖项一样简单。
 

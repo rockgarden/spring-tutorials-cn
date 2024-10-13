@@ -223,9 +223,7 @@
 
 4. Spring Data Mongo 注释
 
-    Spring Data 让使用 MongoDB 变得更加容易。在接下来的章节中，我们将探索 Spring Data MongoDB 的最基本功能。
-
-    如需了解更多信息，请访问我们有关 Spring Data MongoDB 的[文章](https://www.baeldung.com/spring-data-mongodb-tutorial)。
+    Spring Data 让使用 MongoDB 变得更加容易。在接下来的章节中，我们将探索 Spring Data MongoDB 的最基本功能。 
 
     1. @Document
 

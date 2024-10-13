@@ -10,7 +10,7 @@
 
 2. 使用注解禁用
 
-    让我们从 [MongoDB](https://www.baeldung.com/spring-data-mongodb-tutorial) 示例开始。我们来看看需要排除的类：
+    让我们从 MongoDB 示例开始。我们来看看需要排除的类：
 
     ```java
     @SpringBootApplication(exclude = {
