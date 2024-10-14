@@ -68,22 +68,17 @@
 - [Spring Data Elasticsearch 简介](/persistence-modules/spring-data-elasticsearch/spring-data-elasticsearch-tutorial_zh.md)
 - [使用 Spring Data 进行 Elasticsearch 查询](/persistence-modules/spring-data-elasticsearch/java-elasticsearch-guide_zh.md)
 
-## Spring Data MongoDB
+## [Spring Data MongoDB](spring-data-mongodb-series_zh.md)
 
-- [Spring Data MongoDB 简介](/persistence-modules/spring-data-mongodb/spring-data-mongodb-tutorial_zh.md)
-- [Spring Data MongoDB 中的查询指南](/persistence-modules/spring-data-mongodb/queries-in-spring-data-mongodb_zh.md)
-- [Spring Data MongoDB 事务](/persistence-modules/spring-data-mongodb/spring-data-mongodb-transactions_zh.md)
-- [Spring Data MongoDB：索引、注解和转换器](/persistence-modules/spring-data-mongodb/spring-data-mongodb-index-annotations-converter_zh.md)
-使用MongoDB的Spring数据反应式存储库
-类别-项目-图标
-Spring Data MongoDB 系列（系列）
-类别-项目-图标
-Spring Data MongoDB - 配置连接（常用）
-分类-项目-图标
-使用嵌入式 MongoDB 进行 Spring Boot 集成测试 (热门)
- Spring 其他技术 - 图标
-Spring 数据 Couchbase
-类别-项目-图标
-Spring Data Couchbase 简介
-类别-项目-图标
-Spring Data Couchbase中的多个桶和空间视图查询
+- ~~Spring Data MongoDB 简介~~
+- ~~Spring Data MongoDB 中的查询指南~~
+- ~~Spring Data MongoDB 事务~~
+- ~~Spring Data MongoDB：索引、注解和转换器~~
+- ~~使用MongoDB的Spring数据反应式存储库~~
+- ~~Spring Data MongoDB - 配置连接~~
+- ~~使用嵌入式 MongoDB 进行 Spring Boot 集成测试~~
+
+## Spring Data Couchbase
+
+- [Spring Data Couchbase 简介](/persistence-modules/spring-data-couchbase-2/spring-data-couchbase_zh.md)
+- [Spring Data Couchbase中的多个桶和空间视图查询](/persistence-modules/spring-data-couchbase-2/spring-data-couchbase-buckets-and-spatial-view-queries_zh.md)

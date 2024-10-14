@@ -39,7 +39,7 @@ Last updated: August 30, 2024
 
 ## Spring Data 集成
 
-- [Spring Data MongoDB 系列](spring-data-mongodb-series_zh.md)......
+- ~~Spring Data MongoDB 系列~~
 - ~~Spring Data Redis 简介~~
 - ~~Spring Data Elasticsearch 简介~~
 - ~~Spring Data REST 简介~~
