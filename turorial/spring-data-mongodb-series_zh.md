@@ -4,6 +4,8 @@ Last updated: November 14, 2023
 
 这是 Spring Data MongoDB 指南--从如何在 Spring 项目中快速入门，到更复杂、更有用的用例和库功能。
 
+- [MongoDB Community Server](https://www.mongodb.com/try/download/community)
+
 ## Spring Data MongoDB 基础知识
 
 - [Spring Data MongoDB 简介](/persistence-modules/spring-data-mongodb/spring-data-mongodb-tutorial_zh.md)
