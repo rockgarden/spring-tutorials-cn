@@ -1,19 +1,4 @@
-# 数据结构
-
-本模块包含有关 Java 数据结构的文章
-
-- [Java 中的 Trie 数据结构](<https://www.baeldung.com/trie-java>)
-- [Java 中二叉树的实现](<https://www.baeldung.com/java-binary-tree>)
-- [循环链接表的 Java 实现](<https://www.baeldung.com/java-circular-linked-list>)
-- [如何打印二叉树图](<https://www.baeldung.com/java-print-binary-tree-diagram>)
-- [大队列简介](<https://www.baeldung.com/java-big-queue>)
-- [Java 中的 AVL 树指南](<https://www.baeldung.com/java-avl-trees>)
-- [ ] [Java中的图形](#java-中的图形)
-- [用 Java 实现环形缓冲区](<https://www.baeldung.com/java-ring-buffer>)
-- [如何在 Java 中实现最小-最大堆](<https://www.baeldung.com/java-min-max-heap>)
-- [如何在 Java 中实现 LRU 缓存](<https://www.baeldung.com/java-lru-cache>)
-
-## Java 中的图形
+# [Java中的图形](https://www.baeldung.com/java-graphs)
 
 1. 概述
 
@@ -30,6 +15,7 @@
     让我们定义一个简单的图来更好地理解这一点：
 
     ![graph1 图 1](pic/graph1.jpg)
+
     在这里，我们定义了一个有五个顶点和六条边的简单图。圆圈是顶点，代表人，连接两个顶点的线是边，代表在线门户网站上的朋友。
 
     根据边的属性，这个简单图有几种变化。让我们在接下来的章节中简单介绍一下。
@@ -43,6 +29,7 @@
         举个例子，在在线门户网站上，谁向谁发送了交友请求：
 
         ![图 2](pic/graph2.jpg)
+
         在这里，我们可以看到这些边都有固定的方向。这些边也可以是双向的。
 
     2. 加权图
@@ -54,6 +41,7 @@
         实际应用中的一个例子就是在在线门户网站上表示一段友谊的相对年龄：
 
         ![图 3](pic/graph3.jpg)
+
         在这里，我们可以看到这些边都有相关的权重。这为这些边提供了相对意义。
 
 3. 图的表示
@@ -71,6 +59,7 @@
         让我们来看看上一节中简单图的邻接矩阵：
 
         ![图 4](pic/graph4.jpg)
+
         这种表示法比较容易实现，查询效率也很高。不过，它占用空间的效率较低。
 
     2. 邻接表
@@ -82,6 +71,7 @@
         让我们看看上一节中的简单图的邻接列表：
 
         ![图 5](pic/graph5.jpg)
+
         这种表示法创建起来相对困难，查询效率也较低。不过，它的空间效率更高。
 
         在本教程中，我们将使用邻接表来表示图形。
@@ -130,7 +120,7 @@
 
     让我们定义添加和删除顶点的方法：
 
-    参见 graph\Graph.java
+    参见 [Graph.java](src/main/java/com/baeldung/graph/Graph.java)
 
     `void addVertex(String label)`
 
@@ -150,7 +140,7 @@
 
     接下来，让我们看看如何使用迄今为止定义的方法创建我们之前绘制的简单图形：
 
-    GraphUnitTest.java
+    [GraphUnitTest.java](src/test/java/com/baeldung/graph/GraphUnitTest.java)
 
     `Graph createGraph()`
 
@@ -166,11 +156,11 @@
 
     遍历图有两种可能的方式：深度优先遍历和广度优先遍历。
 
-    代码参见：graph\GraphTraversal.java
+    代码参见：[GraphTraversal.java](src/main/java/com/baeldung/graph/GraphTraversal.java)
 
     1. 深度优先遍历
 
-        [深度优先遍历](https://www.baeldung.com/cs/depth-first-traversal-methods)从任意根顶点开始，沿着每个分支尽可能深入地探索顶点，然后再探索同一层次的顶点。
+        深度优先遍历从任意根顶点开始，沿着每个分支尽可能深入地探索顶点，然后再探索同一层次的顶点。
 
         让我们定义一个执行深度优先遍历的方法：
 
@@ -182,7 +172,7 @@
 
         `assertEquals("[Bob, Rob, Maria, Alice, Mark]", depthFirstTraversal(graph, "Bob").toString());`
 
-        请注意，这里我们使用顶点 "Bob "作为遍历的根顶点，但也可以是任何其他顶点。
+        请注意，这里我们使用顶点 "Bob" 作为遍历的根顶点，但也可以是任何其他顶点。
 
     2. 广度优先遍历
 
@@ -200,6 +190,8 @@
 
         同样，这里的根顶点是 "Bob"，也可以是任何其他顶点。
 
+        测试代码见：GraphUnitTest.java
+
 7. 图形的 Java 库
 
     不一定非要用 Java 从头开始实现图形。有几个开源和成熟的库可以提供图的实现。
@@ -210,7 +202,7 @@
 
         [JGraphT](https://jgrapht.org/) 是 Java 中最流行的图数据结构库之一。它允许创建简单图、有向图和加权图等。
 
-        此外，它还为图数据结构提供了许多可能的算法。我们以前的[教程](https://www.baeldung.com/jgrapht)之一更详细地介绍了 JGraphT。
+        此外，它还为图数据结构提供了许多可能的算法。
 
     2. 谷歌 Guava
 
@@ -235,7 +227,3 @@
     在本文中，我们讨论了作为数据结构的图及其表示方法。我们使用 Java 集合在 Java 中定义了一个非常简单的图，还定义了图的常用遍历。
 
     我们还简要介绍了 Java 平台之外提供图实现的各种 Java 库。
-
-## Code
-
-一如既往，这些示例的代码可在 [GitHub](https://github.com/eugenp/tutorials/tree/master/data-structures) 上获取。
