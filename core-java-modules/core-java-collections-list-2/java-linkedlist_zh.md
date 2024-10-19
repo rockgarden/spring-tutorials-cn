@@ -1,8 +1,4 @@
-# Java 核心集合列表（第 2 部分）
-
-本模块包含有关 Java 列表集合的文章
-
-## Java 链接表指南
+# [Java链接表指南](https://www.baeldung.com/java-linkedlist)
 
 1. 简介
 
@@ -88,20 +84,3 @@
     ArrayList 通常是默认的 List 实现。
 
     然而，在某些使用情况下，使用 LinkedList 会更合适，例如，对于恒定的插入/删除时间（例如，频繁的插入/删除/更新）的偏好，会超过恒定的访问时间和有效的内存使用。
-
-## 相关文章
-
-- [Check if Two Lists Are Equal in Java](https://www.baeldung.com/java-test-a-list-for-ordinality-and-equality)
-- [Java 8 Streams: Find Items From One List Based on Values From Another List](https://www.baeldung.com/java-streams-find-list-items)
-- [ ] [A Guide to the Java LinkedList](https://www.baeldung.com/java-linkedlist)
-- [Java List UnsupportedOperationException](https://www.baeldung.com/java-list-unsupported-operation-exception)
-- [Java List Initialization in One Line](https://www.baeldung.com/java-init-list-one-line)
-- [Ways to Iterate Over a List in Java](https://www.baeldung.com/java-iterate-list)
-- [Flattening Nested Collections in Java](https://www.baeldung.com/java-flatten-nested-collections)
-- [Intersection of Two Lists in Java](https://www.baeldung.com/java-lists-intersection)
-- [Searching for a String in an ArrayList](https://www.baeldung.com/java-search-string-arraylist)
-- [[<-- Prev]][/core-java-modules/core-java-collections-list]([Next -->)](/core-java-modules/core-java-collections-list-3)
-
-## Code
-
-代码示例可在 [GitHub](https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-collections-list-2) 上找到。

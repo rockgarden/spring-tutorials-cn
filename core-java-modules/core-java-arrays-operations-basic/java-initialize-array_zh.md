@@ -1,22 +1,8 @@
-# Java数组-基本操作
-
-本模块包含有关Java数组基础知识的文章。这些文章没有假定以前有与数组打交道的背景知识。
-
-## 在Java中初始化数组
+# [在Java中初始化数组](https://www.baeldung.com/java-initialize-array)
 
 1. 概述
 
     在这个快速教程中，我们将研究初始化数组的不同方法，以及它们之间的微妙差别。
-
-    [Java中的数组：参考指南](https://www.baeldung.com/java-arrays-guide)
-
-    一个简单而完整的参考指南，用于理解和使用Java中的数组。
-
-    [Java中的数组操作](https://www.baeldung.com/java-common-array-operations)
-
-    了解我们如何在Java中处理常见的数组操作。
-
-    [一条语句的Java列表初始化](https://www.baeldung.com/java-init-list-one-line)
 
     在这个快速教程中，我们将研究如何使用单行代码初始化一个列表。
 
@@ -109,20 +95,3 @@
 8. 总结
 
     在这篇简短的文章中，我们探讨了在Java中初始化数组的不同方法。
-
-## Relevant Articles
-
-- [x] [Initializing Arrays in Java](https://www.baeldung.com/java-initialize-array)
-- [Array Operations in Java](https://www.baeldung.com/java-common-array-operations)
-- [Adding an Element to a Java Array vs an ArrayList](https://www.baeldung.com/java-add-element-to-array-vs-list)
-- [Check if a Java Array Contains a Value](https://www.baeldung.com/java-array-contains-value)
-- [Removing an Element from an Array in Java](https://www.baeldung.com/java-array-remove-element)
-- [Removing the First Element of an Array](https://www.baeldung.com/java-array-remove-first-element)
-- [Extending an Array’s Length](https://www.baeldung.com/java-array-add-element-at-the-end)
-- [Initializing a Boolean Array in Java](https://www.baeldung.com/java-initializing-boolean-array)
-- [Find the Index of an Element in a Java Array](https://www.baeldung.com/java-array-find-index)
-- [Comparing Two Byte Arrays in Java](https://www.baeldung.com/java-comparing-byte-arrays)
-
-## Code
-
-一如既往，完整版的代码可以在[GitHub](https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-arrays-operations-basic)上找到。
