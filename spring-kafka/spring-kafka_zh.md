@@ -303,7 +303,7 @@
 
         src/.spring.kafka/KafkaConsumerConfig.java: greetingConsumerFactory(), greetingKafkaListenerContainerFactory()
 
-        spring-kafka JSON 序列化器和反序列化器使用的是 [Jackson](https://www.baeldung.com/jackson) 库，它也是 spring-kafka 项目的可选 Maven 依赖项。
+        spring-kafka JSON 序列化器和反序列化器使用的是 Jackson 库，它也是 spring-kafka 项目的可选 Maven 依赖项。
 
         因此，让我们将其添加到 pom.xml 中：
 

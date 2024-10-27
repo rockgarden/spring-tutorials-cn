@@ -1,4 +1,6 @@
-# [Jest - Elasticsearch Java 客户端](https://www.baeldung.com/elasticsearch-jest)
+# ~~[Jest – Elasticsearch Java客户端](https://www.baeldung.com/elasticsearch-jest)~~
+
+==**此版本库已存档**==
 
 1. 简介
 
@@ -258,3 +260,41 @@
     在本教程中，我们简要介绍了 Elasticsearch 的 RESTful Java 客户端 Jest 客户端。
 
     虽然我们只介绍了它的一小部分功能，但很明显，Jest 是一个强大的 Elasticsearch 客户端。其流畅的构建器类和 RESTful 接口使其易于学习，对 Elasticsearch 接口的全面支持使其成为原生客户端的有力替代品。
+
+## Code
+
+- [x] Error: ch/qos/logback/classic/spi/LogbackServiceProvider has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0
+  - logback-classic-1.5.6.jar Compiler version 55.0
+    - JDK Runtime 指定为 zulu-11.jdk
+
+- [x] `14:45:06.245 [main] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager -- Connection released: [id: 3][route: {}->http://localhost:9200][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20] -- Exception in thread "main" org.apache.http.NoHttpResponseException: localhost:9200 failed to respond`
+  - es 默认运行在 https
+
+- [ ] `14:42:18.823 [main] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager -- Connection released: [id: 0][route: {s}->https://localhost:9200][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20] -- Exception in thread "main" javax.net.ssl.SSLHandshakeException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target`
+
+    HTTPS 或 SSL（或 TLS）连接可通过向创建器传递自己的 LayeredConnectionSocketFactory 实例来配置。
+
+    ```java
+    // trust ALL certificates
+    SSLContext sslContext = new SSLContextBuilder().loadTrustMaterial(null, new TrustStrategy() {
+        public boolean isTrusted(X509Certificate[] arg0, String arg1) throws CertificateException {
+            return true;
+        }
+    }).build();
+
+    // skip hostname checks
+    HostnameVerifier hostnameVerifier = NoopHostnameVerifier.INSTANCE;
+
+    SSLConnectionSocketFactory sslSocketFactory = new SSLConnectionSocketFactory(sslContext, hostnameVerifier);
+    SchemeIOSessionStrategy httpsIOSessionStrategy = new SSLIOSessionStrategy(sslContext, hostnameVerifier);
+
+    JestClientFactory factory = new JestClientFactory();
+    factory.setHttpClientConfig(new HttpClientConfig.Builder("https://localhost:9200")
+                    .defaultSchemeForDiscoveredNodes("https") // required, otherwise uses http
+                    .sslSocketFactory(sslSocketFactory) // this only affects sync calls
+                    .httpsIOSessionStrategy(httpsIOSessionStrategy) // this only affects async calls
+                    .build()
+    );
+    ```
+
+    > 请记住，上述示例中的 SSLContext 和 HostnameVerifier 只是一个例子，而且非常不安全。

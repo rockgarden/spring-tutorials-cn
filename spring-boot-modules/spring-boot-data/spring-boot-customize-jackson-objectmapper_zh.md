@@ -6,7 +6,7 @@
 
     在本教程中，我们将看看配置序列化和反序列化选项的最常见方法。
 
-    要了解更多关于Jackson的信息，请务必查看我们的[Jackson教程](https://www.baeldung.com/jackson)。
+    要了解更多关于Jackson的信息，请务必查看我们的Jackson教程。
 
 2. 默认配置
 

@@ -18,7 +18,7 @@
 
     Spring提供了一种通过POST请求发送JSON数据的直接方式。[内置的@RequestBody注释](https://www.baeldung.com/spring-request-response-body#@requestbody)可以自动将封装在请求正文中的JSON数据反序列化到特定的模型对象中。
 
-    一般来说，我们不必自己解析请求主体。我们可以利用[杰克逊图书馆](https://www.baeldung.com/jackson)为我们做所有繁重的工作。
+    一般来说，我们不必自己解析请求主体。我们可以利用jackson库为我们做所有繁重的工作。
 
     现在，让我们看看如何在Spring MVC中通过POST请求发送JSON数据。
 

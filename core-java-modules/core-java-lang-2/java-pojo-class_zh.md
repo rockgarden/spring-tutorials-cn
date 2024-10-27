@@ -55,7 +55,7 @@
 
         在这里，我们只看到 start 是类的一个属性。PropertyUtils 没有找到其他两个属性。
 
-        如果使用其他库（如 [Jackson](https://www.baeldung.com/jackson)）来处理 EmployeePojo，我们也会看到同样的结果。
+        如果使用其他库（如Jackson）来处理 EmployeePojo，我们也会看到同样的结果。
 
         理想情况下，我们会看到所有属性：firstName、lastName 和 startDate。好消息是，许多 Java 库都默认支持 JavaBean 命名约定。
 
