@@ -14,10 +14,9 @@ public class EuclideanDistance implements Distance {
         }
 
         double sum = 0;
-        for (String key : f1.keySet()) {
-            Double v1 = f1.get(key);
-            Double v2 = f2.get(key);
-
+        for (Map.Entry<String,Double> entry : f1.entrySet()) {
+            Double v1 = entry.getValue();
+            Double v2 = f2.get(entry.getKey());
             if (v1 != null && v2 != null) sum += Math.pow(v1 - v2, 2);
         }
 

@@ -4,7 +4,7 @@
 
     [Apache Flink](https://flink.apache.org/) 是一个流处理框架，可以轻松地与 Java 结合使用。Apache Kafka 是一个支持高容错性的分布式流处理系统。
 
-    在本教程中，我们将了解如何使用这两种技术构建[数据管道](https://www.baeldung.com/cs/data-pipelines)。
+    在本教程中，我们将了解如何使用这两种技术构建数据管道。
 
 2. 安装
 
@@ -30,14 +30,14 @@
 
     Flink 中有多种可用的连接器：
 
-    - 阿帕奇卡夫卡（源/汇）
-    - Apache Cassandra（汇）
-    - 亚马逊 Kinesis 流（源/汇）
-    - Elasticsearch （汇）
-    - Hadoop FileSystem（汇）
-    - RabbitMQ （源/汇）
-    - Apache NiFi（源/汇）
-    - Twitter 流 API（源）
+    - Apache Kafka (source/sink)
+    - Apache Cassandra (sink)
+    - Amazon Kinesis Streams (source/sink)
+    - Elasticsearch (sink)
+    - Hadoop FileSystem (sink)
+    - RabbitMQ (source/sink)
+    - Apache NiFi (source/sink)
+    - Twitter Streaming API (source)
 
     要在项目中添加 Flink，我们需要包含以下 Maven 依赖项：
 
@@ -84,17 +84,17 @@
 
 6. 字符串流处理
 
-    当消费者和生产者完全正常工作后，我们就可以尝试处理来自 Kafka 的数据，然后将结果保存回 Kafka。可用于流处理的函数的完整列表可以在这里找到。
+    当消费者和生产者完全正常工作后，我们就可以尝试处理来自 Kafka 的数据，然后将结果保存回 Kafka。
 
     在本例中，我们将对每个 Kafka 条目中的单词进行大写处理，然后将其写回 Kafka。
 
     为此，我们需要创建一个自定义 MapFunction：
 
-    main/.flink.operator/WordsCapitalizer.java
+    ![WordsCapitalizer.java](src/main/java/com/baeldung/flink/operator/WordsCapitalizer.java)
 
-    创建函数后，我们就可以在流处理中使用它了：
+    创建函数后，我们就可以在流处理中使用它了，参见capitalize()方法：
 
-    main/.flink/FlinkDataPipeline.java:capitalize()
+    ![FlinkDataPipeline.java](src/main/java/com/baeldung/flink/FlinkDataPipeline.java)
 
     应用程序将从 flink_input 主题读取数据，对流执行操作，然后将结果保存到 Kafka 中的 flink_output 主题。
 
@@ -104,13 +104,13 @@
 
     下面的类表示一条简单的消息，包含发送方和接收方的信息：
 
-    mian/.flink.model/InputMessage.java
+    ![InputMessage.java](src/main/java/com/baeldung/flink/model/InputMessage.java)
 
     之前，我们使用 SimpleStringSchema 从 Kafka 反序列化消息，但现在我们想直接将数据反序列化为自定义对象。
 
     为此，我们需要一个自定义的反序列化模式（DeserializationSchema）：
 
-    main/.flink.schema/InputMessageDeserializationSchema.java
+    ![InputMessageDeserializationSchema.java](src/main/java/com/baeldung/flink/schema/InputMessageDeserializationSchema.java)
 
     在此，我们假定消息在 Kafka 中保存为 JSON 格式。
 
@@ -130,13 +130,13 @@
 
     为此，我们可以创建以下类：
 
-    main/.flink.model/Backup.java
+    ![Backup.java](src/main/java/com/baeldung/flink/model/Backup.java)
 
     请注意，UUID 生成机制并不完美，因为它允许重复。不过，就本示例而言，这已经足够了。
 
     我们希望将备份对象以 JSON 格式保存到 Kafka，因此需要创建序列化模式（SerializationSchema）：
 
-    main/.flink.model/BackupSerializationSchema.java
+    ![BackupSerializationSchema.java](src/main/java/com/baeldung/flink/schema/BackupSerializationSchema.java)
 
 9. 为消息添加时间戳
 
@@ -148,13 +148,13 @@
 
     要使用 EventTime，我们需要一个 TimestampAssigner，它将从我们的输入数据中提取时间戳：
 
-    main/.flink.operator/InputMessageTimestampAssigner.java
+    ![InputMessageTimestampAssigner.java](src/main/java/com/baeldung/flink/operator/InputMessageTimestampAssigner.java)
 
     我们需要将 LocalDateTime 转换为 EpochSecond，因为这是 Flink 所期望的格式。分配时间戳后，所有基于时间的操作都将使用 sentAt 字段中的时间进行操作。
 
     由于 Flink 希望时间戳的单位是毫秒，而 toEpochSecond() 返回的时间单位是秒，因此我们需要将其乘以 1000，这样 Flink 才能正确创建窗口。
 
-    Flink 定义了水印的概念。水印在数据未按发送顺序到达时非常有用。水印定义了允许处理元素的最大延迟时间。
+    Flink 定义了水印(Watermark)的概念。水印在数据未按发送顺序到达时非常有用。水印定义了允许处理元素的最大延迟时间。
 
     时间戳低于水印的元素根本不会被处理。
 
@@ -166,13 +166,13 @@
 
     为此，我们需要一个自定义的 AggregateFunction：
 
-    main/.flink.operator/BackupAggregator.java
+    ![BackupAggregator.java](src/main/java/com/baeldung/flink/operator/BackupAggregator.java)
 
 11. 聚合备份
 
-    在分配了适当的时间戳并实现了 AggregateFunction 后，我们终于可以接收 Kafka 输入并对其进行处理了：
+    在分配了适当的时间戳并实现了 AggregateFunction 后，我们终于可以接收 Kafka 输入并对其进行处理了，参见createBackup()方法：
 
-    main/.flink/FlinkDataPipeline.java:createBackup()
+    ![FlinkDataPipeline.java](src/main/java/com/baeldung/flink/FlinkDataPipeline.java)
 
 12. 结论
 

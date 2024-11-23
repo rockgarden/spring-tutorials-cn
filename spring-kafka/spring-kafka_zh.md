@@ -14,10 +14,6 @@
 
     进一步阅读：
 
-    [使用 Flink 和 Kafka 构建数据管道](https://www.baeldung.com/kafka-flink-data-pipeline)
-
-    了解如何使用 Flink 和 Kafka 处理流数据
-
     [使用 MQTT 和 MongoDB 的 Kafka 连接示例](https://www.baeldung.com/kafka-connect-mqtt-mongodb)
 
     看看使用 Kafka 连接器的实用示例。
