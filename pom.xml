@@ -574,6 +574,7 @@
                 <module>quarkus-modules/quarkus-vs-springboot/quarkus-project</module>
                 <module>spring-di-2</module>
                 <module>spring-security-modules/spring-security-legacy-oidc</module>
+                <module>spring-reactive-modules/spring-reactive-kafka-stream-binder</module>              
             </modules>
 
             <properties>
@@ -642,6 +643,7 @@
                 <module>azure-functions</module>
                 <module>bazel</module>
                 <module>checker-framework</module>
+                <module>choco-solver</module>
                 <module>core-java-modules</module>
                 <module>custom-pmd</module>
                 <module>data-structures</module>
@@ -959,6 +961,7 @@
                 <module>quarkus-modules/quarkus-vs-springboot/quarkus-project</module>
                 <module>spring-di-2</module>
                 <module>spring-security-modules/spring-security-legacy-oidc</module>
+                <module>spring-reactive-modules/spring-reactive-kafka-stream-binder</module>
             </modules>
 
             <properties>
@@ -1021,6 +1024,7 @@
                 <module>azure-functions</module>
                 <module>bazel</module>
                 <module>checker-framework</module>
+                <module>choco-solver</module>
                 <module>core-java-modules</module>
                 <module>custom-pmd</module>
                 <module>data-structures</module>
