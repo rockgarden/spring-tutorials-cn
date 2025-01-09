@@ -1,8 +1,4 @@
-# 核心Java-IO转换（第二部分）
-
-本模块包含有关核心Java输入/输出（IO）转换的文章。
-
-## 如何将InputStream转换为Base64字符串
+# [如何将InputStream转换为Base64字符串](https://www.baeldung.com/java-inputstream-to-base64-string)
 
 1. 概述
 
@@ -74,18 +70,3 @@
 4. 总结
 
     在这篇文章中，我们演示了将InputStream编码为Base64字符串，并成功将该字符串解码为二进制数组。
-
-## Relevant Articles
-
-- [Java InputStream to String](https://www.baeldung.com/convert-input-stream-to-string)
-- [Java String to InputStream](https://www.baeldung.com/convert-string-to-input-stream)
-- [Java – Write an InputStream to a File](https://www.baeldung.com/convert-input-stream-to-a-file)
-- [Converting a BufferedReader to a JSONObject](https://www.baeldung.com/java-bufferedreader-to-jsonobject)
-- [Reading a CSV File into an Array](https://www.baeldung.com/java-csv-file-array)
-- [How to Write to a CSV File in Java](https://www.baeldung.com/java-csv)
-- [x] [How to Convert InputStream to Base64 String](https://www.baeldung.com/java-inputstream-to-base64-string)
-- More articles: [[<-- prev]](/core-java-modules/core-java-io-conversions)
-
-## Code
-
-像往常一样，本文介绍的代码可以在[GitHub](https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-io-conversions-2)上找到。
