@@ -1,19 +1,4 @@
-# 核心Java安全
-
-本模块包含有关 Java 核心安全的文章
-
-- [Java 验证与授权服务 (JAAS) 指南](https://www.baeldung.com/java-authentication-authorization-service)
-- [Java 中的 MD5 加密](http://www.baeldung.com/java-md5)
-- [x] [Java中的密码散列](#用java对密码进行散列)
-- [Java 中的 SHA-256 和 SHA3-256 散列](https://www.baeldung.com/sha-256-hashing-java)
-- [Java 中的校验和](https://www.baeldung.com/java-checksums)
-- [如何读取 PEM 文件以获取公钥和私钥](https://www.baeldung.com/java-read-pem-file-keys)
-- [在 Java 中获取可信证书列表](https://www.baeldung.com/java-list-trusted-certificates)
-- [安全上下文基础知识：用户、主体和负责人](https://www.baeldung.com/security-context-basics)
-- [java.security.egd JVM 选项](https://www.baeldung.com/java-security-egd)
-- 更多文章： [[<-- prev]](../core-java-security/README-zh.md) [[next -->]](../core-java-security-3/README-zh.md)
-
-## 用Java对密码进行散列
+# [用Java对密码进行散列](https://www.baeldung.com/java-password-hashing)
 
 1. 概述
 
@@ -159,19 +144,4 @@
 
     最后，我们看到 Spring Security 提供了密码加密类，实现了一系列不同的哈希函数。
 
-## Code
-
-一如既往，代码可在 [GitHub](https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-security-2) 上获取。
-
-## Relevant Articles
-
-- [Guide To The Java Authentication And Authorization Service (JAAS)](https://www.baeldung.com/java-authentication-authorization-service)
-- [MD5 Hashing in Java](http://www.baeldung.com/java-md5)
-- [Hashing a Password in Java](https://www.baeldung.com/java-password-hashing)
-- [SHA-256 and SHA3-256 Hashing in Java](https://www.baeldung.com/sha-256-hashing-java)
-- [Checksums in Java](https://www.baeldung.com/java-checksums)
-- [How to Read PEM File to Get Public and Private Keys](https://www.baeldung.com/java-read-pem-file-keys)
-- [Get a List of Trusted Certificates in Java](https://www.baeldung.com/java-list-trusted-certificates)
-- [Security Context Basics: User, Subject and Principal](https://www.baeldung.com/security-context-basics)
-- [The java.security.egd JVM Option](https://www.baeldung.com/java-security-egd)
-- More articles: [[<-- prev]](../core-java-security/README-zh.md) [[next -->]](../core-java-security-3/README-zh.md)
+    一如既往，代码可在 [GitHub](https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-security-2) 上获取。
