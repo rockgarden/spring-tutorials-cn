@@ -60,9 +60,9 @@ HTML    XSS
 
     ```java
     private static final PolicyFactory POLICY = new HtmlPolicyBuilder()
-    .allowCommonBlockElements()
-    .allowCommonInlineFormattingElements()
-    .toFactory();
+        .allowCommonBlockElements()
+        .allowCommonInlineFormattingElements()
+        .toFactory();
 
     public static String sanitize(String html) {
         return POLICY.sanitize(html);
