@@ -205,7 +205,7 @@
     }
     ```
 
-    直接使用Critrias API查询可能令人生畏，但当我们需要添加动态查询元素或与[JPA元模型](https://www.baeldung.com/hibernate-criteria-queries-metamodel)耦合时，它们可能是一个很好的选择。
+    直接使用Critrias API查询可能令人生畏，但当我们需要添加动态查询元素或与JPA元模型耦合时，它们可能是一个很好的选择。
 
 7. 结论
 

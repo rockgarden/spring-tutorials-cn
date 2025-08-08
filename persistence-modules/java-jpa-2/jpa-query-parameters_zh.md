@@ -132,7 +132,7 @@
 
 5. 标准查询参数
 
-    可以使用[JPA标准API构建](https://www.baeldung.com/hibernate-criteria-queries-metamodel)JPA查询，Hibernate的[官方文档](https://docs.jboss.org/hibernate/orm/5.2/topical/html_single/metamodelgen/MetamodelGenerator.html)对此进行了非常详细的解释。
+    可以使用JPA标准API构建JPA查询，Hibernate的[官方文档](https://docs.jboss.org/hibernate/orm/5.2/topical/html_single/metamodelgen/MetamodelGenerator.html)对此进行了非常详细的解释。
 
     在这种类型的查询中，我们通过使用对象而不是名称或索引来表示参数。
 
