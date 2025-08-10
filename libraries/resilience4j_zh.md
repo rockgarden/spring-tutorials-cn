@@ -1,4 +1,4 @@
-# Resilience4j 指南
+# [Resilience4j指南](https://www.baeldung.com/resilience4j)
 
 1. 概述
 
@@ -26,7 +26,7 @@
 
 3. 断路器
 
-    请注意，对于该模块，我们需要上图所示的 resilience4j-circuitbreaker 依赖关系。
+    请注意，对于该模块，我们需要上节所示的 resilience4j-circuitbreaker 依赖关系。
 
     [断路器模式](https://martinfowler.com/bliki/CircuitBreaker.html)可帮助我们在远程服务宕机时防止出现一连串故障。
 
@@ -45,9 +45,9 @@
 
     ```java
     CircuitBreakerConfig config = CircuitBreakerConfig.custom()
-    .failureRateThreshold(20)
-    .withSlidingWindow(5)
-    .build();
+        .failureRateThreshold(20)
+        .withSlidingWindow(5)
+        .build();
     ```
 
     在这里，我们将故障率阈值设为 20%，并设置最少 5 次呼叫尝试。
@@ -62,7 +62,7 @@
     CircuitBreakerRegistry registry = CircuitBreakerRegistry.of(config);
     CircuitBreaker circuitBreaker = registry.circuitBreaker("my");
     Function<Integer, Integer> decorated = CircuitBreaker
-    .decorateFunction(circuitBreaker, service::process);
+        .decorateFunction(circuitBreaker, service::process);
     ```
 
     最后，让我们通过 JUnit 测试看看它是如何工作的。
@@ -110,7 +110,7 @@
     RateLimiterRegistry registry = RateLimiterRegistry.of(config);
     RateLimiter rateLimiter = registry.rateLimiter("my");
     Function<Integer, Integer> decorated
-    = RateLimiter.decorateFunction(rateLimiter, service::process);
+        = RateLimiter.decorateFunction(rateLimiter, service::process);
     ```
 
     现在，对 decorated 服务块的所有调用都符合速率限制器配置（如有必要）。
@@ -134,7 +134,7 @@
     BulkheadRegistry registry = BulkheadRegistry.of(config);
     Bulkhead bulkhead = registry.bulkhead("my");
     Function<Integer, Integer> decorated
-    = Bulkhead.decorateFunction(bulkhead, service::process);
+        = Bulkhead.decorateFunction(bulkhead, service::process);
     ```
 
     为了测试此配置，我们将调用一个模拟服务方法。
@@ -176,10 +176,10 @@
     RetryRegistry registry = RetryRegistry.of(config);
     Retry retry = registry.retry("my");
     Function<Integer, Void> decorated
-    = Retry.decorateFunction(retry, (Integer s) -> {
-            service.process(s);
-            return null;
-        });
+        = Retry.decorateFunction(retry, (Integer s) -> {
+                service.process(s);
+                return null;
+            });
     ```
 
     现在，让我们模拟在远程服务调用过程中出现异常的情况，并确保库自动重试失败的调用：
@@ -211,7 +211,7 @@
     javax.cache.Cache cache = ...; // Use appropriate cache here
     Cache<Integer, Integer> cacheContext = Cache.of(cache);
     Function<Integer, Integer> decorated
-    = Cache.decorateSupplier(cacheContext, () -> service.process(1));
+        = Cache.decorateSupplier(cacheContext, () -> service.process(1));
     ```
 
     此处的缓存是由所使用的 [JSR-107](https://www.baeldung.com/jcache) 缓存实现完成的，Resilience4j 提供了应用该实现的方法。
@@ -229,7 +229,7 @@
     ```java
     long ttl = 1;
     TimeLimiterConfig config
-    = TimeLimiterConfig.custom().timeoutDuration(Duration.ofMillis(ttl)).build();
+        = TimeLimiterConfig.custom().timeoutDuration(Duration.ofMillis(ttl)).build();
     TimeLimiter timeLimiter = TimeLimiter.of(config);
     ```
 
@@ -238,7 +238,7 @@
     ```java
     Future futureMock = mock(Future.class);
     Callable restrictedCall
-    = TimeLimiter.decorateFutureSupplier(timeLimiter, () -> futureMock);
+        = TimeLimiter.decorateFutureSupplier(timeLimiter, () -> futureMock);
     restrictedCall.call();
 
     verify(futureMock).get(ttl, TimeUnit.MILLISECONDS);`
@@ -248,7 +248,7 @@
 
     ```java
     Callable chainedCallable
-    = CircuitBreaker.decorateCallable(circuitBreaker, restrictedCall);
+        = CircuitBreaker.decorateCallable(circuitBreaker, restrictedCall);
     ```
 
 9. 附加模块

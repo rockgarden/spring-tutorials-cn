@@ -181,12 +181,10 @@
 
         `-Dcsp.sentinel.dashboard.server=consoleIp:port`
 
-        现在，只要有资源被调用，仪表盘就会收到来自我们应用程序的心跳声。
+        现在，只要有资源被调用，仪表盘就会收到来自我们应用程序的心跳。
 
         我们还可以使用仪表板动态地操纵流量、降级和系统规则。
 
 6. 总结
 
     在这篇文章中，我们看到了阿里巴巴Sentinel流量控制、断路器和自适应系统保护的主要功能。
-
-    相应的例子可以在[GitHub](https://github.com/eugenp/tutorials/tree/master/spring-cloud-modules/spring-cloud-sentinel)上找到。

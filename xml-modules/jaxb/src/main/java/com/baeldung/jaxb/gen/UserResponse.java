@@ -1,22 +1,18 @@
 
 package com.baeldung.jaxb.gen;
 
-import java.io.Serializable;
-import java.util.Calendar;
+import javax.xml.datatype.XMLGregorianCalendar;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.w3._2001.xmlschema.Adapter1;
 
 
 /**
- * <p>Java class for UserResponse complex type.
+ * <p>UserResponse complex type的 Java 类。
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="UserResponse"&gt;
@@ -42,24 +38,19 @@ import org.w3._2001.xmlschema.Adapter1;
     "gender",
     "created"
 })
-@XmlRootElement(name = "userResponse")
-public class UserResponse
-    implements Serializable
-{
+public class UserResponse {
 
-    private final static long serialVersionUID = -1L;
     protected int id;
     @XmlElement(required = true)
     protected String name;
     @XmlElement(required = true)
     protected String gender;
-    @XmlElement(required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
-    protected Calendar created;
+    protected XMLGregorianCalendar created;
 
     /**
-     * Gets the value of the id property.
+     * 获取id属性的值。
      * 
      */
     public int getId() {
@@ -67,7 +58,7 @@ public class UserResponse
     }
 
     /**
-     * Sets the value of the id property.
+     * 设置id属性的值。
      * 
      */
     public void setId(int value) {
@@ -75,7 +66,7 @@ public class UserResponse
     }
 
     /**
-     * Gets the value of the name property.
+     * 获取name属性的值。
      * 
      * @return
      *     possible object is
@@ -87,7 +78,7 @@ public class UserResponse
     }
 
     /**
-     * Sets the value of the name property.
+     * 设置name属性的值。
      * 
      * @param value
      *     allowed object is
@@ -99,7 +90,7 @@ public class UserResponse
     }
 
     /**
-     * Gets the value of the gender property.
+     * 获取gender属性的值。
      * 
      * @return
      *     possible object is
@@ -111,7 +102,7 @@ public class UserResponse
     }
 
     /**
-     * Sets the value of the gender property.
+     * 设置gender属性的值。
      * 
      * @param value
      *     allowed object is
@@ -123,26 +114,26 @@ public class UserResponse
     }
 
     /**
-     * Gets the value of the created property.
+     * 获取created属性的值。
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link XMLGregorianCalendar }
      *     
      */
-    public Calendar getCreated() {
+    public XMLGregorianCalendar getCreated() {
         return created;
     }
 
     /**
-     * Sets the value of the created property.
+     * 设置created属性的值。
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link XMLGregorianCalendar }
      *     
      */
-    public void setCreated(Calendar value) {
+    public void setCreated(XMLGregorianCalendar value) {
         this.created = value;
     }
 

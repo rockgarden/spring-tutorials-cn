@@ -6,7 +6,7 @@
 
     首先，我们将了解 Spring Cloud Circuit Breaker 除了现有的断路器实现外，还提供了哪些功能。接下来，我们将学习如何使用 Spring Boot [自动配置机制](https://www.baeldung.com/spring-boot-custom-auto-configuration)将一个或多个断路器集成到我们的应用程序中。
 
-    请注意，我们在《[Hystrix 简介](https://www.baeldung.com/introduction-to-hystrix)》、《[Spring Cloud Netflix Hystrix](https://www.baeldung.com/spring-cloud-netflix-hystrix)》和《[Resilience4j指南](https://www.baeldung.com/resilience4j)》中提供了更多有关断路器及其工作原理的信息。
+    请注意，我们在《[Hystrix 简介](https://www.baeldung.com/introduction-to-hystrix)》、《[Spring Cloud Netflix Hystrix](https://www.baeldung.com/spring-cloud-netflix-hystrix)》和《Resilience4j指南》中提供了更多有关断路器及其工作原理的信息。
 
 2. Spring Cloud 断路器
 
@@ -94,17 +94,17 @@
 
     在这里，我们要为所有断路器定义一个全局配置。因此，我们需要定义一个 `Customizer<CircuitBreakerFactory> Bean`。因此，让我们使用 Resilience4JCircuitBreakerFactory 实现。
 
-    首先，我们将根据 [Resilience4j教程](https://www.baeldung.com/resilience4j) 定义断路器和时间限制器配置类：
+    首先，我们将定义断路器和时间限制器配置类：
 
     ```java
     CircuitBreakerConfig circuitBreakerConfig = CircuitBreakerConfig.custom()
-    .failureRateThreshold(50)
-    .waitDurationInOpenState(Duration.ofMillis(1000))
-    .slidingWindowSize(2)
-    .build();
+        .failureRateThreshold(50)
+        .waitDurationInOpenState(Duration.ofMillis(1000))
+        .slidingWindowSize(2)
+        .build();
     TimeLimiterConfig timeLimiterConfig = TimeLimiterConfig.custom()
-    .timeoutDuration(Duration.ofSeconds(4))
-    .build();
+        .timeoutDuration(Duration.ofSeconds(4))
+        .build();
     ```
 
     接下来，让我们使用 Resilience4JCircuitBreakerFactory.configureDefault 方法，将配置嵌入 Customizer Bean 中：

@@ -1,18 +1,16 @@
 
 package com.baeldung.jaxb.gen;
 
-import java.io.Serializable;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for UserRequest complex type.
+ * <p>UserRequest complex type的 Java 类。
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="UserRequest"&gt;
@@ -34,18 +32,14 @@ import jakarta.xml.bind.annotation.XmlType;
     "id",
     "name"
 })
-@XmlRootElement(name = "userRequest")
-public class UserRequest
-    implements Serializable
-{
+public class UserRequest {
 
-    private final static long serialVersionUID = -1L;
     protected int id;
     @XmlElement(required = true)
     protected String name;
 
     /**
-     * Gets the value of the id property.
+     * 获取id属性的值。
      * 
      */
     public int getId() {
@@ -53,7 +47,7 @@ public class UserRequest
     }
 
     /**
-     * Sets the value of the id property.
+     * 设置id属性的值。
      * 
      */
     public void setId(int value) {
@@ -61,7 +55,7 @@ public class UserRequest
     }
 
     /**
-     * Gets the value of the name property.
+     * 获取name属性的值。
      * 
      * @return
      *     possible object is
@@ -73,7 +67,7 @@ public class UserRequest
     }
 
     /**
-     * Sets the value of the name property.
+     * 设置name属性的值。
      * 
      * @param value
      *     allowed object is
