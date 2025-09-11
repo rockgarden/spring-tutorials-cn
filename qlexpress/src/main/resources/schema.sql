@@ -1,0 +1,22 @@
+CREATE DATABASE IF NOT EXISTS security_rule_db;
+USE security_rule_db;
+
+CREATE TABLE security_rules (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(200) NOT NULL COMMENT '规则名称',
+    script TEXT NOT NULL COMMENT 'QLExpress脚本',
+    description TEXT COMMENT '规则描述',
+    enabled BOOLEAN DEFAULT TRUE COMMENT '是否启用',
+    risk_level INT DEFAULT 3 COMMENT '风险等级 1-5',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE security_alerts (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    rule_name VARCHAR(200) NOT NULL,
+    alert_type VARCHAR(100) NOT NULL,
+    log_event JSON NOT NULL COMMENT '触发时的日志快照',
+    triggered_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    handled BOOLEAN DEFAULT FALSE COMMENT '是否已处理'
+);
