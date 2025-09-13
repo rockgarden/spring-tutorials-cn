@@ -1,4 +1,4 @@
-# 在Spring Boot中使用application.yml与application.properties
+# [在Spring Boot中使用application.yml与application.properties](https://www.baeldung.com/spring-boot-yaml-vs-properties)
 
 1. 概述
 
@@ -163,17 +163,6 @@
 
     在这篇文章中，我们看到了properties和yml Spring Boot配置文件之间的一些区别。我们还看到了它们的值是如何引用其他属性的。最后，我们研究了如何将这些值注入到我们的运行时中。
 
-## Relevant Articles
+6. Code
 
-- [How to Define a Map in YAML for a POJO?](https://www.baeldung.com/yaml-map-pojo)
-- [x] [Using application.yml vs application.properties in Spring Boot](https://www.baeldung.com/spring-boot-yaml-vs-properties)
-- [Load Spring Boot Properties From a JSON File](https://www.baeldung.com/spring-boot-json-properties)
-- [IntelliJ – Cannot Resolve Spring Boot Configuration Properties Error](https://www.baeldung.com/intellij-resolve-spring-boot-configuration-properties)
-- [Log Properties in a Spring Boot Application](https://www.baeldung.com/spring-boot-log-properties)
-- [Using Environment Variables in Spring Boot’s application.properties](https://www.baeldung.com/spring-boot-properties-env-variables)
-- [Loading Multiple YAML Configuration Files in Spring Boot](https://www.baeldung.com/spring-boot-load-multiple-yaml-configuration-files)
-- More articles: [[<-- prev]](../spring-boot-properties-2/README-zh.md)
-
-## Code
-
-一如既往，所有的代码实例都可以在[GitHub](https://github.com/eugenp/tutorials/tree/master/spring-boot-modules/spring-boot-properties-3)上找到。
+    一如既往，所有的代码实例都可以在[GitHub](https://github.com/eugenp/tutorials/tree/master/spring-boot-modules/spring-boot-properties-3)上找到。

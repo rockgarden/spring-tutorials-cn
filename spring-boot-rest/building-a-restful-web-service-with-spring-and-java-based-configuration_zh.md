@@ -108,8 +108,6 @@
         }
         ```
 
-        我们可以在 [“Spring Boot 中的测试” 一文](https://www.baeldung.com/spring-boot-testing)中找到这方面的详细信息。
-
 5. 控制器
 
     @RestController 是 RESTful API 整个 Web 层的核心组件。在本文中，控制器将模拟一个简单的 REST 资源 Foo：

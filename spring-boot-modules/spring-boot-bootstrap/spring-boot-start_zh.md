@@ -198,7 +198,7 @@
 
     最后，让我们测试一下新的Books API。
 
-    我们可以使用[@SpringBootTest](https://www.baeldung.com/spring-boot-testing)加载应用程序上下文，并验证在运行应用程序时没有错误：
+    我们可以使用@SpringBootTest加载应用程序上下文，并验证在运行应用程序时没有错误：
 
     SpringContextTest.java
 

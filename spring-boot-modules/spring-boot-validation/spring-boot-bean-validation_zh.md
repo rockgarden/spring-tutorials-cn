@@ -160,7 +160,7 @@
 
 6. 测试REST控制器
 
-    我们可以通过[集成测试](https://www.baeldung.com/spring-boot-testing)轻松测试REST控制器的功能。
+    我们可以通过集成测试轻松测试REST控制器的功能。
 
     让我们开始模拟/自动连接(mocking/autowiring) UserRepository接口实现，以及UserController实例和[MockMvc](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/test/web/servlet/MockMvc.html)对象：
 

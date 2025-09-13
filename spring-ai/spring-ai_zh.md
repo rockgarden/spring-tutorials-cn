@@ -1,5 +1,9 @@
 # [Spring人工智能简介](https://www.baeldung.com/spring-ai)
 
+人工智能    Spring+
+
+Spring AI
+
 1. 概述
 
     Spring Framework 通过 Spring AI 项目正式启用了人工智能生成提示功能。在本教程中，我们将对 Spring Boot 应用程序中的 AI 生成集成进行深入浅出的介绍，并熟悉基本的 AI 概念。我们还将了解 Spring AI 如何与模型交互，并创建一个应用程序来演示其功能。
@@ -241,3 +245,198 @@
     在本文中，我们熟悉了 Spring AI 项目及其在 REST API 方面的功能。尽管在撰写本文时，spring-ai-starter 仍在积极开发中，并且只能访问快照版本，但它为生成式人工智能集成到 Spring Boot 应用程序中提供了一个可靠的接口。
 
     在本文中，我们介绍了与 Spring AI 的基本集成和高级集成，包括 AiClient 如何在引擎盖下工作。作为概念验证，我们实现了一个生成诗歌的基本 REST 应用程序。除了生成端点的基本示例，我们还提供了一个使用 Spring AI 高级功能的示例： PromtTemplate、AiResponse 和 BeanOutputParser。此外，我们还实现了错误处理功能。
+
+## 202509
+
+1. 概述
+
+    现代应用程序越来越多地使用大型语言模型（LLM）构建超越传统编程能力的解决方案。然而，将这些模型集成到我们的应用程序中，往往需要处理复杂的API、管理不同的AI提供商以及应对各种配置挑战。
+
+    **[Spring AI](https://github.com/spring-projects/spring-ai)** 作为Spring生态系统的新成员，通过提供一个通用的抽象层，使用熟悉的Spring编程模式来对接不同的AI提供商，从而解决上述问题。
+
+    它消除了显式使用供应商特定SDK的必要性，使我们能够在不修改应用程序代码的情况下轻松切换不同的模型。
+
+    在本教程中，我们将通过构建一个基础的诗歌生成服务，实际探索Spring AI的核心概念。
+
+2. 项目搭建
+
+    在演示中，我们将使用OpenAI的[GPT-5](https://platform.openai.com/docs/models/gpt-5)模型构建诗歌生成服务。
+
+    不过，Spring AI也支持来自其他提供商（如[Anthropic](https://www.baeldung.com/spring-ai-anthropics-claude-models)、[DeepSeek](https://www.baeldung.com/spring-ai-deepseek-cot)）的模型，甚至可通过[Hugging Face或Ollama](https://www.baeldung.com/spring-ai-ollama-hugging-face-models)接入本地LLM。我们可以根据需求选择最适合的模型，因为具体AI模型对实现本身并不重要。
+
+    1. 依赖项
+
+        首先，在项目的 `pom.xml` 文件中添加必要的依赖：
+
+        ```xml
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-starter-model-openai</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+        ```
+
+        OpenAI Starter依赖是对OpenAI聊天[补全API](https://platform.openai.com/docs/api-reference/chat)的封装，我们将用它来与应用程序中的GPT-5模型交互。
+
+    2. 配置LLM属性
+
+        接下来，在 `application.yaml` 文件中配置[OpenAI API密钥](https://platform.openai.com/api-keys)和聊天模型：
+
+        ```yaml
+        spring:
+        ai:
+            openai:
+            api-key: ${OPENAI_API_KEY}
+            chat:
+                options:
+                model: gpt-5
+                temperature: 1
+        ```
+
+        我们使用 `${}` 属性占位符从环境变量加载API密钥。
+
+        接着，我们指定 `gpt-5` 作为模型ID（可根据需求[更换模型](https://platform.openai.com/docs/models)）。
+
+        此外，我们将温度（temperature）设为1，因为当前配置的模型[仅接受此默认值](https://community.openai.com/t/temperature-in-gpt-5-models/1337133/6)。
+
+3. 构建诗歌生成服务
+
+    配置完成后，让我们构建一个使用配置LLM生成诗歌的服务。我们将从基础实现开始，逐步重构以使用更高级的Spring AI功能。
+
+    1. 使用 ChatClient 与LLM通信
+
+        在Spring AI中，`ChatClient` 类是与任何配置模型交互的主要入口点。
+
+        我们可以通过框架根据 `application.yaml` 中的配置自动创建的 `ChatClient.Builder` Bean 获取其实例。
+
+        让我们创建一个 `PoetryService` 类：
+
+        ```java
+        private final ChatClient chatClient;
+
+        PoetryService(ChatClient.Builder chatClientBuilder) {
+            this.chatClient = chatClientBuilder.build();
+        }
+
+        String generate() {
+            return chatClient
+            .prompt("写一首关于早晨咖啡的俏皮俳句，遵循传统的5-7-5音节结构。")
+            .call()
+            .content();
+        }
+        ```
+
+        这里，我们在服务构造函数中注入 `ChatClient.Builder`，并用它构建 `ChatClient` 实例。
+
+        在 `generate()` 方法中，我们使用 `chatClient` 的 `prompt()` 方法发送请求[俳句](https://www.britannica.com/art/haiku)的提示。
+
+        然后调用 `call()` 方法向配置的LLM执行请求，并通过 `content()` 提取生成的文本作为简单字符串。
+
+    2. 使用 PromptTemplate 与结构化输出重构
+
+        虽然初始实现有效，但它仅限于生成关于咖啡的俳句，且提示语固定。同时，我们返回的是纯字符串响应，客户端处理起来可能较困难。
+
+        为解决这些限制，我们将重构服务，使用提示模板在运行时动态替换体裁（genre）和主题（theme），并将LLM响应映射为结构化的Java对象。
+
+        首先，定义一个 `Poem` 记录类来表示输出结构：
+
+        ```java
+        record Poem(
+            String title,
+            String content,
+            String genre,
+            String theme) {
+        }
+        ```
+
+        我们定义了包含标题、内容、体裁和主题字段的记录类，以表示期望从LLM获得的结构化响应。
+
+        接着，重构服务方法：
+
+        ```java
+        private final static PromptTemplate PROMPT_TEMPLATE
+            = new PromptTemplate("写一首关于{theme}的{genre}风格俳句，遵循传统的5-7-5音节结构。");
+
+        Poem generate(String genre, String theme) {
+            Prompt prompt = PROMPT_TEMPLATE
+            .create(Map.of(
+                "genre", genre,
+                "theme", theme));
+            return chatClient
+            .prompt(prompt)
+            .call()
+            .entity(Poem.class);
+        }
+        ```
+
+        在重构版本中，我们用包含 `genre` 和 `theme` 占位符的 `PromptTemplate` 替代硬编码提示语。在 `generate()` 方法中，我们现在从方法参数接收这些值，并用它们创建 `Prompt` 实例。
+
+        此外，我们用 `entity()` 方法替代 `content()`，并指定 `Poem` 记录类。Spring AI将自动在提示中添加指令，引导LLM生成可映射到该记录的响应。
+
+    3. 暴露REST API并处理错误
+
+        完成服务层实现后，我们在其上暴露一个REST API：
+
+        ```java
+        @PostMapping("/poems")
+        ResponseEntity<Poem> generate(@RequestBody PoemGenerationRequest request) {
+            Poem response = poetryService.generate(request.genre, request.theme);
+            return ResponseEntity.ok(response);
+        }
+
+        record PoemGenerationRequest(String genre, String theme) {}
+        ```
+
+        这里，我们定义了一个 `POST /poems` 端点，接收 `PoemGenerationRequest` 记录作为请求体，并委托服务层生成诗歌后返回。
+
+        另外，与任何外部服务通信一样，配置的LLM有时可能失败。为此，Spring AI提供了 `OpenAiApiClientErrorException`，用于抽象所有[OpenAI错误](https://platform.openai.com/docs/guides/error-codes/api-errors)。
+
+        让我们为此类定义一个[异常处理器](https://www.baeldung.com/exception-handling-for-rest-with-spring#2-global-exception-handling)：
+
+        ```java
+        private static final String LLM_COMMUNICATION_ERROR =
+            "无法与配置的LLM通信，请稍后再试。";
+
+        @ExceptionHandler(OpenAiApiClientErrorException.class)
+        ProblemDetail handle(OpenAiApiClientErrorException exception) {
+            logger.error("OpenAI返回错误。", exception);
+            return ProblemDetail.forStatusAndDetail(HttpStatus.SERVICE_UNAVAILABLE, LLM_COMMUNICATION_ERROR);
+        }
+        ```
+
+        这里，我们有意避免在响应中暴露实际错误详情，以防泄露基础设施或API密钥等敏感信息。相反，我们记录完整异常以供调试，并通过标准化的 `ProblemDetail` 响应格式返回用户友好的消息。
+
+4. 测试应用程序
+
+    最后，让我们使用暴露的API端点与应用程序交互并进行测试。
+
+    我们将使用 **[HTTPie CLI](https://www.baeldung.com/httpie-http-client-command-line)** 调用API：
+
+    ```bash
+    http POST :8080/poems genre="frustrated" theme="code review comments"
+    ```
+
+    这里，我们向 `/poems` 端点发送POST请求，提供期望的体裁和主题。
+
+    让我们看看收到的响应：
+
+    ```json
+    {
+        "title": "挑剔噩梦", 
+        "content": "空格还是制表符\n争论时生产环境已宕机\n优先级…在哪？",
+        "genre": "frustrated",
+        "theme": "code review comments"
+    }
+    ```
+
+    如我们所见，我们获得了一首精准捕捉所提供体裁和主题的俳句。
+
+    这证实了我们的应用程序能正确填充提示模板，并接收可映射到 `Poem` 记录的LLM输出。
+
+5. 结论
+
+    在本文中，我们探索了如何使用 **Spring AI** 在Spring Boot应用程序中集成AI能力。
+
+    我们逐步完成了必要的配置，并使用OpenAI的GPT-5模型实现了一个诗歌生成服务。我们从基于字符串提示的简单实现，逐步演进为使用提示模板和结构化输出的更复杂方案。
+
+    虽然本入门教程涵盖了基础内容，但Spring AI还提供丰富的AI功能，欢迎探索我们的 **Spring AI系列教程** 进一步学习。

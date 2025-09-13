@@ -20,7 +20,7 @@
 
     关于创建自定义Spring Boot启动器的快速实用指南。
 
-    [在Spring Boot中进行测试](https://www.baeldung.com/spring-boot-testing)
+    在Spring Boot中进行测试
 
     了解Spring Boot如何支持测试，以有效地编写单元测试。
 

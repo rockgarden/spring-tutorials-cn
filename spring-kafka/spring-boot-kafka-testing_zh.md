@@ -120,7 +120,7 @@
 
     首先，我们用两个非常标准的 Spring 注解来装饰我们的测试类：
 
-    - [@SpringBootTest](https://www.baeldung.com/spring-boot-testing) 注解将确保我们的测试启动 Spring 应用程序上下文。
+    - @SpringBootTest 注解将确保我们的测试启动 Spring 应用程序上下文。
     - 我们还使用了 [@DirtiesContext](https://www.baeldung.com/spring-dirtiescontext) 注解，它将确保在不同测试之间对上下文进行清理和重置。
 
     关键部分来了--我们使用 @EmbeddedKafka 注解将 EmbeddedKafkaBroker 的实例注入测试中。
