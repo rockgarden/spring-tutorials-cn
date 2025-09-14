@@ -1,8 +1,4 @@
-# Core Java Lang OOP - Constructors
-
-This module contains article about constructors in Java
-
-## Java中的构造函数指南
+# [Java中的构造函数指南](https://www.baeldung.com/java-constructors)
 
 1. 简介
 
@@ -93,7 +89,7 @@ This module contains article about constructors in Java
 
     我们可以创建任意多的构造函数，但我们可能不希望创建太多的构造函数。这样会有点混乱。
 
-    如果我们在代码中发现有太多的构造函数，一些[创造型设计模式](https://www.baeldung.com/creational-design-patterns)可能会有帮助。
+    如果我们在代码中发现有太多的构造函数，一些创造型设计模式可能会有帮助。
 
 5. 拷贝构造函数
 
@@ -150,7 +146,7 @@ This module contains article about constructors in Java
 
     Java中构造函数的一个有趣的用途是创建值对象。值对象是一个在初始化后不改变其内部状态的对象。
 
-    也就是说，该对象是不可变的。Java中的不可变性有一些[细微](https://www.baeldung.com/java-immutable-object)的差别，在创建对象时要注意。
+    也就是说，该对象是不可变的。Java中的不可变性有一些细微的差别，在创建对象时要注意。
 
     让我们继续创建一个不可变的类：
 
@@ -175,21 +171,3 @@ This module contains article about constructors in Java
 8. 结语
 
     我们已经参观了构造函数构建对象的不同方式。如果明智地使用，构造函数构成了Java中面向对象设计的基本构件。
-
-## Relevant Articles
-
-- [x] [A Guide to Constructors in Java](https://www.baeldung.com/java-constructors)
-- [Java Copy Constructor](https://www.baeldung.com/java-copy-constructor)
-- [Cannot Reference “X” Before Supertype Constructor Has Been Called](https://www.baeldung.com/java-cannot-reference-x-before-supertype-constructor-error)
-- [Private Constructors in Java](https://www.baeldung.com/java-private-constructors)
-- [Throwing Exceptions in Constructors](https://www.baeldung.com/java-constructors-exceptions)
-- [Constructors in Java Abstract Classes](https://www.baeldung.com/java-abstract-classes-constructors)
-- [Java Implicit Super Constructor is Undefined Error](https://www.baeldung.com/java-implicit-super-constructor-is-undefined-error)
-- [Constructor Specification in Java](https://www.baeldung.com/java-constructor-specification)
-- [Static vs. Instance Initializer Block in Java](https://www.baeldung.com/java-static-instance-initializer-blocks)
-- [Accessing Private Constructor in Java](https://www.baeldung.com/java-private-constructor-access)
-- [Different Ways to Create an Object in Java](https://www.baeldung.com/java-different-ways-to-create-objects)
-
-## Code
-
-像往常一样，代码样本可以在[GitHub](https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-lang-oop-constructors)上找到。

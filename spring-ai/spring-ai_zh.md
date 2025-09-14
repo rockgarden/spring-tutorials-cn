@@ -262,7 +262,7 @@ Spring AI
 
     在演示中，我们将使用OpenAI的[GPT-5](https://platform.openai.com/docs/models/gpt-5)模型构建诗歌生成服务。
 
-    不过，Spring AI也支持来自其他提供商（如[Anthropic](https://www.baeldung.com/spring-ai-anthropics-claude-models)、[DeepSeek](https://www.baeldung.com/spring-ai-deepseek-cot)）的模型，甚至可通过[Hugging Face或Ollama](https://www.baeldung.com/spring-ai-ollama-hugging-face-models)接入本地LLM。我们可以根据需求选择最适合的模型，因为具体AI模型对实现本身并不重要。
+    不过，Spring AI也支持来自其他提供商（如Anthropic、DeepSeek）的模型，甚至可通过[Hugging Face或Ollama](https://www.baeldung.com/spring-ai-ollama-hugging-face-models)接入本地LLM。我们可以根据需求选择最适合的模型，因为具体AI模型对实现本身并不重要。
 
     1. 依赖项
 

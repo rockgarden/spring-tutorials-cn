@@ -129,7 +129,7 @@
 
     1. 通过@Qualifier自动接线
 
-        例如，让我们看看如何使用[@Qualifier](https://www.baeldung.com/spring-qualifier-annotation)注释来指示所需的bean。
+        例如，让我们看看如何使用 @Qualifier 注释来指示所需的bean。
 
         首先，我们将定义2种格式化器类型的bean：
 

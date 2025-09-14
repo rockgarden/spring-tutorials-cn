@@ -2,7 +2,7 @@
 
 1. 简介
 
-    Lombok是一个非常有用的库，可以克服模板代码。如果你还不熟悉它，我强烈建议你看一下之前的教程--[Project Lombok简介](https://www.baeldung.com/intro-to-project-lombok)。
+    Lombok是一个非常有用的库，可以克服模板代码。
 
     在这篇文章中，我们将展示它与Spring的基于构造函数的依赖注入相结合时的可用性。
 

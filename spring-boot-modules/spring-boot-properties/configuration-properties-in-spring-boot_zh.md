@@ -337,7 +337,7 @@
 
     从Spring Boot 2.2开始，我们可以使用@ConstructorBinding注解来绑定我们的配置属性。
 
-    这实质上意味着@ConfigurationProperties注释的类现在可以是[不可变](https://www.baeldung.com/java-immutable-object)的。
+    这实质上意味着@ConfigurationProperties注释的类现在可以是不可变的。
 
     但从Spring Boot 3开始，这个注解就不需要了：
 

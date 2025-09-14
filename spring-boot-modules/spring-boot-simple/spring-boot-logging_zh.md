@@ -347,7 +347,7 @@
         }
         ```
 
-        除日志记录外，Lombok 还提供了其他注解，有助于保持代码的干净整洁。有关这些注释的更多信息，请参阅项目 [Lombok](https://www.baeldung.com/intro-to-project-lombok) 简介，我们还提供了关于使用 Eclipse 和 IntelliJ 设置 [Lombok](https://www.baeldung.com/lombok-ide) 的教程。
+        除日志记录外，Lombok 还提供了其他注解，有助于保持代码的干净整洁。有关这些注释的更多信息，请参阅项目 Lombok 简介，我们还提供了关于使用 Eclipse 和 IntelliJ 设置 [Lombok](https://www.baeldung.com/lombok-ide) 的教程。
 
 8. 小心Java Util日志
 

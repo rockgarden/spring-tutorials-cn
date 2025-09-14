@@ -103,7 +103,7 @@ Spring Boot
 
         我们还使用其 [Bedrock 模型 ID](https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported) 指定了 Claude 3.5 Sonnet 模型。
 
-        同样，Spring AI 会自动为我们创建 `ChatModel` Bean。如果由于某些原因我们的类路径上同时存在 Anthropic API 和 Bedrock Converse 依赖项，我们可以分别使用[限定符](https://www.baeldung.com/spring-qualifier-annotation#qualifierVsAutowiringByName) `anthropicChatModel` 或 `bedrockProxyChatModel` 来引用所需的 Bean。
+        同样，Spring AI 会自动为我们创建 `ChatModel` Bean。如果由于某些原因我们的类路径上同时存在 Anthropic API 和 Bedrock Converse 依赖项，我们可以分别使用限定符 `anthropicChatModel` 或 `bedrockProxyChatModel` 来引用所需的 Bean。
 
         最后，为了与模型交互，我们需要为在应用程序中配置的 IAM 用户分配以下 IAM 策略：
 

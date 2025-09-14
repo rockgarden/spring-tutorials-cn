@@ -51,7 +51,7 @@
 
     2. 自定义序列化器
 
-        首先，我们将使用 [Lombok](https://www.baeldung.com/intro-to-project-lombok) 来指定要通过 Kafka 发送的自定义对象：
+        首先，我们将使用 Lombok 来指定要通过 Kafka 发送的自定义对象：
 
         ```java
         @Data

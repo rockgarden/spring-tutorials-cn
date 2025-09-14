@@ -138,7 +138,7 @@
 
     [Apache Commons Lang](https://www.baeldung.com/java-eclipse-equals-and-hashcode) 和 [Google Guava](https://www.baeldung.com/whats-new-in-guava-19) 都提供了帮助类来简化这两个方法的编写。
 
-    [Project Lombok](https://www.baeldung.com/intro-to-project-lombok) 还提供了 @EqualsAndHashCode 注解。请再次注意 equals() 和 hashCode() 是如何 "结合" 在一起的，甚至有一个共同的注解。
+    Project Lombok 还提供了 @EqualsAndHashCode 注解。请再次注意 equals() 和 hashCode() 是如何 "结合" 在一起的，甚至有一个共同的注解。
 
 6. 验证契约
 
@@ -361,7 +361,7 @@
 
     使用Eclipse IDE生成equals()和hashCode()的快速实用指南。
 
-    [Lombok项目简介](https://www.baeldung.com/intro-to-project-lombok)
+    Lombok项目简介
 
     全面而实用地介绍Project Lombok在标准Java代码中的许多有用的应用。
 
