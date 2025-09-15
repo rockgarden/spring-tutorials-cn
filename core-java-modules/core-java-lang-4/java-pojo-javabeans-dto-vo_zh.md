@@ -6,7 +6,7 @@
 
 2. 普通旧 Java 对象
 
-    [POJO](https://www.baeldung.com/java-pojo-class) 也称为 Plain Old Java Object，是一种没有任何特定框架引用的普通 Java 对象。它是一个术语，用来指简单、轻量级的 Java 对象。
+    POJO也称为 Plain Old Java Object，是一种没有任何特定框架引用的普通 Java 对象。它是一个术语，用来指简单、轻量级的 Java 对象。
 
     POJO 不对属性和方法使用任何命名约定。
 

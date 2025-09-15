@@ -10,7 +10,7 @@
 
 3. 事件监听器方法
 
-    为创建 REST API 服务，我们在控制器类中使用 [@RestController](https://www.baeldung.com/building-a-restful-web-service-with-spring-and-java-based-configuration#controller) 和 @RequestMapping。这些类在 Spring 应用上下文中注册为 Spring Bean。因此，当应用程序上下文在启动时准备就绪，我们就可以使用事件监听器获取端点。定义监听器有两种方法。我们可以实现 [ApplicationListener](https://www.baeldung.com/spring-events#listener) 接口，或者使用 [@EventListener](https://www.baeldung.com/spring-events#annotation-driven) 注解。
+    为创建 REST API 服务，我们在控制器类中使用 @RestController 和 @RequestMapping。这些类在 Spring 应用上下文中注册为 Spring Bean。因此，当应用程序上下文在启动时准备就绪，我们就可以使用事件监听器获取端点。定义监听器有两种方法。我们可以实现 [ApplicationListener](https://www.baeldung.com/spring-events#listener) 接口，或者使用 [@EventListener](https://www.baeldung.com/spring-events#annotation-driven) 注解。
 
     1. 应用程序监听器接口
 

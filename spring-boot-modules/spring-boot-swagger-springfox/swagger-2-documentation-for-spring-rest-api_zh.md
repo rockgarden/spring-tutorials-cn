@@ -14,10 +14,7 @@
 
 2. 目标项目
 
-    创建我们将使用的 REST 服务不在本文讨论范围之内。如果您已经有一个合适的项目，请使用它。如果没有，可以从以下链接开始：
-
-    - [使用 Spring 和 Java 配置构建 REST API 一文](https://www.baeldung.com/building-a-restful-web-service-with-spring-and-java-based-configuration)
-    - [构建 RESTful Web 服务](https://spring.io/guides/gs/rest-service/)
+    创建我们将使用的 REST 服务不在本文讨论范围之内。如果您已经有一个合适的项目，请使用它。
 
 3. 添加 Maven 依赖项
 

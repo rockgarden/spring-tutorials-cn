@@ -8,7 +8,7 @@
 
     REST（Representational State Transfer）是一种架构风格，为设计网络API提供了指导方针。
 
-    它使用标准的HTTP 1.1方法，如GET、POST、PUT和DELETE来处理服务器端的资源。此外，[REST API提供了预定义的URL](https://www.baeldung.com/building-a-restful-web-service-with-spring-and-java-based-configuration)，客户端必须使用这些URL来与服务器连接。
+    它使用标准的HTTP 1.1方法，如GET、POST、PUT和DELETE来处理服务器端的资源。此外，REST API提供了预定义的URL，客户端必须使用这些URL来与服务器连接。
 
 3. 什么是gRPC？
 
