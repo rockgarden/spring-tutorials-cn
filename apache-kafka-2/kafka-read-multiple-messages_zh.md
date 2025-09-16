@@ -18,7 +18,7 @@
 
     src/.kafka.consumer/VariableFetchSizeKafkaListener.java
 
-    [Testcontainers](https://www.baeldung.com/docker-test-containers) 库将通过启动一个带有运行中的 Kafka 代理的 Docker 容器来帮助我们设置测试环境。如果你想了解有关设置 Testcontainer 的 Kafka 模块的更多信息，请点击此处查看我们是[如何配置测试环境](https://www.baeldung.com/kafka-create-listener-consumer-api#testing)的，然后跟上我们的脚步。
+    Testcontainers 库将通过启动一个带有运行中的 Kafka 代理的 Docker 容器来帮助我们设置测试环境。如果你想了解有关设置 Testcontainer 的 Kafka 模块的更多信息，请点击此处查看我们是[如何配置测试环境](https://www.baeldung.com/kafka-create-listener-consumer-api#testing)的，然后跟上我们的脚步。
 
     在我们的特殊情况下，我们可以定义一个额外的方法，在给定的主题上发布多条消息。例如，假设我们要将温度传感器读取的值流式传输到名为 "engine.sensor.temperature" 的主题上：
 

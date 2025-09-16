@@ -1,8 +1,4 @@
-# Java 核心集合
-
-本模块包含有关 Java 集合的文章
-
-## Java中的迭代器指南
+# [Java中的迭代器指南](https://www.baeldung.com/java-iterator)
 
 1. 迭代器简介
 
@@ -143,21 +139,3 @@
 4. 结论
 
     迭代器接口允许我们在遍历集合的同时修改集合，而简单的 for/while 语句则很难做到这一点。这反过来又为我们提供了一个很好的模式，我们可以在许多方法中使用它，这些方法只需要处理集合，同时保持良好的内聚性和低耦合性。
-
-## 相关文章
-
-- [Introduction to the Java ArrayDeque](https://www.baeldung.com/java-array-deque)
-- [An Introduction to Java.util.Hashtable Class](https://www.baeldung.com/java-hash-table)
-- [Thread Safe LIFO Data Structure Implementations](https://www.baeldung.com/java-lifo-thread-safe)
-- [Time Complexity of Java Collections](https://www.baeldung.com/java-collections-complexity)
-- [A Guide to EnumMap](https://www.baeldung.com/java-enum-map)
-- [x] [A Guide to Iterator in Java](https://www.baeldung.com/java-iterator)
-- [Defining a Char Stack in Java](https://www.baeldung.com/java-char-stack)
-- [Guide to the Java Queue Interface](https://www.baeldung.com/java-queue)
-- [An Introduction to Synchronized Java Collections](https://www.baeldung.com/java-synchronized-collections)
-- [Convert an Array of Primitives to a List](https://www.baeldung.com/java-primitive-array-to-list)
-- More articles: [[next -->]](/core-java-modules/core-java-collections-2)
-
-## Code
-
-最后，我们可以一如既往地在 [GitHub](https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-collections) 上获取完整的源代码。

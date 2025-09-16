@@ -6,7 +6,7 @@
 
 1. 概述
 
-    在本教程中，我们将学习如何创建 Kafka 监听器，并使用 Kafka 的 Consumer API 从主题中消费消息。之后，我们将使用 Producer API 和 [Testcontainers](https://www.baeldung.com/docker-test-containers) 测试我们的实现。
+    在本教程中，我们将学习如何创建 Kafka 监听器，并使用 Kafka 的 Consumer API 从主题中消费消息。之后，我们将使用 Producer API 和 Testcontainers 测试我们的实现。
 
     我们将专注于在不依赖 Spring Boot 模块的情况下设置 KafkaConsumer。
 

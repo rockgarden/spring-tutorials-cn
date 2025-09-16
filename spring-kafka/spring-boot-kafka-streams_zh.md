@@ -85,7 +85,7 @@
 
 5. 测试
 
-    测试是开发和验证应用程序拓扑的关键部分。[Spring Kafka 测试库](https://www.baeldung.com/spring-boot-kafka-testing)和 [Testcontainers](https://www.baeldung.com/docker-test-containers) 都为在不同层面测试应用程序提供了出色的支持。
+    测试是开发和验证应用程序拓扑的关键部分。[Spring Kafka 测试库](https://www.baeldung.com/spring-boot-kafka-testing)和 Testcontainers 都为在不同层面测试应用程序提供了出色的支持。
 
     1. 单元测试
 
