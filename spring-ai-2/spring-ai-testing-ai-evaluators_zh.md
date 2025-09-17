@@ -117,7 +117,7 @@
         }
         ```
 
-        - `SimpleVectorStore`：内存实现的向量存储（生产环境建议使用 [ChromaDB](https://www.baeldung.com/spring-ai-chromadb-vector-store) 等真实向量数据库）。
+        - `SimpleVectorStore`：内存实现的向量存储（生产环境建议使用 ChromaDB 等真实向量数据库）。
         - `QuestionAnswerAdvisor`：根据用户问题从向量库检索相关文档，并作为上下文提供给聊天模型。
 
     3. 填充内存向量存储
