@@ -1,4 +1,4 @@
-# [使用Redis和Spring AI创建RAG（检索增强生成）应用程序](https://www.baeldung.com/spring-ai-redis-rag-app)
+# [使用Redis和Spring AI创建RAG 应用程序](https://www.baeldung.com/spring-ai-redis-rag-app)
 
 1. 一览表
 
