@@ -1,6 +1,4 @@
-# MyBatis
-
-## MyBatis快速指南
+# [MyBatis快速指南](https://www.baeldung.com/mybatis)
 
 1. 简介
 
@@ -207,14 +205,26 @@
     public Person getPersonByProc(Integer personId);
     ```
 
-8. 总结
+8. iBATIS 与 MyBatis 对比
 
-    在这个快速教程中，我们已经看到了MyBatis提供的不同功能，以及它是如何简化面向数据库的应用程序的开发的。我们也看到了该库所提供的各种注释。
+    MyBatis 最初名为 iBATIS，后更名而来。iBATIS 简化了 SQL 映射并减少了 JDBC 的样板代码，使用 XML 配置将 Java 对象映射到 SQL 语句。
 
-## Relevant Articles
+    相比之下，MyBatis 引入了注解、改进了动态 SQL 支持，并更好地集成了 Spring 等现代 Java 框架。
 
-- [x] [Quick Guide to MyBatis](https://www.baeldung.com/mybatis)
+    下表对比了 iBATIS 与 MyBatis 的主要区别：
 
-## Code
+    | 特性 | iBATIS | MyBatis |
+    |------|--------|---------|
+    | 名称与包名 | com.ibatis 包 | org.mybatis 包 |
+    | 注解支持 | 不支持注解；完全依赖 XML 配置 | 支持 @Select、@Insert、@Update、@Delete 等注解，同时兼容 XML |
+    | 动态 SQL | 仅通过 XML 标签支持，灵活性较低 | 提供基于 Java 的构建器类（如 SQLProvider）实现高级动态 SQL |
+    | 映射器接口 | 需要显式编写 DAO（数据访问对象）类，增加样板代码 | 使用映射器接口，直接将方法映射到 SQL 语句，减少 DAO 需求 |
+    | 配置方式 | 严重依赖 XML 配置文件 | 同时支持 XML 和基于 Java 的配置，更加灵活 |
+    | 社区与更新 | 已停止维护 | 持续活跃开发，频繁更新并引入新特性 |
+    | 性能 | 功能可用，但缺乏内部优化，性能较慢 | 经过优化，查询执行更快，内存消耗更低 |
+    | 缓存机制 | 仅提供基础缓存，查询级缓存支持有限 | 内置一级缓存（会话级）和二级缓存（映射器级），可通过 XML 或注解配置 |
+    | 存储过程支持 | 支持但需显式 XML 配置 | 通过注解提供更简洁的存储过程调用支持 |
 
-这篇文章的完整代码可以在[GitHub](https://github.com/eugenp/tutorials/tree/master/mybatis)上找到。
+9. 结论
+
+    本文探讨了 MyBatis 的核心特性，以及它如何通过减少样板代码和简化 SQL 映射来简化数据库应用开发。我们还详细介绍了 MyBatis 提供的各种注解（如 @Select、@Insert 和 @Results），这些注解能更高效地定义数据库操作。
