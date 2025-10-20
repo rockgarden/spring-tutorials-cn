@@ -523,16 +523,6 @@
 
     我们在[本文](https://www.baeldung.com/java-primitive-conversions)中介绍了基元转换，这里我们将重点介绍引用类型转换，以便充分了解 Java 是如何处理类型的。
 
-    进一步阅读：
-
-    [Java 泛型基础](https://www.baeldung.com/java-generics)
-
-    快速介绍 Java 生成器的基础知识
-
-    [Java instanceof 操作符](https://www.baeldung.com/java-instanceof)
-
-    了解 Java 中的 instanceof 操作符
-
 2. 基元与引用
 
     虽然基元转换(primitive conversions)和引用变量铸造(reference variable casting)看起来很相似，但它们是[完全不同的概念](https://docs.oracle.com/javase/specs/jls/se8/html/jls-4.html#jls-4.1)。

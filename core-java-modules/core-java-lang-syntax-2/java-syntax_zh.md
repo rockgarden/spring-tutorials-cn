@@ -10,7 +10,7 @@
 
     Java中的数据类型有两大类：[原始类型和对象/参考类型](https://www.baeldung.com/java-primitives-vs-objects)。
 
-    原始类型([primitive types](https://www.baeldung.com/java-primitives))是存储简单数据的基本数据类型，是数据操作的基础。例如，Java有整数值（int、long、byte、short）、浮点值（float和double）、字符值（char）和逻辑值（boolean）的原始类型。
+    原始类型(primitive types)是存储简单数据的基本数据类型，是数据操作的基础。例如，Java有整数值（int、long、byte、short）、浮点值（float和double）、字符值（char）和逻辑值（boolean）的原始类型。
 
     另一方面，引用类型(reference types)是包含对值和/或其他对象的引用的对象，或者包含表示没有值的特殊值null。
 

@@ -12,7 +12,7 @@ Java 语言基础
 在学习类和对象之前，让我们先从 Java 语言的基本语法开始。
 
 - [Java 基本语法入门](/core-java-modules/core-java-lang-syntax-2/java-syntax_zh.md)
-Java 基本数据类型（Primitives）入门
+- [Java 基本数据类型（Primitives）入门](/core-java-modules/core-java-lang-syntax/java-primitives_zh.md)
 Java main() 方法详解  
 Java 中的控制结构（热门）  
 Java 循环指南  

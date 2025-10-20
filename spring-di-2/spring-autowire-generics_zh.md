@@ -2,7 +2,7 @@
 
 1. 概述
 
-    在本教程中，我们将看到如何通过[泛型](https://www.baeldung.com/java-generics)注入Spring Bean。
+    在本教程中，我们将看到如何通过泛型注入Spring Bean。
 
 2. 在Spring 3.2中自动连接泛型。
 

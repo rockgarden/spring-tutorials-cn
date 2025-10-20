@@ -4,7 +4,7 @@
 
 1. 概述
 
-    本文将介绍 Java 中的菱形运算符，以及[泛型](https://www.baeldung.com/java-generics)和集合 API 如何影响了菱形运算符的演变。
+    本文将介绍 Java 中的菱形运算符，以及泛型和集合 API 如何影响了菱形运算符的演变。
 
 2. 原始类型
 
