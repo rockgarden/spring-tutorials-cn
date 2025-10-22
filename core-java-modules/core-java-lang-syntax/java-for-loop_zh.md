@@ -1,4 +1,4 @@
-# [Java For Loop](https://www.baeldung.com/java-for-loop)
+# [Java for 循环](https://www.baeldung.com/java-for-loop)
 
 在这篇文章中，我们将看看Java语言的一个核心方面--使用for循环重复执行一条或一组语句。
 

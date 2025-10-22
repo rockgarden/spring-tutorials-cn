@@ -21,24 +21,139 @@
 
    For 循环是一种控制结构，它允许我们通过增加和评估一个循环计数器来重复某些操作。
 
-   关于详细的例子，请看专门的帖子。[Java For Loop](https://www.baeldung.com/java-for-loop)。
-
-4. While 循环
+4. [While 循环](https://www.baeldung.com/java-while-loop)
 
    while 循环是 Java 最基本的循环语句。它在其控制的布尔表达式为真时重复一个语句或一个语句块。
 
-   关于详细的例子，请看专门的帖子。[Java While Loop](https://www.baeldung.com/java-while-loop)。
+   1. 概述
 
-5. 暂时循环（Do-While Loop
+      在本文中，我们将探讨 Java 语言的一个核心特性——使用 **while 循环** 来重复执行一条语句或一组语句。
+
+   2. while 循环
+
+      `while` 循环是 Java 中最基础的循环语句。只要其控制条件（布尔表达式）为 `true`，它就会重复执行一条语句或一个语句块。
+
+      语法
+
+      ```java
+      while (布尔表达式) {
+         // 语句或语句块
+      }
+      ```
+
+      > 注意：`while` 循环在**每次迭代前**（包括第一次）都会先判断条件。  
+      > 因此，如果初始条件为 `false`，循环体**一次都不会执行**。
+
+      示例
+
+      ```java
+      int i = 0;
+      while (i < 5) {
+         System.out.println("While loop: i = " + i++);
+      }
+      ```
+
+      输出结果：
+
+      ```log
+      While loop: i = 0
+      While loop: i = 1
+      While loop: i = 2
+      While loop: i = 3
+      While loop: i = 4
+      ```
+
+      在这个例子中：
+      - 初始时 `i = 0`；
+      - 每次循环判断 `i < 5`；
+      - 条件为真时执行循环体，并通过 `i++` 递增 `i`；
+      - 当 `i` 达到 5 时，条件为假，循环终止。
+
+      > 提示：务必确保循环体内有使条件最终变为 `false` 的逻辑，否则将导致**无限循环**。
+
+   3. 结论
+
+      在本篇简短教程中，我们学习了 Java 的 `while` 循环：  
+      它是一种**先判断后执行**的循环结构，适用于循环次数不确定、但依赖某个条件是否成立的场景。
+
+      与 `do-while`（先执行后判断）和 `for`（通常用于已知迭代次数）相比，`while` 更适合处理**条件驱动**的重复任务。
+
+5. [暂时循环（Do-While Loop）](https://www.baeldung.com/java-do-while-loop)
 
    Do-while 循环的工作原理与 while 循环相同，只是第一个条件的评估发生在循环的第一次迭代之后。
 
-   关于详细的例子，请看专门的帖子。[Java Do-While Loop](https://www.baeldung.com/java-do-while-loop)。
+   1. 概述
+
+      在本文中，我们将探讨 Java 语言的一个核心特性——使用 **do-while 循环** 来重复执行一条语句或一组语句。
+
+   2. do-while 循环
+
+      `do-while` 循环与 `while` 循环非常相似，但有一个关键区别：  
+      **循环体至少会执行一次**，因为条件判断发生在**每次循环体执行之后**。
+
+      语法
+
+      ```java
+      do {
+         // 语句或语句块
+      } while (布尔表达式);
+      ```
+
+      > 注意：`do-while` 是 **先执行、后判断** 的循环结构。  
+      > 即使初始条件为 `false`，循环体也会执行一次。
+
+      示例
+
+      ```java
+      int i = 0;
+      do {
+         System.out.println("Do-While loop: i = " + i++);
+      } while (i < 5);
+      ```
+
+      **输出结果：**
+
+      ```log
+      Do-While loop: i = 0
+      Do-While loop: i = 1
+      Do-While loop: i = 2
+      Do-While loop: i = 3
+      Do-While loop: i = 4
+      ```
+
+      在这个例子中：
+      - `i` 从 0 开始；
+      - 每次先执行 `println`，再判断 `i < 5`；
+      - 当 `i` 增加到 5 时，条件为 `false`，循环结束。
+
+      与 `while` 的关键区别
+
+      | 特性             | `while` 循环               | `do-while` 循环             |
+      |------------------|----------------------------|------------------------------|
+      | 条件检查时机     | 循环开始前                 | 循环体执行后                 |
+      | 最少执行次数     | 0 次（条件为假时）         | **至少 1 次**                |
+      | 适用场景         | 条件可能一开始就不满足     | 需要至少执行一次操作（如用户输入验证） |
+
+      典型应用场景：
+
+      ```java
+      Scanner scanner = new Scanner(System.in);
+      int input;
+      do {
+         System.out.print("请输入一个正数: ");
+         input = scanner.nextInt();
+      } while (input <= 0);
+      ```
+
+      > 此例中，无论用户首次输入什么，提示都会至少显示一次。
+
+   3. 结论
+
+      在本篇简短教程中，我们学习了 Java 的 `do-while` 循环：  
+      它是一种**先执行后判断**的循环结构，确保循环体**至少执行一次**，特别适用于需要“先做再看”的场景，例如菜单显示、输入验证等。
 
 6. 结语
 
    在这个快速教程中，我们展示了 Java 编程语言中可用的不同类型的循环。
 
    我们还看到，在合适的用例下，每个循环都有其特定的用途。我们讨论了适合于特定循环实现的情况。
-
-   像往常一样，可以在[GitHub](https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-lang-syntax)上找到例子。

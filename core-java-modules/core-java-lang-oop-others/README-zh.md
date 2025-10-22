@@ -134,8 +134,6 @@
     }
     ```
 
-    有关多态性的更多信息，请参阅[Java中的多态性](https://www.baeldung.com/java-polymorphism)文章。
-
 8. 结论
 
     在本文中，我们学习了 Java OOP 的基本概念。

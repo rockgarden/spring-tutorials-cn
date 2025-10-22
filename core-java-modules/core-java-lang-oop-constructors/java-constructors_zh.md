@@ -2,7 +2,7 @@
 
 1. 简介
 
-    构造函数是[面向对象设计](https://www.baeldung.com/java-polymorphism)的守门员。
+    构造函数是面向对象设计的守门员。
 
     在本教程中，我们将看到它们如何作为一个单一的位置来初始化被创建对象的[内部状态](https://www.baeldung.com/java-inheritance-composition)。
 

@@ -50,7 +50,7 @@
 
     让我们记住，所有这些情况都是完全的、基于继承的遵守[开放/封闭原则](https://en.wikipedia.org/wiki/Open–closed_principle)的好例子。
 
-    此外，由于使用抽象类隐含地处理了基类型和子类型，我们也在利用[多态性(Polymorphism)](https://www.baeldung.com/java-polymorphism)。
+    此外，由于使用抽象类隐含地处理了基类型和子类型，我们也在利用多态性(Polymorphism)。
 
     请注意，代码重用是使用抽象类的一个非常有说服力的理由，只要类层次结构中的 "is-a" 关系被保留下来。
 
@@ -916,7 +916,6 @@
 - [A Guide to Inner Interfaces in Java](https://www.baeldung.com/java-inner-interfaces)
 - [x] [Guide to the super Java Keyword](https://www.baeldung.com/java-super)
 - [x] [Anonymous Classes in Java](https://www.baeldung.com/java-anonymous-classes)
-- [Polymorphism in Java](https://www.baeldung.com/java-polymorphism)
 - [x] [Guide to Inheritance in Java](https://www.baeldung.com/java-inheritance)
 - [x] [Object Type Casting in Java](https://www.baeldung.com/java-type-casting)
 - [Variable and Method Hiding in Java](https://www.baeldung.com/java-variable-method-hiding)

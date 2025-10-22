@@ -14,7 +14,7 @@
 
 2. If/Else/Else If
 
-    if/else语句是[最基本的控制结构](https://www.baeldung.com/java-if-else)，但也可以认为是编程中决策的基础。
+    if/else语句是最基本的控制结构，但也可以认为是编程中决策的基础。
 
     虽然if可以单独使用，但最常见的使用场景是用if/else在两条路径中进行选择。
 
@@ -32,7 +32,7 @@
 
 3. 三元运算符
 
-    我们可以使用[三元运算符](https://www.baeldung.com/java-ternary-operator)作为一个速记表达式，它的作用类似于if/else语句。
+    我们可以使用三元运算符作为一个速记表达式，它的作用类似于if/else语句。
 
     我们可以用三元组对if/else语句进行重构，如下。
 
@@ -63,11 +63,11 @@
 
     三个或更多的if/else语句会让人难以阅读。作为可能的变通方法之一，我们可以使用switch，如上所示。
 
-    而且还要记住，[switch有范围和输入限制](https://www.baeldung.com/java-switch)，我们在使用它之前需要记住。
+    而且还要记住，switch有范围和输入限制，我们在使用它之前需要记住。
 
 5. 循环
 
-    当我们需要连续多次重复相同的代码时，我们会使用[loops](https://www.baeldung.com/java-loops)。
+    当我们需要连续多次重复相同的代码时，我们会使用loops。
 
     让我们看一个简单的例子，比较for和while类型的循环。
 
@@ -87,7 +87,7 @@
 
 6. 中断
 
-    我们需要使用[break](https://www.baeldung.com/java-continue-and-break)来提前退出一个循环。
+    我们需要使用break来提前退出一个循环。
 
     让我们看一个快速的例子。
 
@@ -108,7 +108,7 @@
 
 7. 继续
 
-    简单地说，[continue](https://www.baeldung.com/java-continue-and-break)意味着跳过我们所处的循环的其余部分。
+    简单地说，continue意味着跳过我们所处的循环的其余部分。
 
     ```java
     List<String> names = getNameList();
