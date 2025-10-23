@@ -81,7 +81,7 @@
 
     1. Mapping Strategy
 
-        当我们的对象有许多具有[不同访问级别](https://www.baeldung.com/java-access-modifiers)的字段时，实现[DTO模式](https://www.baeldung.com/entity-to-and-from-dto-for-a-java-spring-application)是很常见的。
+        当我们的对象有许多具有不同访问级别的字段时，实现[DTO模式](https://www.baeldung.com/entity-to-and-from-dto-for-a-java-spring-application)是很常见的。
 
         现在假设我们的对象中有一百多个电话字段。编写一种将数据从DTO注入我们的实体的方法，就像我们以前所做的那样，可能会令人讨厌且无法维护。
 

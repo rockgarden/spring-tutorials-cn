@@ -12,7 +12,7 @@
 
     ```txt
     for (initialization; Boolean-expression; step) 
-    statement;
+        statement;
     ```
 
     让我们在一个简单的例子中看到它。
@@ -56,7 +56,7 @@
 
     ```txt
     for(Type item : items)
-    statement;
+        statement;
     ```
 
     由于这种循环与标准for循环相比是简化的，所以我们在初始化循环时只需要声明两件事。
@@ -98,9 +98,9 @@
     ```java
     for (Entry<String, Integer> entry : map.entrySet()) {
         System.out.println(
-        "Key: " + entry.getKey() + 
-        " - " + 
-        "Value: " + entry.getValue());
+            "Key: " + entry.getKey() + 
+            " - " + 
+            "Value: " + entry.getValue());
     }
     ```
 

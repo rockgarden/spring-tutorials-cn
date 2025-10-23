@@ -87,7 +87,7 @@
 
     `void varargsMethod(String... varargs) {}`
 
-    这个方法可以接受从0到任意数量的String参数。一篇关于varargs的文章可以在[这里](https://www.baeldung.com/java-varargs)找到。
+    这个方法可以接受从0到任意数量的String参数。
     在这里我们要知道的是，在方法主体里面，varargs参数变成了一个数组。但是，我们也可以直接传递一个数组作为参数。让我们通过重用上面声明的方法实例来看看如何做：
 
     ```java

@@ -26,13 +26,13 @@
 
     让我们把一个类型放在一个名为com.baeldung.packages的包中。
 
-    package com.baeldung.packages;
+    `package com.baeldung.packages;`
 
     强烈建议将每个新类型放在一个包中。如果我们定义了类型却不把它们放在一个包里，它们就会进入默认的或未命名的包里。使用默认包会有一些缺点。
 
     - 我们失去了拥有包结构的好处，我们不能拥有子包
     - 我们不能从其他包中导入默认包中的类型
-    - [受保护的和包专用](https://www.baeldung.com/java-access-modifiers)的访问范围将毫无意义
+    - 受保护的和包专用的访问范围将毫无意义
 
     正如[Java语言规范](https://docs.oracle.com/javase/specs/jls/se14/html/jls-7.html#jls-7.4.2)所述，未命名包由Java SE平台提供，主要是为了在开发小型或临时应用程序或刚开始开发时提供方便。
 
@@ -48,9 +48,9 @@
 
         要根据一个组织来确定包的名称，我们通常会从颠倒公司的URL开始。之后，命名规则由公司定义，可能包括部门名称和项目名称。
 
-        例如，要把www.baeldung.com，让我们反过来做一个包。
+        例如，让我们把`www.baeldung.com`反过来做一个包。
 
-        com.baeldung
+        `com.baeldung`
 
         然后我们可以进一步定义其中的子包，如com.baeldung.packages或com.baeldung.packages.domain。
 
@@ -66,7 +66,7 @@
 
     让我们先在一个名为domain的子包中定义一个TodoItem类。
 
-    com.baeldung.core.packages.domain/TodoItem.java
+    ![TodoItem.java](./src/main/java/com/baeldung/core/packages/domain/TodoItem.java)
 
     1. 导入
 
@@ -88,7 +88,7 @@
 
         然后我们可以在我们的应用程序中使用这些类型，只需使用它们的名字。
 
-        com.baeldung.core.packages/TodoList.java
+        ![TodoList.java](./src/main/java/com/baeldung/core/packages/TodoList.java)
 
         在这里，我们用我们的新类和Java核心类一起，创建了一个ToDoItems的列表。
 
@@ -121,21 +121,19 @@
 
     现在，让我们编译我们的com.baeldung.packages.domain.TodoItem类。
 
-    >javac com/baeldung/core/packages/domain/TodoItem.java
-
     如果我们的类编译得很干净，我们就不会看到错误信息，并且在com/baeldung/packages/domain目录下应该出现一个TodoItem.class文件。
 
     对于引用其他包中的类型，我们应该使用-classpath标志来告诉javac命令在哪里找到其他编译的类。
 
     现在我们的TodoItem类已经编译完成，我们可以编译TodoList和TodoApp类。
 
-    >javac -classpath . com/baeldung/core/packages/*.java
+    `javac -classpath . com/baeldung/core/packages/*.java`
 
     同样的，我们应该没有看到错误信息，我们应该在com/baeldung/packages目录下找到两个类文件。
 
     让我们使用TodoApp类的全称来运行我们的应用程序。
 
-    >java com.baeldung.core.packages.TodoApp
+    `java com.baeldung.core.packages.TodoApp`
 
     我们的输出应该看起来像这样。
 

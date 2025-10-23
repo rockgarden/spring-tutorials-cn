@@ -869,7 +869,7 @@
 
    `private static <T> void doNothingAtAll(Object... o) {}`
 
-   由于它是一个 [varargs](https://www.baeldung.com/java-varargs) 方法，因此可以在任何 lambda 表达式中使用，无论引用的对象或推断的参数数量是多少。
+   由于它是一个 varargs 方法，因此可以在任何 lambda 表达式中使用，无论引用的对象或推断的参数数量是多少。
 
    现在，让我们看看它的实际效果：
 
