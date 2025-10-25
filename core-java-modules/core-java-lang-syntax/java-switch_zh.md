@@ -4,15 +4,15 @@
 
 1. 概述
 
-    在本教程中，我们将学习 **switch 语句** 是什么以及如何使用它。
+    在本教程中，我们将学习 switch 语句是什么以及如何使用它。
 
-    `switch` 语句可以替代多个嵌套的 `if-else` 结构，从而**提升代码可读性**。
+    `switch` 语句可以替代多个嵌套的 `if-else` 结构，从而提升代码可读性。
 
     `switch` 语句随着 Java 版本不断演进：
 
     - Java 5 引入了对 `enum` 类型的支持；
     - Java 7 增加了对 `String` 类型的支持；
-    - Java 12 起引入了 **switch 表达式（switch expressions）**（预览功能），并在后续版本中正式化。
+    - Java 12 起引入了 switch 表达式（switch expressions）（预览功能），并在后续版本中正式化。
 
     下文将通过代码示例展示：
 
@@ -66,11 +66,11 @@
 
     - `switch` 将 `animal` 与各个 `case` 值进行比较；
     - 若无匹配项，则执行 `default` 分支；
-    - `break` 用于**跳出 `switch`**，防止“穿透”（fall-through）。
+    - `break` 用于跳出 `switch`，防止“穿透”（fall-through）。
 
 3. `break` 语句的重要性
 
-    虽然大多数情况下我们只希望执行一个 `case`，但 **`break` 是必需的**。若省略，程序会继续执行后续 `case` 的代码。
+    虽然大多数情况下我们只希望执行一个 `case`，但 `break` 是必需的。若省略，程序会继续执行后续 `case` 的代码。
 
     **示例（缺少 `break`）：**
 
@@ -92,7 +92,7 @@
     unknown animal
     ```
 
-    > 这种行为称为 **fall-through（穿透）**。虽然通常应避免，但也可**有意利用**它来为多个 `case` 共享同一段逻辑。
+    > 这种行为称为 **fall-through（穿透）**。虽然通常应避免，但也可有意利用它来为多个 `case` 共享同一段逻辑。
 
     **优化写法（合并 `case`）：**
 

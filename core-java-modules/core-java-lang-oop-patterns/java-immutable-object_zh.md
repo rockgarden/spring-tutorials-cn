@@ -4,7 +4,7 @@
 
     在本教程中，我们将学习是什么使得对象不可变、如何在 Java 中实现不可变以及这样做有什么好处。
 
-    测试代码：ImmutableObjectsUnitTest.java
+    ![测试代码](./src/test/java/com/baeldung/immutableobjects/ImmutableObjectsUnitTest.java)
 
 2. 什么是不可变对象？
 

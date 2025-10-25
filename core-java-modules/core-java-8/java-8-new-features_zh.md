@@ -1,19 +1,4 @@
-# Java8核心
-
-本模块包含有关 Java 8 核心功能的文章
-
-- Java 8 中的新功能](https://www.baeldung.com/java-8-new-features)
-- Java 8 中的策略设计模式](https://www.baeldung.com/java-strategy-pattern)
-- Java 8 Comparator.comparing() 指南](https://www.baeldung.com/java-8-comparator-comparing)
-- Java 8 forEach 指南](https://www.baeldung.com/foreach-java)
-- Java 中的 Spliterator 简介](https://www.baeldung.com/java-spliterator)
-- 使用 Java 查找数组中的最小值/最大值](https://www.baeldung.com/java-array-min-max)
-- Java 8 中的国际化和本地化](https://www.baeldung.com/java-8-localization)
-- Java 中的广义目标类型推断](https://www.baeldung.com/java-generalized-target-type-inference)
-- Java 中的单子](https://www.baeldung.com/java-monads)
-- [[更多-->]](/core-java-modules/core-java-8-2)
-
-## Java8的新功能
+# [Java8的新功能](https://www.baeldung.com/java-8-new-features)
 
 1. 概述
 
@@ -218,7 +203,3 @@
     当然，Java 8 JDK 的许多包和类中还有许多其他新增功能和改进。
 
     但是，本文介绍的信息是探索和学习其中一些新功能的良好起点。
-
-## Code
-
-最后，本文的所有源代码均可在 [GitHub](https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-8) 上获取。

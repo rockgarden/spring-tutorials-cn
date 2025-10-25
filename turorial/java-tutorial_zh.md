@@ -21,13 +21,14 @@ Java 系列教程
 - [x] [Java 包（Packages）指南](/core-java-modules/core-java-lang-syntax-2/java-packages_zh.md)
 - [x] [Java 中的“按值传递”参数机制](/core-java-modules/core-java-lang-oop-others/java-pass-by-value-or-pass-by-reference_zh.md)
 - [x] [Java 可变参数（Varargs）](/core-java-modules/core-java-lang-syntax/java-varargs_zh.md)
-Java hashCode() 方法指南
-Java switch 语句
-Java forEach 循环指南
-Java 中的不可变对象（Immutable Objects）
-Java 模块化指南
+- [x] [Java hashCode() 方法指南](/core-java-modules/core-java-lang-oop-methods/java-hashcode_zh.md)
+- [x] [Java switch 语句](/core-java-modules/core-java-lang-syntax/java-switch_zh.md)
+- [x] [Java forEach 循环指南](/core-java-modules/core-java-8/foreach-java_zh.md)
+- [x] [Java 中的不可变对象](/core-java-modules/core-java-lang-oop-patterns/java-immutable-object_zh.md)
+- [x] [Java 模块化指南](/core-java-modules/core-java-9-jigsaw/java-modularity_zh.md)
 
-Java 面向对象编程（OOP）
+### Java 面向对象编程（OOP）
+
 接下来，让我们深入面向对象编程的世界，并结合实际的 Java 示例进行学习。
 
 Java 类与对象

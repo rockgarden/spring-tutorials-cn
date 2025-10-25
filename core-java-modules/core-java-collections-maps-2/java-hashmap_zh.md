@@ -145,7 +145,7 @@
 
         map/Product.java: forEach()
 
-        我们的文章[《Java 8 forEach指南》](https://www.baeldung.com/foreach-java)更详细地介绍了forEach循环。
+        我们的文章《Java 8 forEach指南》更详细地介绍了forEach循环。
     2. getOrDefault()
         使用getOrDefault()方法，我们可以从映射中获得一个值，或者在没有给定键的映射的情况下返回一个默认元素：
 

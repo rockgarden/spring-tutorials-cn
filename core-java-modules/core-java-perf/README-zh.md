@@ -283,7 +283,6 @@
 
         - 根据经验，在定义新实体时，一定要重载 equals() 和 hashCode() 方法。
         - 仅仅覆盖还不够，还必须以最佳方式覆盖这些方法。
-        如需了解更多信息，请访问我们的教程[使用 Eclipse 生成 equals() 和 hashCode()](https://www.baeldung.com/java-eclipse-equals-and-hashcode)和[Java中的hashCode()指南](https://www.baeldung.com/java-hashcode)。
 
     4. 引用外层类的内层类
 

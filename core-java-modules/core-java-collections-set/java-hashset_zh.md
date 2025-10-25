@@ -53,7 +53,7 @@
 
         `private transient HashMap<E, Object> map;`
 
-        最好先熟悉一下[哈希代码](https://www.baeldung.com/java-hashcode)，以便详细了解基于哈希的数据结构中的元素是如何组织的。
+        最好先熟悉一下哈希代码，以便详细了解基于哈希的数据结构中的元素是如何组织的。
         总结一下：
 
         - HashMap是一个默认容量为16个元素的桶的数组--每个bucket对应一个不同的哈希代码值
