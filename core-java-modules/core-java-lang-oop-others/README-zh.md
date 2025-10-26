@@ -22,7 +22,7 @@
 
     Car.java
 
-    请注意，一个类可能有不止一个构造函数。有关类的更多信息，请参阅我们的[类文章](https://www.baeldung.com/java-classes-objects#classes)。
+    请注意，一个类可能有不止一个构造函数。
 
 3. 对象
 
@@ -30,7 +30,7 @@
 
     `Car veyron = new Car("Bugatti", "Veyron", "crimson");`
 
-    在这里，我们创建了 Car 类实例。有关对象的更多信息，请参阅[对象文章](https://www.baeldung.com/java-classes-objects#objects)。
+    在这里，我们创建了 Car 类实例。
 
 4. 抽象
 
@@ -40,7 +40,7 @@
 
     在 OOP 中，抽象意味着隐藏程序的复杂实现细节，只公开使用实现所需的应用程序接口。在 Java 中，我们通过使用接口和抽象类来实现抽象
 
-    有关抽象的更多信息，请参阅我们的[抽象类](https://www.baeldung.com/java-abstract-class)和[接口文章](https://www.baeldung.com/java-interfaces)。
+    有关抽象的更多信息，请参阅我们的抽象类和[接口文章](https://www.baeldung.com/java-interfaces)。
 
 5. 封装
 
@@ -96,7 +96,7 @@
     }
     ```
 
-    请注意，这也被称为运行时多态性。有关继承的更多信息，请参阅[Java 继承](https://www.baeldung.com/java-inheritance)和[继承与组成](https://www.baeldung.com/java-inheritance-composition)的文章。
+    请注意，这也被称为运行时多态性。有关继承的更多信息，请参阅[继承与组成](https://www.baeldung.com/java-inheritance-composition)的文章。
 
 7. 多态性
 

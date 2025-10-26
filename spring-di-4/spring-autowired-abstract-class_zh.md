@@ -2,7 +2,7 @@
 
 1. 介绍
 
-    在本快速教程中，我们将解释如何在[抽象类](https://www.baeldung.com/java-abstract-class)中使用@Autowired 注释。
+    在本快速教程中，我们将解释如何在抽象类中使用@Autowired 注释。
 
     我们将@Autowired应用于抽象类，并专注于我们应该考虑的要点。
 

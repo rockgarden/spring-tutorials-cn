@@ -4,7 +4,7 @@
 
     [抽象](https://www.baeldung.com/java-oop#abstraction)是面向对象编程的主要特征之一。它允许我们通过更简单的接口提供功能，从而隐藏复杂的实现。在 Java 中，我们通过使用接口或抽象类来实现抽象。
 
-    本文将讨论在设计应用程序时何时使用[接口](https://www.baeldung.com/java-interfaces)，何时使用[抽象类](https://www.baeldung.com/java-abstract-class)。此外，我们还将讨论它们之间的主要区别，以及根据我们想要实现的目标选择哪一种。
+    本文将讨论在设计应用程序时何时使用[接口](https://www.baeldung.com/java-interfaces)，何时使用抽象类。此外，我们还将讨论它们之间的主要区别，以及根据我们想要实现的目标选择哪一种。
 
 2. 类与接口
 

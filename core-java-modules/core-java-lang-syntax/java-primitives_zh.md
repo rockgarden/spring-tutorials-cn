@@ -182,16 +182,86 @@
 
       下溢也是同样的问题，只是它涉及到存储一个比最小值小的值。当数字下溢时，它们会返回 0.0。
 
-   10. Autoboxing 自动排版
+   10. Autoboxing 自动装箱
 
        每个原始数据类型也有一个完整的 Java 类实现，可以包裹它。例如，Integer 类可以包装一个 int。有时需要从原始类型转换到它的对象封装器（例如，将它们用于泛型）。
 
        幸运的是，Java 可以自动为我们进行这种转换，这个过程被称为 "Autoboxing"。
 
-      ```java
-       Character c = 'c';
-       Integer i = 1;
+       - **Autoboxing（自动装箱）**：指 Java 编译器自动将**基本数据类型**（primitive types，如 `int`、`double`、`boolean` 等）转换为其对应的**包装类对象**（wrapper class，如 `Integer`、`Double`、`Boolean` 等）的过程。
+       - **Unboxing（自动拆箱）**：指反向过程，即自动将包装类对象转换回基本数据类型。
+
+       为什么需要自动装箱？
+
+       Java 的泛型（如 `List<T>`）**不能直接使用基本类型**，只能使用对象引用类型。例如：
+
+       ```java
+       // ❌ 编译错误：不能使用 int 作为泛型类型参数
+       List<int> numbers = new ArrayList<>();
+
+       // ✅ 正确：必须使用包装类 Integer
+       List<Integer> numbers = new ArrayList<>();
        ```
+
+       如果没有自动装箱，每次向 `List<Integer>` 添加 `int` 值时，都需要手动创建 `Integer` 对象：
+
+       ```java
+       // 手动装箱（Java 5 之前的方式）
+       numbers.add(new Integer(42));
+       ```
+
+       但有了自动装箱（从 Java 5 开始引入），编译器会自动帮我们完成转换：
+
+       ```java
+       // 自动装箱：int → Integer
+       numbers.add(42); // 编译器自动转换为 numbers.add(Integer.valueOf(42));
+       ```
+
+       同样，从列表中取出值时也会自动拆箱：
+
+       ```java
+       // 自动拆箱：Integer → int
+       int value = numbers.get(0); // 编译器自动调用 .intValue()
+       ```
+
+       常见的基本类型与包装类对应关系
+
+       | 基本类型 (primitive) | 包装类 (wrapper class) |
+       | -------------------- | ---------------------- |
+       | `byte`               | `Byte`                 |
+       | `short`              | `Short`                |
+       | `int`                | `Integer`              |
+       | `long`               | `Long`                 |
+       | `float`              | `Float`                |
+       | `double`             | `Double`               |
+       | `char`               | `Character`            |
+       | `boolean`            | `Boolean`              |
+
+       注意事项
+
+       - 性能开销：自动装箱/拆箱会创建对象或调用方法，在高频循环中可能影响性能。
+       - 空指针风险：如果包装类对象为 `null`，拆箱时会抛出 `NullPointerException`：
+
+         ```java
+         Integer x = null;
+         int y = x; // 抛出 NullPointerException！
+         ```
+
+       - 缓存机制：像 `-128` 到 `127` 这样的小整数在程序中使用频率极高（比如循环计数、状态码、数组索引等）。如果每次用到数字 `100` 都新建一个对象，会浪费大量内存和 GC 资源。于是，Java 设计者决定：对常用的小整数进行缓存，重复使用同一个对象。
+
+         `Integer` 对 `-128` 到 `127` 之间的值做了缓存（通过 `Integer.valueOf()`），因此：
+
+         ```java
+         Integer a = 100;
+         Integer b = 100;
+         System.out.println(a == b); // true（因为是同一个缓存对象）
+
+         Integer c = 200;
+         Integer d = 200;
+         System.out.println(c == d); // false（超出缓存范围，创建了新对象）
+         ```
+
+         这个缓存机制不仅存在于 `Integer`，`Byte`、`Short`、`Long` 也缓存了 `-128` 到 `127`，`Character` 缓存了 `0` 到 `127`，但 `Float` 和 `Double` 没有缓存（因为浮点数范围太大，缓存意义不大）。
 
 3. 总结
 

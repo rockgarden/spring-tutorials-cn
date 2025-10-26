@@ -1,4 +1,4 @@
-# Java中的具体类
+# [Java中的具体类](https://www.baeldung.com/java-concrete-class)
 
 1. 简介
 
@@ -10,7 +10,7 @@
 
     具体类是一个我们可以使用new关键字来创建实例的类。
 
-    换句话说，它是其蓝图的完整实现。一个具体的类是完整的。
+    换句话说，它是其蓝图(blueprint)的完整实现。一个具体的类是完整的。
 
     想象一下，比如说，一个汽车类：
 
@@ -42,7 +42,7 @@
 
     1. 接口
 
-        一个接口是一个类的蓝图(blueprint)。或者，换句话说，它是一个未实现的方法签名的集合：
+        一个接口是一个类的蓝图。或者，换句话说，它是一个未实现的方法签名的集合：
 
         ```java
         interface Driveable {
@@ -106,7 +106,3 @@
     在这个简短的教程中，我们了解了具体类和它们的规范。
 
     此外，我们还展示了接口与具体类和抽象类之间的区别。
-
-## Relevant Articles
-
-- [x] [Concrete Class in Java](https://www.baeldung.com/java-concrete-class)

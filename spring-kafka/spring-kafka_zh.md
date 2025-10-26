@@ -348,7 +348,7 @@
 
         src/.spring.kafka/KafkaProducerConfig.java: multiTypeProducerFactory(), multiTypeKafkaTemplate()
 
-        我们可以使用此 KafkaTemplate 向主题发送问候语、告别语或任何[对象](https://www.baeldung.com/java-classes-objects)：
+        我们可以使用此 KafkaTemplate 向主题发送问候语、告别语或任何对象：
 
         src/.spring.kafka/KafkaApplicationMultiListener.java: MessageProducer{sendMessages()}
 

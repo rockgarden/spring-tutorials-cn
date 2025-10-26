@@ -64,8 +64,6 @@
     }
     ```
 
-    关于public关键字在应用于类、接口、嵌套的公有类或接口和方法时的行为的更多细节，请参阅[专门的文章](https://www.baeldung.com/java-public-keyword)。
-
 4. 私有
 
     任何带有private关键字的方法、属性或构造函数都只能从同一个类中访问。这是限制性最强的访问修饰语，是封装概念的核心。所有的数据都将从外界隐藏起来：
@@ -83,8 +81,6 @@
         }
     }
     ```
-
-    这篇[更详细的文章](https://www.baeldung.com/java-private-keyword)将展示private关键字在应用于字段、构造函数、方法和内类时的表现。
 
 5. 受保护的
 
@@ -115,8 +111,6 @@
         }
     }
     ```
-
-    [专门的文章](https://www.baeldung.com/java-protected-access-modifier)描述了更多关于关键字在字段、方法、构造函数、内类中使用时的情况，以及同一包或不同包中的可访问性。
 
 6. 比较
 

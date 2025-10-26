@@ -1,4 +1,4 @@
-# [Java “回归基础” 教程](https://www.baeldung.com/java-tutorial)
+# [Java 回归基础教程](https://www.baeldung.com/java-tutorial)
 
 Java 系列教程
 
@@ -31,9 +31,9 @@ Java 系列教程
 
 接下来，让我们深入面向对象编程的世界，并结合实际的 Java 示例进行学习。
 
-Java 类与对象
-Java 中的具体类（Concrete Class）
-Java 访问修饰符（Access Modifiers）
+- [x] [Java 类与对象](/core-java-modules/core-java-lang-oop-types/java-classes-objects_zh.md)
+- [x] [Java 中的具体类](/core-java-modules/java-concrete-class_zh.md)
+- [x] [Java 访问修饰符](/core-java-modules/core-java-lang-oop-modifiers/java-access-modifiers_zh.md)
 Java 构造方法指南
 Java 对象创建指南
 Java 抽象类（Abstract Classes）
