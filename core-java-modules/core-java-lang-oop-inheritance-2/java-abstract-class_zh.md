@@ -20,11 +20,11 @@
 
     让我们让我们的基抽象类定义一个棋盘游戏的抽象API：
 
-    abstractclasses.overview/BoardGame.java
+    ![BoardGame.java](./src/main/java/com/baeldung/abstractclasses/overview/BoardGame.java)
 
     然后，我们可以创建一个实现play方法的子类：
 
-    abstractclasses.overview/Checkers.java
+    ![Checkers.java](./src/main/java/com/baeldung/abstractclasses/overview/Checkers.java)
 
 3. 何时使用抽象类
 
@@ -40,7 +40,7 @@
 
     请注意，代码重用是使用抽象类的一个非常有说服力的理由，只要类层次结构中的 "is-a" 关系被保留下来。
 
-    而[Java 8又增加了另一个问题](https://www.baeldung.com/java-static-default-methods)，即默认方法，它有时可以取代需要创建一个抽象类的位置。
+    而Java 8又增加了另一个问题，即默认方法，它有时可以取代需要创建一个抽象类的位置。
 
     > With Java 8’s "default method" feature, any abstract class without direct or inherited field should be converted into an interface. However, this change may not be appropriate in libraries or other applications where the class is intended to be used as an API.
 
@@ -64,21 +64,21 @@
 
         一个自然的实现可能是将文件的内容转换为小写字母：
 
-        abstractclasses.filereader/LowercaseFileReader.java
+        ![LowercaseFileReader.java](./src/main/java/com/baeldung/abstractclasses/filereaders/LowercaseFileReader.java)
 
         或者另一个可能是将文件内容转换为大写字母的：
 
-        abstractclasses.filereader/UppercaseFileReader.java
+        ![UppercaseFileReader.java](./src/main/java/com/baeldung/abstractclasses/filereaders/UppercaseFileReader.java)
 
-        正如我们从这个简单的例子中所看到的，每个子类都可以专注于其独特的行为，而不需要指定文件阅读的其他方面。
+        正如我们从这个简单的例子中所看到的，每个子类都可以专注于其独特的行为，而不需要指定文件读取的其他方面。
 
     3. 使用一个子类
 
         最后，使用一个继承自抽象类的类与其他具体类没有什么不同：
 
-        abstractclasses/LowercaseFileReaderUnitTest.java
+        ![LowercaseFileReaderUnitTest.java](./src/test/java/com/baeldung/abstractclasses/LowercaseFileReaderUnitTest.java)
 
-        为简单起见，目标文件位于 src/main/resources/files 文件夹下。因此，我们使用了一个应用程序类加载器来获取示例文件的路径。请随时查看我们[关于Java中类加载器的教程](https://www.baeldung.com/java-classloaders)。
+        为简单起见，目标文件位于 src/main/resources/files 文件夹下。因此，我们使用了一个应用程序类加载器来获取示例文件的路径。
 
 5. 总结
 

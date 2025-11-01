@@ -52,7 +52,7 @@ This module contains articles about core Java Security
 
         - 数字签名(Digital signatures)
         - [消息摘要](https://www.baeldung.com/java-password-hashing)
-        - [对称和非对称密码器](https://www.baeldung.com/java-cipher-class)
+        - 对称和非对称密码器
         - 消息验证码
         - 密钥生成器和密钥工厂
 
@@ -872,7 +872,6 @@ This module contains articles about core Java Security
 ## Relevant Articles
 
 - [x] [The Basics of Java Security](https://www.baeldung.com/java-security-overview)
-- [ ] [Guide to the Cipher Class](http://www.baeldung.com/java-cipher-class)
 - [Introduction to SSL in Java](http://www.baeldung.com/java-ssl)
 - [Java KeyStore API](http://www.baeldung.com/java-keystore)
 - [Encrypting and Decrypting Files in Java](http://www.baeldung.com/java-cipher-input-output-stream)

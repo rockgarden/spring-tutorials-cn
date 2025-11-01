@@ -36,12 +36,12 @@ Java 系列教程
 - [x] [Java 访问修饰符](/core-java-modules/core-java-lang-oop-modifiers/java-access-modifiers_zh.md)
 - [x] [Java 构造方法指南](/core-java-modules/core-java-lang-oop-constructors/java-constructors_zh.md)
 - [x] [Java 对象创建指南](/core-java-modules/core-java-lang-syntax/java-initialization_zh.md)
-Java 抽象类（Abstract Classes）
-Java 接口（Interfaces）
-Java 继承指南
-Java 中的继承与组合（“is-a” 与 “has-a” 关系）
-Java 中的方法重载与重写（Method Overloading and Overriding）
-Java 中的组合、聚合与关联（Composition, Aggregation, and Association）
+- [x] [Java 抽象类](/core-java-modules/core-java-lang-oop-inheritance-2/java-abstract-class_zh.md)
+- [x] [Java 接口](/core-java-modules/core-java-lang-oop-inheritance/java-interfaces_zh.md)
+- [ ] [Java 继承指南](/core-java-modules/core-java-lang-oop-inheritance/java-inheritance_zh.md)
+- [ ] [Java 中的继承与组合（“is-a” 与 “has-a” 关系）](/core-java-modules/core-java-lang-oop-patterns/java-inheritance-composition_zh.md)
+- [ ] [Java 中的方法重载与重写（Method Overloading and Overriding）](/core-java-modules/core-java-lang-oop-methods/java-method-overload-override_zh.md)
+- [ ] [Java 中的组合、聚合与关联（Composition, Aggregation, and Association）](/core-java-modules/core-java-lang-oop-patterns/java-composition-aggregation-association_zh.md)
 Java this 关键字指南
 Java super 关键字指南
 Java static 关键字指南

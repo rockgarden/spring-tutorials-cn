@@ -129,8 +129,6 @@
 
     如果调用的 Person 的姓氏大于 this，compareTo() 方法将返回负数 int；如果姓氏相同，则返回 0；否则返回正数。
 
-    如需了解更多信息，请参阅我们有关此主题的[文章](https://www.baeldung.com/java-comparator-comparable)。
-
 6. 比较器接口
 
     [Comparator接口](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Comparator.html)是一个通用接口，它有一个比较方法，该方法接收两个通用类型的参数并返回一个整数。我们在前面的 Comparable 接口中已经看到了这种模式。

@@ -36,7 +36,7 @@
 
 4. 使用方法覆盖的super关键字
 
-    在进一步讨论之前，我们建议回顾我们的方法[覆盖指南](https://www.baeldung.com/java-method-overload-override)。
+    在进一步讨论之前，我们建议回顾我们的方法覆盖指南。
 
     让我们为我们的父类添加一个实例方法：
 
