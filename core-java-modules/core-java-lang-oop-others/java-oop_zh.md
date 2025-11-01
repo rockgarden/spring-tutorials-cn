@@ -1,14 +1,4 @@
-# 核心Java语言OOP-其他
-
-本模块包含有关 Java 面向对象编程 (OOP) 的文章
-
-- [Java中的面向对象编程概念](#java中面向对象的编程概念)
-- [Java中的静态绑定和动态绑定](https://www.baeldung.com/java-static-dynamic-binding)
-- [ ] [Java中作为参数传递机制的"逐值传递"](#在java中作为参数传递机制的逐值传递)
-- [检查对象的所有变量是否为空](https://www.baeldung.com/java-check-all-variables-object-null)
-- [Java中的得墨忒耳定律](https://www.baeldung.com/java-demeter-law)
-
-## Java中面向对象的编程概念
+# [Java中面向对象的编程概念](https://www.baeldung.com/java-oop)
 
 1. 概述
 
@@ -68,7 +58,7 @@
 
     `public class Car extends Vehicle {}`
 
-    当我们扩展一个类时，就形成了一种 [IS-A](https://www.baeldung.com/java-inheritance-composition) 关系。汽车 IS-A 车辆。因此，它具有车辆的所有特性。
+    当我们扩展一个类时，就形成了一种 IS-A 关系。汽车 IS-A 车辆。因此，它具有车辆的所有特性。
 
     我们可能会问，为什么需要继承？要回答这个问题，让我们考虑一个汽车制造商，他生产不同类型的汽车，如轿车、公共汽车、有轨电车和卡车。
 
@@ -96,7 +86,7 @@
     }
     ```
 
-    请注意，这也被称为运行时多态性。有关继承的更多信息，请参阅[继承与组成](https://www.baeldung.com/java-inheritance-composition)的文章。
+    请注意，这也被称为运行时多态性。
 
 7. 多态性
 
@@ -137,14 +127,3 @@
 8. 结论
 
     在本文中，我们学习了 Java OOP 的基本概念。
-
-## 原文
-
-- [Object-Oriented-Programming Concepts in Java](https://www.baeldung.com/java-oop)
-- [Static and Dynamic Binding in Java](https://www.baeldung.com/java-static-dynamic-binding)
-- [Check If All the Variables of an Object Are Null](https://www.baeldung.com/java-check-all-variables-object-null)
-- [Law of Demeter in Java](https://www.baeldung.com/java-demeter-law)
-
-## Code
-
-本文中使用的代码片段可以在[GitHub](https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-lang-oop-others)上找到。

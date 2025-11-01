@@ -1,10 +1,12 @@
 # [Java中的构造函数指南](https://www.baeldung.com/java-constructors)
 
+Core Java
+
 1. 简介
 
     构造函数是面向对象设计的守门员。
 
-    在本教程中，我们将看到它们如何作为一个单一的位置来初始化被创建对象的[内部状态](https://www.baeldung.com/java-inheritance-composition)。
+    在本教程中，我们将看到它们如何作为一个单一的位置来初始化被创建对象的内部状态。
 
     让我们继续前进，创建一个代表银行账户的简单对象。
 
@@ -14,7 +16,19 @@
 
     同时，让我们覆盖toString方法，将细节打印到控制台：
 
-    constructors/BankAccount.java
+    ```java
+    class BankAccount {
+        String name;
+        LocalDateTime opened;
+        double balance;
+        
+        @Override
+        public String toString() {
+            return String.format("%s, %s, %f", 
+            this.name, this.opened.toString(), this.balance);
+        }
+    }
+    ```
 
     现在，这个类包含了存储银行账户信息所需的所有必要字段，但它还不包含构造函数。
 
@@ -138,7 +152,7 @@
 
     通过关键字this，我们正在调用另一个构造函数。
 
-    我们必须记住，如果我们想连锁一个超类构造函数，我们必须使用super而不是this。
+    我们必须记住，如果要调用父类的构造函数，必须使用 super，而不是 this。
 
     另外，请记住，this或super表达式应该永远是第一条语句。
 
