@@ -14,17 +14,19 @@
 
     为了清楚地了解如何使用继承，让我们创造一个例子：一个基类Person定义了一个人的通用字段和方法，而子类Waitress和Actress提供了额外的、细粒度的方法实现。
 
-    这里是Person类：inheritancecomposition.model/Person.java
+    这里是Person类：
+
+    ![Person.java](./src/main/java/com/baeldung/inheritancecomposition/model/Person.java)
 
     而这些是子类：
 
-    Waitress.java: serveStarter()
+    ![Waitress.java](./src/main/java/com/baeldung/inheritancecomposition/model/Waitress.java)
 
-    Actress.java: readScript()
+    ![Actress.java](./src/main/java/com/baeldung/inheritancecomposition/model/Actress.java)
 
     此外，让我们创建一个单元测试来验证女服务员和女演员类的实例也是人的实例，从而表明在类型级别上满足 "is-a "条件：
 
-    InheritanceUnitTest.java
+    ![InheritanceUnitTest.java](./src/test/java/com/baeldung/inheritancecomposition/InheritanceUnitTest.java)
 
     在此必须强调继承的语义方面的问题。除了重复使用Person类的实现之外，我们还在基类型Person和子类型Waitress和Actress之间创建了一个定义明确的 "is-a" 关系。女服务员和女演员，实际上就是人。
 
@@ -100,21 +102,21 @@
 
     下面是计算机类的一个简单实现：
 
-    inheritancecomposition.model/Computer.java
+    ![Computer.java](./src/main/java/com/baeldung/inheritancecomposition/model/Computer.java)
 
     下面的类对一个微处理器、内存和声卡进行了建模（为了简洁起见，省略了接口）：
 
-    inheritancecomposition.model/StandardProcessor.java
+    ![StandardProcessor.java](./src/main/java/com/baeldung/inheritancecomposition/model/StandardProcessor.java)
 
-    inheritancecomposition.model/StandardMemory.java
+    ![StandardMemory.java](./src/main/java/com/baeldung/inheritancecomposition/model/StandardMemory.java)
 
-    inheritancecomposition.model/StandardSoundCard.java
+    ![StandardSoundCard.java](./src/main/java/com/baeldung/inheritancecomposition/model/StandardSoundCard.java)
 
-    很容易理解推动组合而不是继承背后的动机。在每一个有可能在一个给定的类和其他类之间建立语义上正确的 "有-a "关系的场景中，组合都是正确的选择。
+    推动“组合优于继承”背后的动机很容易理解。在任何能够为某个类与其他类之间建立语义上正确的“has-a”（拥有）关系的场景中，组合都是正确的选择。
 
-    在上面的例子中，计算机符合 "has-a" 的条件，它与为其部分建模的类。
+    在上述示例中，Computer 类与其所包含的各个部件类之间就满足了“has-a”的条件。
 
-    还值得注意的是，在这种情况下，包含的计算机对象对所包含的对象拥有所有权，前提是这些对象不能在另一个计算机对象中重复使用。如果它们可以，我们就会使用聚合，而不是组合，因为在组合中并不隐含所有权。
+    还值得注意的是，在这种情况下，如果被包含的对象无法在另一个 Computer 对象中复用，那么包含它们的 Computer 对象就拥有这些对象的所有权；反之，如果这些对象可以被复用，则我们使用的是聚合（aggregation）而非组合（composition），因为此时并不隐含所有权关系。
 
 5. 没有抽象的组合
 
@@ -123,9 +125,9 @@
     ```java
     public class Computer {
         private StandardProcessor processor
-        = new StandardProcessor("Intel I3");
+            = new StandardProcessor("Intel I3");
         private StandardMemory memory
-        = new StandardMemory("Kingston", "1TB");
+            = new StandardMemory("Kingston", "1TB");
         // additional fields / methods
     }
     ```

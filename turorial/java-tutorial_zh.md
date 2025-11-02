@@ -15,17 +15,17 @@ Java 系列教程
 - [x] [Java 基本语法入门](/core-java-modules/core-java-lang-syntax-2/java-syntax_zh.md)
 - [x] [Java 基本数据类型（Primitives）入门](/core-java-modules/core-java-lang-syntax/java-primitives_zh.md)
 - [x] [Java main() 方法详解](/core-java-modules/core-java-lang-syntax/java-main-method_zh.md)
-- [x] [Java 中的控制结构](/core-java-modules/core-java-lang-syntax-2/java-control-structures_zh.md)
+- [x] [Java 中的控制结构](/core-java-modules/core-java-lang-syntax/java-control-structures_zh.md)
 - [x] [Java 循环指南](/core-java-modules/core-java-lang-syntax/java-loops_zh.md)
   - [x] [Java for 循环](/core-java-modules/core-java-lang-syntax/java-for-loop_zh.md)
 - [x] [Java 包（Packages）指南](/core-java-modules/core-java-lang-syntax-2/java-packages_zh.md)
 - [x] [Java 中的“按值传递”参数机制](/core-java-modules/core-java-lang-oop-others/java-pass-by-value-or-pass-by-reference_zh.md)
 - [x] [Java 可变参数（Varargs）](/core-java-modules/core-java-lang-syntax/java-varargs_zh.md)
-- [x] [Java hashCode() 方法指南](/core-java-modules/core-java-lang-oop-methods/java-hashcode_zh.md)
-- [x] [Java switch 语句](/core-java-modules/core-java-lang-syntax/java-switch_zh.md)
-- [x] [Java forEach 循环指南](/core-java-modules/core-java-8/foreach-java_zh.md)
-- [x] [Java 中的不可变对象](/core-java-modules/core-java-lang-oop-patterns/java-immutable-object_zh.md)
-- [x] [Java 模块化指南](/core-java-modules/core-java-9-jigsaw/java-modularity_zh.md)
+- [ ] [Java hashCode() 方法指南](/core-java-modules/core-java-lang-oop-methods/java-hashcode_zh.md)
+- [ ] [Java switch 语句](/core-java-modules/core-java-lang-syntax/java-switch_zh.md)
+- [ ] [Java forEach 循环指南](/core-java-modules/core-java-8/foreach-java_zh.md)
+- [ ] [Java 中的不可变对象](/core-java-modules/core-java-lang-oop-patterns/java-immutable-object_zh.md)
+- [ ] [Java 模块化指南](/core-java-modules/core-java-9-jigsaw/java-modularity_zh.md)
 
 ### Java 面向对象编程（OOP）
 
@@ -38,11 +38,11 @@ Java 系列教程
 - [x] [Java 对象创建指南](/core-java-modules/core-java-lang-syntax/java-initialization_zh.md)
 - [x] [Java 抽象类](/core-java-modules/core-java-lang-oop-inheritance-2/java-abstract-class_zh.md)
 - [x] [Java 接口](/core-java-modules/core-java-lang-oop-inheritance/java-interfaces_zh.md)
-- [ ] [Java 继承指南](/core-java-modules/core-java-lang-oop-inheritance/java-inheritance_zh.md)
-- [ ] [Java 中的继承与组合（“is-a” 与 “has-a” 关系）](/core-java-modules/core-java-lang-oop-patterns/java-inheritance-composition_zh.md)
+- [x] [Java 继承指南](/core-java-modules/core-java-lang-oop-inheritance/java-inheritance_zh.md)
+- [x] [Java 中的继承与组合（“is-a” 与 “has-a” 关系）](/core-java-modules/core-java-lang-oop-patterns/java-inheritance-composition_zh.md)
 - [ ] [Java 中的方法重载与重写（Method Overloading and Overriding）](/core-java-modules/core-java-lang-oop-methods/java-method-overload-override_zh.md)
 - [ ] [Java 中的组合、聚合与关联（Composition, Aggregation, and Association）](/core-java-modules/core-java-lang-oop-patterns/java-composition-aggregation-association_zh.md)
-Java this 关键字指南
+- [ ] [Java this 关键字指南](/core-java-modules/core-java-lang-oop-types/java-this_zh.md)
 Java super 关键字指南
 Java static 关键字指南
 Java final 关键字

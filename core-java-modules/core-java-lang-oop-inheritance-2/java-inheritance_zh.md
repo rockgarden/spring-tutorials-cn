@@ -2,28 +2,30 @@
 
 1. 概述
 
-    面向对象编程的核心原则之一--继承--使我们能够重复使用现有的代码或扩展现有的类型。
+    面向对象编程（OOP）的核心原则之一——**继承**（inheritance）——使我们能够复用现有代码或扩展现有类型。
 
-    简单地说，在Java中，一个类可以继承另一个类和多个接口，而一个接口可以继承其他接口。
+    简单来说，在 Java 中，一个类可以继承另一个类以及多个接口，而一个接口可以继承其他接口。
 
-    在这篇文章中，我们将从继承的必要性开始，转到继承如何在类和接口中发挥作用。
+    在本文中，我们将从继承的需求出发，探讨继承在类和接口中是如何工作的。
 
-    然后，我们将介绍变量/方法名和访问修饰符如何影响被继承的成员。
+    接着，我们将介绍变量/方法名称以及访问修饰符如何影响被继承的成员。
 
-    最后，我们将看到继承一个类型意味着什么。
+    最后，我们将探讨“继承一个类型”究竟意味着什么。
 
-2. 继承的必要性
+2. 继承的需求  
 
-    想象一下，作为一个汽车制造商，你向你的客户提供多种汽车型号。尽管不同的汽车型号可能提供不同的功能，如天窗或防弹窗，但它们都包括共同的部件和功能，如发动机和车轮。
+    假设你是一家汽车制造商，向客户提供多种汽车型号。尽管不同的车型可能提供不同的功能（例如天窗或防弹玻璃），但它们都会包含一些通用的组件和功能，比如发动机和车轮。
 
-    创建一个基本的设计并扩展它以创建它们的专门版本是有意义的，而不是从头开始单独设计每个汽车模型。
+    与其从零开始为每个车型单独设计，不如创建一个基础设计，然后在此基础上扩展出各种专用版本，这样做更为合理。
 
-    以类似的方式，通过继承，我们可以创建一个具有基本特征和行为的类，并通过创建继承这个基类的类来创建其专门版本。以同样的方式，接口可以扩展现有的接口。
+    同样地，通过继承，我们可以创建一个包含基本功能和行为的类，然后通过创建继承该基类的子类来实现其专用版本。接口也可以通过扩展现有接口来实现类似的效果。
 
-    我们会注意到使用了多个术语来指代一个被另一个类型继承的类型，特别是：
+    我们会注意到，对于被其他类型继承的类型，有多种术语用来指代它，具体如下：
 
-    - 基类型也被称为超类型或父类型 a base type is also called a super or a parent type
-    - 一个派生类型被称为扩展类型、子类型或儿童类型 a derived type is referred to as an extended, sub or a child type
+    - **基类型**（base type）也被称为 **超类型**（super type）或 **父类型**（parent type）  
+    - **派生类型**（derived type）则被称为 **扩展类型**（extended type）、**子类型**（sub type）或 **子类**（child type）
+      - **sub type（子类型）**：更侧重**类型系统**和**多态性**的概念，强调“Liskov 替换原则”下的类型兼容关系（即子类型对象可替换父类型引用）。这是面向对象理论中的标准术语。
+      - **child type（子类 / 子类型）**：更侧重**继承结构**中的**父子关系**，常用于描述类层次（class hierarchy），尤其在与 “parent class” 对应时，译为“子类”更自然。
 
 3. 类的继承
 
@@ -33,11 +35,18 @@
 
         让我们从定义一个基类Car开始：
 
-        inheritance/Car.java
+        ![Car.java](./src/main/java/com/baeldung/inheritance/Car.java)
 
         ArmoredCar类可以通过在其声明中使用关键字extends来继承Car类的成员：
 
-        inheritance/ArmoredCar.java
+        ```java
+        public class ArmoredCar extends Car {
+            int bulletProofWindows;
+            void remoteStartCar() {
+            // this vehicle can be started by using a remote control
+            }
+        }
+        ```
 
         我们现在可以说，ArmoredCar类是Car的子类，而后者是ArmoredCar的超类。
 
@@ -71,11 +80,11 @@
 
         想象一下，我们在上一节中定义的ArmoredCar是需要一个超级间谍的。所以汽车制造公司想到了增加飞行和漂浮功能：
 
-        inheritance/Floatable.java
+        ![Floatable.java](./src/main/java/com/baeldung/inheritance/Floatable.java)
 
-        inheritance/Flyable.java
+        ![Flyable.java](./src/main/java/com/baeldung/inheritance/Flyable.java)
 
-        inheritance/ArmoredCar.java
+        ![ArmoredCar.java](./src/main/java/com/baeldung/inheritance/ArmoredCar.java)
 
         在上面的例子中，我们注意到使用了关键字 implements 来继承一个接口。
 
@@ -133,11 +142,11 @@
 
         一个接口可以扩展多个接口。下面是一个例子：
 
-        inheritance/Floatable.java
+        ![Floatable.java](./src/main/java/com/baeldung/inheritance/Floatable.java)
 
-        inheritance/Flyable.java
+        ![Flyable.java](./src/main/java/com/baeldung/inheritance/Flyable.java)
 
-        inheritance/SpaceTraveller.java
+        ![SpaceTraveller.java](./src/main/java/com/baeldung/inheritance/SpaceTraveller.java)
 
         一个接口通过使用关键字extends来继承其他接口。类使用关键字 implements 来继承一个接口。
 
@@ -149,7 +158,7 @@
 
     例如，想象一下这样一种情况：一个组织维护着其员工所拥有的汽车的列表。当然，所有员工可能拥有不同的汽车型号。那么，我们怎样才能引用不同的汽车实例呢？这里有一个解决方案：
 
-    inheritance/Employee.java
+    ![Employee.java](./src/main/java/com/baeldung/inheritance/Employee.java)
 
     因为Car的所有派生类都继承了Car的类型，派生类的实例可以通过使用Car类的变量来引用：
 
@@ -168,6 +177,17 @@
         this关键字指的是它所使用的实例。super关键字（似乎很明显）指的是父类实例：
 
         inheritance/ArmoredCar.java: getAValue()
+
+        ```java
+        public class ArmoredCar extends Car {
+            private String model;
+            public String getAValue() {
+                return super.model;   // returns value of model defined in base class Car
+                // return this.model;   // will return value of model defined in ArmoredCar
+                // return model;   // will return value of model defined in ArmoredCar
+            }
+        }
+        ```
 
         很多开发者使用this和super关键字来明确说明他们所指的是哪个变量或方法。然而，对所有成员使用它们会使我们的代码看起来很杂乱。
 
@@ -197,7 +217,23 @@
 
         inheritance/Car.java: String msg()
 
+        ```java
+        public class Car {
+            public static String msg() {
+                return "Car";
+            }
+        }
+        ```
+
         inheritance/ArmoredCar.java: String msg()
+
+        ```java
+        public class ArmoredCar extends Car {
+            public static String msg() {
+                return "ArmoredCar";
+            }
+        }
+        ```
 
         下面是我们如何调用它们：
 

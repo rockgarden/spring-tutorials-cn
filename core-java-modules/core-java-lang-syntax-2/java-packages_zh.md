@@ -117,7 +117,7 @@
 
     我们需要先编译我们的TodoItem类，因为我们的TodoList类依赖于它。
 
-    让我们先打开一个命令行或终端，导航到我们的源文件目录/src/main/java。
+    让我们先打开一个命令行或终端，导航到我们的源文件目录`/src/main/java`。
 
     现在，让我们编译我们的com.baeldung.packages.domain.TodoItem类。
 
@@ -129,7 +129,7 @@
 
     `javac -classpath . com/baeldung/core/packages/*.java`
 
-    同样的，我们应该没有看到错误信息，我们应该在com/baeldung/packages目录下找到两个类文件。
+    同样的，我们应该没有看到错误信息，我们应该在com/baeldung/packages目录下找到两个类(.class)文件。
 
     让我们使用TodoApp类的全称来运行我们的应用程序。
 
