@@ -1,7 +1,7 @@
 package com.baeldung.langchain;
 
-import static dev.langchain4j.data.document.FileSystemDocumentLoader.loadDocument;
-import static dev.langchain4j.model.openai.OpenAiModelName.GPT_3_5_TURBO;
+import static dev.langchain4j.data.document.loader.FileSystemDocumentLoader.loadDocument;
+import static dev.langchain4j.model.openai.OpenAiChatModelName.GPT_4_O_MINI;
 import static java.time.Duration.ofSeconds;
 import static java.util.stream.Collectors.joining;
 import static org.junit.Assert.assertNotNull;
@@ -21,13 +21,14 @@ import dev.langchain4j.data.document.splitter.DocumentSplitters;
 import dev.langchain4j.data.embedding.Embedding;
 import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.data.segment.TextSegment;
-import dev.langchain4j.model.chat.ChatLanguageModel;
-import dev.langchain4j.model.embedding.AllMiniLmL6V2EmbeddingModel;
+import dev.langchain4j.model.chat.ChatModel;
+import dev.langchain4j.model.embedding.onnx.allminilml6v2.AllMiniLmL6V2EmbeddingModel;
 import dev.langchain4j.model.embedding.EmbeddingModel;
 import dev.langchain4j.model.input.Prompt;
 import dev.langchain4j.model.input.PromptTemplate;
 import dev.langchain4j.model.openai.OpenAiChatModel;
-import dev.langchain4j.model.openai.OpenAiTokenizer;
+import dev.langchain4j.model.openai.OpenAiTokenCountEstimator;
+import dev.langchain4j.store.embedding.EmbeddingSearchRequest;
 import dev.langchain4j.store.embedding.EmbeddingMatch;
 import dev.langchain4j.store.embedding.EmbeddingStore;
 import dev.langchain4j.store.embedding.inmemory.InMemoryEmbeddingStore;
@@ -39,7 +40,7 @@ public class ChatWithDocumentLiveTest {
     @Test
     public void givenDocument_whenPrompted_thenValidResponse() {
         Document document = loadDocument(Paths.get("src/test/resources/example-files/simpson's_adventures.txt"));
-        DocumentSplitter splitter = DocumentSplitters.recursive(100, 0, new OpenAiTokenizer(GPT_3_5_TURBO));
+        DocumentSplitter splitter = DocumentSplitters.recursive(100, 0, new OpenAiTokenCountEstimator(GPT_4_O_MINI));
         List<TextSegment> segments = splitter.split(document);
 
         EmbeddingModel embeddingModel = new AllMiniLmL6V2EmbeddingModel();
@@ -53,7 +54,13 @@ public class ChatWithDocumentLiveTest {
             .content();
         int maxResults = 3;
         double minScore = 0.7;
-        List<EmbeddingMatch<TextSegment>> relevantEmbeddings = embeddingStore.findRelevant(questionEmbedding, maxResults, minScore);
+        List<EmbeddingMatch<TextSegment>> relevantEmbeddings = embeddingStore.search(
+            EmbeddingSearchRequest.builder()
+                .queryEmbedding(questionEmbedding)
+                .maxResults(maxResults)
+                .minScore(minScore)
+                .build())
+            .matches();
 
         PromptTemplate promptTemplate = PromptTemplate.from("Answer the following question to the best of your ability:\n" + "\n" + "Question:\n" + "{{question}}\n" + "\n" + "Base your answer on the following information:\n" + "{{information}}");
 
@@ -67,12 +74,12 @@ public class ChatWithDocumentLiveTest {
         variables.put("information", information);
 
         Prompt prompt = promptTemplate.apply(variables);
-        ChatLanguageModel chatModel = OpenAiChatModel.builder()
+        ChatModel chatModel = OpenAiChatModel.builder()
             .apiKey(Constants.OPENAI_API_KEY)
             .timeout(ofSeconds(60))
             .build();
-        AiMessage aiMessage = chatModel.generate(prompt.toUserMessage())
-            .content();
+        AiMessage aiMessage = chatModel.chat(prompt.toUserMessage())
+            .aiMessage();
 
         logger.info(aiMessage.text());
         assertNotNull(aiMessage.text());

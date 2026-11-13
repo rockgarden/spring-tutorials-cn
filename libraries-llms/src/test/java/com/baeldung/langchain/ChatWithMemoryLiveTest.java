@@ -1,7 +1,7 @@
 package com.baeldung.langchain;
 
 import static dev.langchain4j.data.message.UserMessage.userMessage;
-import static dev.langchain4j.model.openai.OpenAiModelName.GPT_3_5_TURBO;
+import static dev.langchain4j.model.openai.OpenAiChatModelName.GPT_4_O_MINI;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertNotNull;
 
@@ -12,9 +12,9 @@ import org.slf4j.LoggerFactory;
 import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.memory.ChatMemory;
 import dev.langchain4j.memory.chat.TokenWindowChatMemory;
-import dev.langchain4j.model.chat.ChatLanguageModel;
+import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.model.openai.OpenAiChatModel;
-import dev.langchain4j.model.openai.OpenAiTokenizer;
+import dev.langchain4j.model.openai.OpenAiTokenCountEstimator;
 
 public class ChatWithMemoryLiveTest {
 
@@ -22,19 +22,22 @@ public class ChatWithMemoryLiveTest {
 
     @Test
     public void givenMemory_whenPrompted_thenValidResponse() {
-        ChatLanguageModel model = OpenAiChatModel.withApiKey(Constants.OPENAI_API_KEY);
-        ChatMemory chatMemory = TokenWindowChatMemory.withMaxTokens(300, new OpenAiTokenizer(GPT_3_5_TURBO));
+        ChatModel model = OpenAiChatModel.builder()
+            .apiKey(Constants.OPENAI_API_KEY)
+            .modelName(GPT_4_O_MINI)
+            .build();
+        ChatMemory chatMemory = TokenWindowChatMemory.withMaxTokens(300, new OpenAiTokenCountEstimator(GPT_4_O_MINI));
 
         chatMemory.add(userMessage("Hello, my name is Kumar"));
-        AiMessage answer = model.generate(chatMemory.messages())
-            .content();
+        AiMessage answer = model.chat(chatMemory.messages())
+            .aiMessage();
         logger.info(answer.text());
         chatMemory.add(answer);
         assertNotNull(answer.text());
 
         chatMemory.add(userMessage("What is my name?"));
-        AiMessage answerWithName = model.generate(chatMemory.messages())
-            .content();
+        AiMessage answerWithName = model.chat(chatMemory.messages())
+            .aiMessage();
         logger.info(answerWithName.text());
         chatMemory.add(answerWithName);
         assertThat(answerWithName.text()).contains("Kumar");

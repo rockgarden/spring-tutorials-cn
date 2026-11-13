@@ -1,4 +1,4 @@
-# LangChain简介
+# [LangChain简介](https://www.baeldung.com/java-langchain-basics)
 
 人工智能
 
@@ -22,7 +22,9 @@ LangChain   OpenAI
 
         ![大型语言模型](pic/Large-Language-Model.jpg)
 
-        这些 LLM 能够执行多种自然语言处理任务，如语言翻译和内容摘要。它们还能够进行内容创作等生成任务。因此，它们在回答问题等应用中极为宝贵。
+        这些 LLM 能够执行多种自然语言处理任务，如语言翻译和内容摘要。它们还具备内容创作等生成式任务的能力。因此，它们在问答等应用中极具价值。
+
+        几乎所有主要的云服务提供商都已将大语言模型纳入其服务产品。例如，Microsoft Azure 提供了 Llama 2 和 OpenAI GPT-4 等 LLM。Amazon Bedrock 则提供了来自 AI21 Labs、Anthropic、Cohere、Meta 和 Stability AI 的模型。
 
     2. 提示工程
 
@@ -66,19 +68,19 @@ LangChain   OpenAI
 
     2023 年初，出现了 JavaScript/TypeScript 版本的 LangChain，紧随 Python 版本之后。它很快变得非常受欢迎，并开始支持多个 JavaScript 环境，如 Node.js、Web 浏览器、CloudFlare 工作者、Vercel/Next.js、Deno 和 Supabase Edge 函数。
 
-    不幸的是，目前没有适用于 Java/Spring 应用程序的官方 Java 版本的 LangChain。但是，有一个名为 [LangChain4j](https://github.com/langchain4j/langchain4j) 的社区版本的 LangChain。它适用于 Java 8 或更高版本，并支持 Spring Boot 2 和 3。
+    不幸的是，目前没有适用于 Java/Spring 应用程序的官方 Java 版本的 LangChain。但是，有一个名为 [LangChain4j](https://github.com/langchain4j/langchain4j) 的社区版本的 LangChain。LangChain4j 1.x 需要 Java 17 或更高版本；如果通过 Spring Boot 集成使用，应根据所选集成版本确认 Spring Boot 兼容性。
 
-    LangChain 的各种依赖项可在 [Maven Central](https://mvnrepository.com/artifact/dev.langchain4j/langchain4j/0.23.0) 获取。根据我们使用的功能，我们可能需要在应用程序中添加一个或多个依赖项：
+    LangChain 的各种依赖项可在 [Maven Central](https://mvnrepository.com/artifact/dev.langchain4j/langchain4j) 获取。根据我们使用的功能，我们可能需要在应用程序中添加一个或多个依赖项：
 
     ```xml
     <dependency>
         <groupId>dev.langchain4j</groupId>
         <artifactId>langchain4j</artifactId>
-        <version>0.23.0</version>
+        <version>1.23.0</version>
     </dependency>
     ```
 
-    例如，在本教程的以下部分，我们还需要支持集成到 [OpenAI](https://mvnrepository.com/artifact/dev.langchain4j/langchain4j-open-ai/0.23.0) 模型的依赖项，提供对[嵌入](https://mvnrepository.com/artifact/dev.langchain4j/langchain4j-embeddings/0.23.0)的支持，以及像 [all-MiniLM-L6-v2](https://mvnrepository.com/artifact/dev.langchain4j/langchain4j-embeddings-all-minilm-l6-v2-q/0.23.0) 这样的句子转换器模型。
+    例如，在本教程的以下部分，我们还需要支持集成到 [OpenAI](https://mvnrepository.com/artifact/dev.langchain4j/langchain4j-open-ai/1.23.0) 模型的依赖项，提供对[嵌入](https://mvnrepository.com/artifact/dev.langchain4j/langchain4j-embeddings/1.23.0-beta33)的支持，以及像 [all-MiniLM-L6-v2](https://mvnrepository.com/artifact/dev.langchain4j/langchain4j-embeddings-all-minilm-l6-v2/1.23.0-beta33) 这样的句子转换器模型。
 
     LangChain4j 与 LangChain 具有类似的设计目标，提供了简单且一致的抽象层及其众多实现。它已经支持多个语言模型提供商，如 OpenAI 和嵌入存储提供商，如 Pinecone。
 
@@ -109,36 +111,36 @@ LangChain   OpenAI
         LangChain 支持与两种类型的模型集成：语言模型和聊天模型。聊天模型也由语言模型支持，但提供聊天功能：
 
         ```java
-        ChatLanguageModel model = OpenAiChatModel.builder()
+        ChatModel model = OpenAiChatModel.builder()
             .apiKey(<OPENAI_API_KEY>)
-            .modelName(GPT_3_5_TURBO)
+            .modelName(OpenAiChatModelName.GPT_4_O_MINI)
             .temperature(0.3)
             .build();
-        String response = model.generate(prompt.text());
+        String response = model.chat(prompt.text());
         ```
 
         在这里，我们使用特定的 OpenAI 模型和相关的 API 密钥创建了一个聊天模型。我们可以通过免费注册从 OpenAI 获取 API 密钥。温度参数用于控制模型输出的随机性。
 
         最后，语言模型的输出可能不够结构化以供展示。LangChain 提供了输出解析器，帮助我们结构化语言模型的响应——例如，将输出中的信息提取为 Java 中的 POJO。
 
-    2. 内存
+    2. 记忆
 
-        通常，利用 LLM 的应用程序具有对话界面。任何对话的一个重要方面是能够引用对话早期引入的信息。存储有关过去互动信息的能力称为内存：
+        通常，利用 LLM 的应用程序具有对话界面。任何对话的一个重要方面是能够引用对话早期引入的信息。存储有关过去交互信息的能力被称为“记忆”：
 
-        ![LangChain内存](pic/LangChain-Memory.jpg)
+        ![LangChain记忆](pic/LangChain-Memory.jpg)
 
-        LangChain 提供了为应用程序添加内存的关键使能器。例如，我们需要从内存中读取信息以增强用户输入。然后，我们需要将当前运行的输入和输出写入内存的能力：
+        LangChain 提供了为应用程序添加记忆的关键赋能器。例如，我们需要能够从记忆中读取信息以增强用户输入。同时，我们也需要能够将当前运行的输入和输出写入记忆：
 
         ```java
         ChatMemory chatMemory = TokenWindowChatMemory
-            .withMaxTokens(300, new OpenAiTokenizer(GPT_3_5_TURBO));
+            .withMaxTokens(300, new OpenAiTokenCountEstimator(OpenAiChatModelName.GPT_4_O_MINI));
         chatMemory.add(userMessage("Hello, my name is Kumar"));
-        AiMessage answer = model.generate(chatMemory.messages()).content();
+        AiMessage answer = model.chat(chatMemory.messages()).aiMessage();
         System.out.println(answer.text()); // Hello Kumar! How can I assist you today?
         chatMemory.add(answer);
         chatMemory.add(userMessage("What is my name?"));
-        AiMessage answerWithName = model.generate(chatMemory.messages()).content();
-        System.out.println(answer.text()); // Your name is Kumar.
+        AiMessage answerWithName = model.chat(chatMemory.messages()).aiMessage();
+        System.out.println(answerWithName.text()); // Your name is Kumar.
         chatMemory.add(answerWithName);
         ```
 
@@ -157,13 +159,14 @@ LangChain   OpenAI
         首先，LangChain 提供了文档加载器，用于从存储位置检索文档。然后，有可用的转换器来准备文档以进行进一步处理。例如，我们可以将其拆分为较小的块：
 
         ```java
-        Document document = FileSystemDocumentLoader.loadDocument("simpson's_adventures.txt");
-        DocumentSplitter splitter = DocumentSplitters.recursive(100, 0, 
-            new OpenAiTokenizer(GPT_3_5_TURBO));
+        Document document = FileSystemDocumentLoader.loadDocument(
+            Paths.get("simpson's_adventures.txt"));
+        DocumentSplitter splitter = DocumentSplitters.recursive(100, 0,
+            new OpenAiTokenCountEstimator(OpenAiChatModelName.GPT_4_O_MINI));
         List<TextSegment> segments = splitter.split(document);
         ```
 
-        在这里，我们使用 FileSystemDocumentLoader 从文件系统加载文档。然后，我们使用 OpenAiTokenizer 将该文档拆分为较小的块。
+        在 LangChain4j 1.x 中，`FileSystemDocumentLoader` 位于 `dev.langchain4j.data.document.loader` 包中，并使用 `Path` 加载文件。然后，我们使用 `OpenAiTokenCountEstimator` 将文档拆分为较小的块。
         为了使检索更高效，文档通常会被转换为其嵌入并存储在向量数据库中。LangChain 支持几种嵌入提供商和方法，并几乎集成了所有流行的向量存储：
 
         ```java
@@ -173,9 +176,9 @@ LangChain   OpenAI
         embeddingStore.addAll(embeddings, segments);
         ```
 
-        在这里，我们使用 AllMiniLmL6V2EmbeddingModel 创建文档段的嵌入。然后，我们将嵌入存储在内存中的向量存储中。
+        在这里，我们使用位于 `dev.langchain4j.model.embedding.onnx.allminilml6v2` 包中的 `AllMiniLmL6V2EmbeddingModel` 创建文档段的嵌入。然后，我们将嵌入存储在内存中的向量存储中。
 
-        现在，我们的外部数据以嵌入的形式存在于向量存储中，我们已准备好从中检索。LangChain 支持几种检索算法，如简单的语义搜索和复杂的集成检索器：
+        现在，我们的外部数据以嵌入的形式存在于向量存储中，我们已准备好从中检索。LangChain 支持几种检索算法，如简单的语义搜索和复杂的集成检索器（Ensemble Retriever）：
 
         ```java
         String question = "Who is Simpson?";
@@ -183,8 +186,13 @@ LangChain   OpenAI
         Embedding questionEmbedding = embeddingModel.embed(question).content();
         int maxResults = 3;
         double minScore = 0.7;
-        List<EmbeddingMatch<TextSegment>> relevantEmbeddings = embeddingStore
-        .findRelevant(questionEmbedding, maxResults, minScore);
+        List<EmbeddingMatch<TextSegment>> relevantEmbeddings = embeddingStore.search(
+            EmbeddingSearchRequest.builder()
+                .queryEmbedding(questionEmbedding)
+                .maxResults(maxResults)
+                .minScore(minScore)
+                .build())
+            .matches();
         ```
 
         我们创建用户问题的嵌入，然后使用问题嵌入从向量存储中检索相关匹配。现在，我们可以将检索到的相关匹配作为上下文添加到我们打算发送给模型的提示中。
@@ -200,32 +208,41 @@ LangChain   OpenAI
         这对于组合多个链以形成更复杂的应用程序也很有用，这些应用程序可能需要与多个语言模型进行接口。LangChain 提供了方便的方式来创建这样的链，并提供了许多预构建的链：
 
         ```java
+        ContentRetriever contentRetriever = EmbeddingStoreContentRetriever.builder()
+            .embeddingStore(embeddingStore)
+            .embeddingModel(embeddingModel)
+            .build();
+        RetrievalAugmentor retrievalAugmentor = DefaultRetrievalAugmentor.builder()
+            .contentRetriever(contentRetriever)
+            .contentInjector(DefaultContentInjector.builder()
+                .promptTemplate(PromptTemplate.from(
+                    "Answer the following question to the best of your ability: {{userMessage}}\n\n"
+                        + "Base your answer on the following information:\n{{contents}}"))
+                .build())
+            .build();
+
         ConversationalRetrievalChain chain = ConversationalRetrievalChain.builder()
-            .chatLanguageModel(chatModel)
-            .retriever(EmbeddingStoreRetriever.from(embeddingStore, embeddingModel))
+            .chatModel(chatModel)
+            .retrievalAugmentor(retrievalAugmentor)
             .chatMemory(MessageWindowChatMemory.withMaxMessages(10))
-            .promptTemplate(PromptTemplate
-                .from("Answer the following question to the best of your ability: {{question}}
-                    Base your answer on the following information:
-                    {{information}}"))
             .build();
         ```
 
-        在这里，我们使用预构建的链 ConversationalRetrievalChain，它允许我们将聊天模型与检索器、内存和提示模板一起使用。现在，我们可以简单地使用链来执行用户查询：
+        在这里，我们使用预构建的链 `ConversationalRetrievalChain`，并通过 `RetrievalAugmentor` 配置检索器和自定义提示词。LangChain4j 1.x 的链构建器不再提供 `.promptTemplate(...)`；默认的 `DefaultContentInjector` 会将用户问题和检索内容填入 `{{userMessage}}` 与 `{{contents}}`。需要自定义提示词时，应通过 `DefaultContentInjector` 配置，并将 `RetrievalAugmentor` 传给链。现在，我们可以简单地使用链来执行用户查询：
 
         ```java
         String answer = chain.execute("Who is Simpson?");
         ```
 
-        该链带有一个默认的内存和提示模板，我们可以覆盖它们。创建自定义链也相当容易。创建链的能力使得实现复杂应用程序的模块化变得更加容易。
+        该链默认使用窗口式聊天记忆和检索增强器。通过替换记忆或配置检索增强器，我们可以调整对话上下文和提示词。创建链的能力使得实现复杂应用程序的模块化变得更加容易。
 
     2. 代理
 
         LangChain 还提供了更强大的结构，如代理。与链不同，代理使用语言模型作为推理引擎，确定采取哪些行动以及行动的顺序。我们还可以为代理提供访问正确工具以执行必要操作的能力。
 
-        在 LangChain4j 中，代理作为 AI 服务可用，以声明方式定义复杂的 AI 行为。让我们看看是否可以将计算器作为工具提供给 AI 服务，并使语言模型能够执行计算。
+        在 LangChain4j 中，代理以 AI 服务（AI Services）的形式提供，用于声明式地定义复杂的 AI 行为。让我们看看是否可以为 AI 服务提供一个计算器作为工具，并使语言模型能够执行计算。
 
-        首先，我们将定义一个具有一些基本计算器功能的类，并用自然语言描述每个函数以便模型理解：
+        首先，我们定义一个包含基本计算器函数的类，并用自然语言描述每个函数以便模型理解：
 
         ```java
         public class AIServiceWithCalculator {
@@ -254,7 +271,10 @@ LangChain   OpenAI
 
         ```java
         Assistant assistant = AiServices.builder(Assistant.class)
-            .chatLanguageModel(OpenAiChatModel.withApiKey(<OPENAI_API_KEY>))
+            .chatModel(OpenAiChatModel.builder()
+                .apiKey(<OPENAI_API_KEY>)
+                .modelName(OpenAiChatModelName.GPT_4_O_MINI)
+                .build())
             .tools(new Calculator())
             .chatMemory(MessageWindowChatMemory.withMaxMessages(10))
             .build();
@@ -265,7 +285,7 @@ LangChain   OpenAI
         ```java
         String question = "What is the sum of the numbers of letters in the words \"language\" and \"model\"?";
         String answer = assistant.chat(question);
-        System.out.prtintln(answer); // The sum of the numbers of letters in the words "language" and "model" is 13. 
+        System.out.println(answer); // The sum of the numbers of letters in the words "language" and "model" is 13.
         ```
 
         当我们运行这段代码时，我们会观察到语言模型现在能够执行计算。

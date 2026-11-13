@@ -22,7 +22,7 @@
         <dependency>
             <groupId>dev.langchain4j</groupId>
             <artifactId>langchain4j-embeddings</artifactId>
-            <version>${langchain4j.version}</version>
+            <version>${langchain4j.embeddings.version}</version>
         </dependency>
         <dependency>
             <groupId>dev.langchain4j</groupId>
@@ -32,12 +32,13 @@
         <dependency>
             <groupId>dev.langchain4j</groupId>
             <artifactId>langchain4j-embeddings-all-minilm-l6-v2</artifactId>
-            <version>${langchain4j.version}</version>
+            <version>${langchain4j.embeddings.version}</version>
         </dependency>
     </dependencies>
 
     <properties>
-        <langchain4j.version>0.23.0</langchain4j.version>
+        <langchain4j.version>1.23.0</langchain4j.version>
+        <langchain4j.embeddings.version>1.23.0-beta33</langchain4j.embeddings.version>
     </properties>
 
 </project>

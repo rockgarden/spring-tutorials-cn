@@ -1,6 +1,6 @@
 package com.baeldung.langchain;
 
-import static dev.langchain4j.model.openai.OpenAiModelName.GPT_3_5_TURBO;
+import static dev.langchain4j.model.openai.OpenAiChatModelName.GPT_4_O_MINI;
 import static org.junit.Assert.assertNotNull;
 
 import java.util.HashMap;
@@ -10,7 +10,7 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import dev.langchain4j.model.chat.ChatLanguageModel;
+import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.model.input.Prompt;
 import dev.langchain4j.model.input.PromptTemplate;
 import dev.langchain4j.model.openai.OpenAiChatModel;
@@ -27,13 +27,13 @@ public class PromptTemplatesLiveTest {
         variables.put("content", "humans");
         Prompt prompt = promptTemplate.apply(variables);
 
-        ChatLanguageModel model = OpenAiChatModel.builder()
+        ChatModel model = OpenAiChatModel.builder()
             .apiKey(Constants.OPENAI_API_KEY)
-            .modelName(GPT_3_5_TURBO)
+            .modelName(GPT_4_O_MINI)
             .temperature(0.3)
             .build();
 
-        String response = model.generate(prompt.text());
+        String response = model.chat(prompt.text());
         logger.info(response);
         assertNotNull(response);
     }
