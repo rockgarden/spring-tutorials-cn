@@ -1,12 +1,31 @@
 package com.baeldung.camellangchain4jdocling;
 
+import java.util.Objects;
+import java.util.function.Consumer;
+
 import org.apache.camel.Exchange;
 import org.apache.camel.builder.RouteBuilder;
 
 class ConversionRoute extends RouteBuilder {
 
+    private final Consumer<Throwable> fatalErrorHandler;
+
+    ConversionRoute(Consumer<Throwable> fatalErrorHandler) {
+        this.fatalErrorHandler = Objects.requireNonNull(fatalErrorHandler, "fatalErrorHandler");
+    }
+
     @Override
     public void configure() {
+        onException(Exception.class)
+            .maximumRedeliveries(0)
+            .handled(true)
+            .process(exchange -> {
+                Throwable exception = exchange.getProperty(Exchange.EXCEPTION_CAUGHT, Throwable.class);
+                if (exception == null) {
+                    throw new IllegalStateException("Camel did not provide the document processing exception");
+                }
+                fatalErrorHandler.accept(exception);
+            });
 
         from("file:documents?include=.*\\.(pdf|docx|pptx|html|md)&noop=true&idempotent=true").routeId("document-analysis-workflow")
             .log("Processing document: ${header.CamelFileName}")
