@@ -16,6 +16,7 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- Quarkus 平台 BOM：升级到 3.33.3.1 -->
             <dependency>
                 <groupId>${quarkus.platform.group-id}</groupId>
                 <artifactId>${quarkus.platform.artifact-id}</artifactId>
@@ -23,10 +24,19 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!-- 新增：quarkus-langchain4j BOM，统一管理所有 LangChain4j 扩展版本 -->
+            <dependency>
+                <groupId>io.quarkiverse.langchain4j</groupId>
+                <artifactId>quarkus-langchain4j-bom</artifactId>
+                <version>${quarkus-langchain4j.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
     <dependencies>
+        <!-- Camel 通用扩展：保持，版本由 camel-quarkus.version 控制 -->
         <dependency>
             <groupId>org.apache.camel.quarkus</groupId>
             <artifactId>camel-quarkus-jsonpath</artifactId>
@@ -34,14 +44,23 @@
         </dependency>
         <dependency>
             <groupId>org.apache.camel.quarkus</groupId>
-            <artifactId>camel-quarkus-langchain4j</artifactId>
-            <version>${quarkus-camel-langchain4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.camel.quarkus</groupId>
             <artifactId>camel-quarkus-platform-http</artifactId>
             <version>${camel-quarkus.version}</version>
         </dependency>
+
+        <!--
+            ⚠️ camel-quarkus-langchain4j 已在 Camel Quarkus 3.27.0 中移除
+            如需保留“将 Camel 路由注册为 LLM 工具”的能力，改用 camel-quarkus-ai-tool
+            （从 Camel Quarkus 3.39.0 开始提供）
+            如项目中未使用该能力，可整段删除
+        -->
+        <dependency>
+            <groupId>org.apache.camel.quarkus</groupId>
+            <artifactId>camel-quarkus-ai-tool</artifactId>
+            <version>${camel-quarkus.version}</version>
+        </dependency>
+
+        <!-- Quarkus REST 扩展（版本由 Quarkus BOM 管理） -->
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-rest</artifactId>
@@ -51,16 +70,16 @@
             <artifactId>quarkus-rest-jackson</artifactId>
         </dependency>
 
+        <!--
+            LangChain4j 扩展：移除显式 <version>，改由 quarkus-langchain4j-bom 统一管理
+        -->
         <dependency>
             <groupId>io.quarkiverse.langchain4j</groupId>
             <artifactId>quarkus-langchain4j-openai</artifactId>
-            <version>${quarkus-langchain4j.version}</version>
         </dependency>
-
         <dependency>
             <groupId>io.quarkiverse.langchain4j</groupId>
             <artifactId>quarkus-langchain4j-memory-store-redis</artifactId>
-            <version>${quarkus-langchain4j.version}</version>
         </dependency>
 
         <dependency>
@@ -68,6 +87,7 @@
             <artifactId>quarkus-redis-client</artifactId>
         </dependency>
 
+        <!-- 测试依赖 -->
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-junit5</artifactId>
@@ -190,16 +210,20 @@
     <properties>
         <compiler-plugin.version>3.13.0</compiler-plugin.version>
         <failsafe.useModulePath>false</failsafe.useModulePath>
-        <maven.compiler.release>17</maven.compiler.release>
+        <!-- Java 17 → 21（quarkus-langchain4j 1.14.2 的配套要求） -->
+        <maven.compiler.release>21</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
-        <quarkus.platform.version>3.14.2</quarkus.platform.version>
-        <quarkus-langchain4j.version>0.18.0.CR1</quarkus-langchain4j.version>
+        <!-- Quarkus 3.14.2 → 3.33.3.1（quarkus-langchain4j 1.14.2 的配套 LTS） -->
+        <quarkus.platform.version>3.33.3.1</quarkus.platform.version>
+        <!-- LangChain4j 0.18.0.CR1 → 1.14.2 -->
+        <quarkus-langchain4j.version>1.14.2</quarkus-langchain4j.version>
         <surefire-plugin.version>3.2.5</surefire-plugin.version>
-        <camel-quarkus.version>3.13.0</camel-quarkus.version>
-        <quarkus-camel-langchain4j.version>3.16.0</quarkus-camel-langchain4j.version>
+        <!-- Camel Quarkus 3.13.0 → 3.33.x（与 Quarkus 3.33.x 对齐） -->
+        <camel-quarkus.version>3.33.0</camel-quarkus.version>
+        <!-- 原 quarkus-camel-langchain4j.version 已删除，不再需要 -->
     </properties>
 
 </project>
