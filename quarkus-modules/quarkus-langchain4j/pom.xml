@@ -222,7 +222,7 @@
         <quarkus-langchain4j.version>1.14.2</quarkus-langchain4j.version>
         <surefire-plugin.version>3.2.5</surefire-plugin.version>
         <!-- Camel Quarkus 3.13.0 → 3.33.x（与 Quarkus 3.33.x 对齐） -->
-        <camel-quarkus.version>3.33.0</camel-quarkus.version>
+        <camel-quarkus.version>3.40.0</camel-quarkus.version>
         <!-- 原 quarkus-camel-langchain4j.version 已删除，不再需要 -->
     </properties>
 

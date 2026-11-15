@@ -1,4 +1,4 @@
-# [利用 Quarkus 和 LangChain4j](https://www.baeldung.com/java-quarkus-langchain4j)
+# [使用 Quarkus 和 LangChain4j](https://www.baeldung.com/java-quarkus-langchain4j)
 
 **最后更新**：2025年9月19日
 

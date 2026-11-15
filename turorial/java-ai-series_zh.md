@@ -56,3 +56,7 @@
 * Deep Java Library (DJL) 指南
 * Deeplearning4j 指南
 * Jlama 简介
+
+## 其它
+
+* [使用 Quarkus 和 LangChain4](../quarkus-modules/quarkus-langchain4j/java-quarkus-langchain4j_zh.md)
