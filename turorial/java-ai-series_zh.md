@@ -41,6 +41,7 @@
 * 结合 Spring AI 探索模型上下文协议 (MCP)
 * 使用 Spring AI 和 OAuth2 进行 MCP 授权
 * 使用 OAuth2 保护 Spring AI MCP 服务器
+* [使用 Quarkus 和 LangChain4j 实现 Model Context Protocol](../quarkus-modules/quarkus-mcp-langchain/langchain4j-quarkus-mcp_zh.md)
 
 ## 🚀 AI 智能体
 
